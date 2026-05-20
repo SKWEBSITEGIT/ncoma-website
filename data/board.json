@@ -1,39 +1,30 @@
 {
   "directors": [
     {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio — 2-3 sentences on background and role]",
-      "headshot": "/images/board/placeholder.jpg"
+      "name": "Matt McMahon",
+      "title": "President",
+      "organization": "NCOMA",
+      "role": "President & Co-Founder",
+      "bio": "Former President of McMahon Restaurant Group, where he opened 24 Outback Steakhouses across Arizona and New Mexico, reaching $72M+ in annual sales. Supervised 94 restaurants in 16 states and opened over 240 locations in 8 years. Developed Bulk Oil Management Solutions that saved over 100,000 lbs of oil waste. Now leads NCOMA's mission to bring science-based oil management to every commercial kitchen in America.",
+      "linkedin": "https://www.linkedin.com/in/matt-mcmahon-17aaa4b1/",
+      "headshot": "/images/board/matt-mcmahon.jpg"
     },
     {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
-      "headshot": "/images/board/placeholder.jpg"
+      "name": "Conrad Canter",
+      "title": "Managing Partner",
+      "organization": "SK Oil Sales / Zeco",
+      "role": "Co-Founder & Technical Director",
+      "bio": "Inventor of the Zeco Oil Filtration Machine — a patented closed-loop system that microfilters cooking oil down to 0.5 microns, removing 99% of free radicals and contaminants. Over 50 years of business experience spanning commercial printing, filtration engineering, and foodservice. As Managing Partner of SK Oil Sales, delivers filtration and bulk oil systems to hundreds of restaurants and casinos across Arizona, California, Nevada, and New Mexico.",
+      "linkedin": "https://www.linkedin.com/in/conrad-canter-4b27b218/",
+      "headshot": "/images/board/conrad-canter.jpg"
     },
     {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
-      "headshot": "/images/board/placeholder.jpg"
-    },
-    {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
-      "headshot": "/images/board/placeholder.jpg"
-    },
-    {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
-      "headshot": "/images/board/placeholder.jpg"
+      "name": "Pablo Herrera",
+      "title": "Chief Instigator",
+      "organization": "NCOMA",
+      "role": "Chief Instigator",
+      "bio": "The person who decided this industry needed a reckoning. Built the Oil Atlas, designed the certification framework, and won't stop until every commercial kitchen in America knows exactly what's in their fryer. Background in technology, data, and asking questions the oil industry would rather you didn't.",
+      "headshot": "/images/board/pablo-herrera.jpg"
     }
   ],
   "advisors": [
@@ -41,28 +32,7 @@
       "name": "[NEEDS: real name]",
       "title": "[NEEDS: real title]",
       "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
-      "headshot": "/images/board/placeholder.jpg"
-    },
-    {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
-      "headshot": "/images/board/placeholder.jpg"
-    },
-    {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
-      "headshot": "/images/board/placeholder.jpg"
-    },
-    {
-      "name": "[NEEDS: real name]",
-      "title": "[NEEDS: real title]",
-      "organization": "[NEEDS: real organization]",
-      "bio": "[NEEDS: real bio]",
+      "bio": "[NEEDS: real bio — 2-3 sentences on background and role]",
       "headshot": "/images/board/placeholder.jpg"
     },
     {

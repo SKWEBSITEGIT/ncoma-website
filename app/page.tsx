@@ -1,79 +1,270 @@
-import { Container, Section, Eyebrow, Button, Card, Badge, Callout } from '@/components/ui'
+import { Container, Section, Eyebrow, Button, Card, Badge } from '@/components/ui'
+import { FadeIn, FadeInStagger, FadeInItem, SlideIn } from '@/components/AnimatedSection'
+import { AnimatedCounter } from '@/components/AnimatedCounter'
+import { HeroImage, InlineImage } from '@/components/HeroImage'
+import { Avatar } from '@/components/Avatar'
+import { IMAGES } from '@/lib/images'
 
 export default function Home() {
   return (
     <main>
-      {/* Hero */}
-      <Section className="pt-20 pb-12 md:pt-32 md:pb-20">
-        <Container size="lg">
+      {/* Hero — the uncomfortable question */}
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+        <HeroImage
+          src={IMAGES.restaurantKitchen}
+          alt="Commercial kitchen fryer station"
+          className="absolute inset-0"
+        />
+        <Container size="lg" className="relative z-10">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
-              What is your oil<span className="text-amber">?</span>
+            <h1 className="animate-hero-1 text-5xl font-bold tracking-tight text-white md:text-7xl">
+              What is <span className="text-amber">in</span> your oil<span className="text-amber">?</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-xl text-lg text-charcoal/70 md:text-xl">
-              There is no federal standard for when to change frying oil in an
-              American restaurant. No threshold. No certification. No number on
-              the wall. NCOMA built one.
+            <p className="animate-hero-2 mx-auto mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
+              Acrolein. 4-hydroxynonenal. Trans,trans-2,4-decadienal.
+              If those words mean nothing to you, you&apos;re not testing your frying oil.
+              Neither are 78% of American restaurants.
             </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/operators#get-certified" size="lg">
-                Get Certified
+            <div className="animate-hero-3 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Button href="#the-problem" size="lg">
+                See What&apos;s In the Oil
               </Button>
-              <Button href="/seal" variant="outline" size="lg">
-                What the Seal Means
+              <Button
+                href="/operators#get-certified"
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-white hover:border-white/60"
+              >
+                Fix It — Get Certified
               </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* THE PROBLEM — dark, confrontational */}
+      <section id="the-problem" className="border-t border-charcoal/10 bg-charcoal py-16 text-white md:py-24">
+        <Container>
+          <FadeIn>
+            <Eyebrow className="text-amber">The Problem</Eyebrow>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+              This is what&apos;s actually in degraded frying oil.
+            </h2>
+            <p className="mt-4 max-w-3xl text-white/60">
+              When frying oil breaks down — through heat, oxygen, water, and time — it doesn&apos;t
+              just get &ldquo;old.&rdquo; It becomes a cocktail of toxic compounds that transfer
+              directly into the food your customers eat.
+            </p>
+          </FadeIn>
+
+          <FadeInStagger className="mt-12 grid gap-6 md:grid-cols-3">
+            <FadeInItem>
+              <div className="border border-white/10 bg-white/5 p-6">
+                <p className="font-sans text-3xl font-bold text-amber">20×</p>
+                <p className="mt-1 font-sans text-sm font-semibold text-white/90">
+                  Above WHO Limits
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-white/50">
+                  PUFA-rich oils at frying temperature produce aldehyde concentrations
+                  approximately <strong className="text-white/80">20 times higher</strong> than
+                  WHO recommended limits. These compounds absorb directly into the food.
+                </p>
+                <p className="mt-3 font-sans text-xs text-white/30">
+                  Grootveld et al. (2021), Frontiers in Nutrition
+                </p>
+              </div>
+            </FadeInItem>
+            <FadeInItem>
+              <div className="border border-white/10 bg-white/5 p-6">
+                <p className="font-sans text-3xl font-bold text-amber">78%</p>
+                <p className="mt-1 font-sans text-sm font-semibold text-white/90">
+                  Have Never Tested
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-white/50">
+                  Of 412 US operators surveyed, <strong className="text-white/80">78% have
+                  never measured the Total Polar Materials</strong> in their frying oil.
+                  Not once. They don&apos;t know what&apos;s in it. Neither do their customers.
+                </p>
+                <p className="mt-3 font-sans text-xs text-white/30">
+                  NCOMA 2026 State of the Fryer Survey
+                </p>
+              </div>
+            </FadeInItem>
+            <FadeInItem>
+              <div className="border border-white/10 bg-white/5 p-6">
+                <p className="font-sans text-3xl font-bold text-amber">0</p>
+                <p className="mt-1 font-sans text-sm font-semibold text-white/90">
+                  Federal Standards
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-white/50">
+                  Germany, France, Spain, Belgium, China, India — <strong className="text-white/80">20+
+                  countries mandate TPM discard thresholds.</strong> The United States has
+                  no federal limit, no required testing, no standard of any kind.
+                </p>
+                <p className="mt-3 font-sans text-xs text-white/30">
+                  FDA / USDA regulatory review; Codex Alimentarius
+                </p>
+              </div>
+            </FadeInItem>
+          </FadeInStagger>
+        </Container>
+      </section>
+
+      {/* What's actually in the oil — the gross part */}
+      <Section className="border-t border-charcoal/10">
+        <Container>
+          <FadeIn>
+            <Eyebrow>The Chemistry of Neglect</Eyebrow>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+              Every hour your oil degrades, it produces these.
+            </h2>
+          </FadeIn>
+
+          <div className="mt-12 space-y-16">
+            <div className="grid items-start gap-12 md:grid-cols-2">
+              <SlideIn direction="left">
+                <div className="space-y-6">
+                  <div className="border-l-4 border-l-red-500 pl-5">
+                    <h3 className="font-sans text-base font-bold text-charcoal">4-Hydroxynonenal (4-HNE)</h3>
+                    <p className="mt-1 text-sm text-charcoal/60">
+                      A lipid peroxidation product from omega-6 PUFA oxidation. Classified as
+                      cytotoxic and genotoxic. Linked to oxidative stress, inflammation, and
+                      cell damage in peer-reviewed literature. Generated in every fryer running
+                      degraded PUFA-rich oil.
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-l-red-500 pl-5">
+                    <h3 className="font-sans text-base font-bold text-charcoal">Acrolein</h3>
+                    <p className="mt-1 text-sm text-charcoal/60">
+                      The simplest unsaturated aldehyde. A respiratory and gastrointestinal
+                      irritant. Produced when glycerol in oil breaks down at frying temperatures.
+                      The compound responsible for the acrid smell near an overused fryer.
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-l-red-500 pl-5">
+                    <h3 className="font-sans text-base font-bold text-charcoal">Trans,trans-2,4-decadienal</h3>
+                    <p className="mt-1 text-sm text-charcoal/60">
+                      The dominant aldehyde from linoleic acid oxidation. What you taste as
+                      &ldquo;rancid&rdquo; or &ldquo;fishy&rdquo; in degraded oil. Absorbed into
+                      the food during frying. Diners eat it. Staff breathe it.
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-l-amber pl-5">
+                    <h3 className="font-sans text-base font-bold text-charcoal">Total Polar Materials (TPM)</h3>
+                    <p className="mt-1 text-sm text-charcoal/60">
+                      The umbrella measurement for all degradation products — polymers,
+                      dimers, free fatty acids, oxidized triglycerides. Fresh oil: 2–4% TPM.
+                      Legal limit in Europe: 24–27% TPM. Many US fryers: nobody has ever checked.
+                    </p>
+                  </div>
+                </div>
+              </SlideIn>
+              <SlideIn direction="right">
+                <div className="space-y-4">
+                  <div className="bg-charcoal p-8 text-center">
+                    <p className="font-sans text-6xl font-bold text-amber md:text-8xl">30%+</p>
+                    <p className="mt-2 font-sans text-sm text-white/70">
+                      TPM levels found in unregulated US fryers
+                    </p>
+                    <p className="mt-1 font-sans text-xs text-white/30">
+                      No US survey exists. Delhi street vendors: 65%+ exceeded threshold.
+                      Athens restaurants: 17%. The US — with no testing — is flying blind.
+                    </p>
+                  </div>
+                  <div className="bg-charcoal/5 p-8 text-center">
+                    <p className="font-sans text-4xl font-bold text-charcoal md:text-5xl">3 days</p>
+                    <p className="mt-2 font-sans text-sm text-charcoal/50">
+                      Median oil change frequency — regardless of oil type, volume, or filtration
+                    </p>
+                    <p className="mt-1 font-sans text-xs text-charcoal/30">
+                      A fixed schedule that gets every operation wrong. Wastes good oil.
+                      Serves food in bad oil. Condition-based testing is the only answer.
+                    </p>
+                  </div>
+                  <div className="bg-charcoal/5 p-8 text-center">
+                    <p className="font-sans text-4xl font-bold text-charcoal md:text-5xl">20–40%</p>
+                    <p className="mt-2 font-sans text-sm text-charcoal/50">
+                      More fat absorbed by food fried in degraded oil
+                    </p>
+                    <p className="mt-1 font-sans text-xs text-charcoal/30">
+                      Saguy &amp; Dana (2003), Journal of Food Engineering
+                    </p>
+                  </div>
+                </div>
+              </SlideIn>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* The Seal — Three Tiers */}
-      <Section className="border-t border-charcoal/10 bg-white" id="seal">
+      {/* The line — transition from problem to solution */}
+      <section className="border-y border-charcoal/10 bg-charcoal py-12 md:py-16">
         <Container>
-          <Eyebrow>The WIYO! Seal</Eyebrow>
-          <h2 className="mt-2 text-3xl font-bold md:text-4xl">
-            Three tiers. One standard.
-          </h2>
-          <p className="mt-4 max-w-2xl text-charcoal/60">
-            The WIYO! seal tells diners their restaurant manages its frying oil
-            to a real, measurable standard — not a gut feeling, not a calendar
-            reminder, but tested and documented quality.
-          </p>
+          <FadeIn>
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl font-bold text-white md:text-3xl">
+                Nobody is coming to regulate this.
+              </h2>
+              <p className="mt-4 text-white/50">
+                The FDA hasn&apos;t signaled interest. No state has enacted TPM legislation.
+                No bill has been introduced. The gap is not closing.
+                So we built the standard ourselves.
+              </p>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <Card>
-              <Badge variant="bronze">Bronze — Foundation</Badge>
-              <h3 className="mt-4 text-xl font-bold">Managed Oil</h3>
-              <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
-                Daily filtration during every active service. TPM testing at
-                minimum daily. Oil discarded at 25% TPM or sensory triggers.
-                Fryers covered when not in use. Salt at the pass, never above
-                the fryer. Oil Log maintained with every service entry.
-              </p>
-            </Card>
-            <Card>
-              <Badge variant="silver">Silver — Certified Staff</Badge>
-              <h3 className="mt-4 text-xl font-bold">Trained Kitchen</h3>
-              <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
-                Everything in Bronze, plus: at least one staff member holds
-                NCOMA Certified Oil Technician (COT) status. Staff can name the
-                three degradation pathways, explain TPM, and demonstrate correct
-                meter operation. Thermostat verified within ±5°C weekly.
-                Dedicated fish fryer or documented oil-change protocol.
-              </p>
-            </Card>
-            <Card>
-              <Badge variant="gold">Gold — Exemplary</Badge>
-              <h3 className="mt-4 text-xl font-bold">Full Transparency</h3>
-              <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
-                Everything in Silver, plus: oil type disclosed to diners. 30+
-                days of Oil Log history available for review. Advanced filtration
-                (0.5-micron or equivalent). Cost-per-cycle tracking. Consumer-facing
-                WIYO! seal displayed. Annual inspection with 85%+ pass rate, no
-                zero scores in oil quality.
-              </p>
-            </Card>
-          </div>
+      {/* THE SOLUTION — WIYO! Seal */}
+      <Section className="bg-white" id="seal">
+        <Container>
+          <FadeIn>
+            <Eyebrow>The Solution</Eyebrow>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+              The WIYO! seal. Three tiers. One standard.
+            </h2>
+            <p className="mt-4 max-w-2xl text-charcoal/60">
+              <strong className="text-charcoal">What Is Your Oil?</strong> — the question every
+              diner should ask and every kitchen should be able to answer. The WIYO! seal means
+              this kitchen tests, filters, logs, and manages its oil to a published standard.
+            </p>
+          </FadeIn>
+
+          <FadeInStagger className="mt-12 grid gap-8 md:grid-cols-3">
+            <FadeInItem>
+              <Card>
+                <Badge variant="bronze">Bronze — Foundation</Badge>
+                <h3 className="mt-4 text-xl font-bold">Managed Oil</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  Daily filtration. TPM testing daily minimum. Oil discarded at 25% TPM.
+                  Fryers covered when idle. Salt at the pass only. Oil Log maintained
+                  every service.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card>
+                <Badge variant="silver">Silver — Certified Staff</Badge>
+                <h3 className="mt-4 text-xl font-bold">Trained Kitchen</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  Everything in Bronze. At least one NCOMA Certified Oil Technician (COT)
+                  on staff. Can name the three degradation pathways. Thermostat verified
+                  ±5°C weekly. Dedicated fish fryer.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card>
+                <Badge variant="gold">Gold — Exemplary</Badge>
+                <h3 className="mt-4 text-xl font-bold">Full Transparency</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  Everything in Silver. Oil type disclosed to diners. 30+ days of Oil
+                  Log history. 0.5-micron filtration. Consumer-facing WIYO! seal displayed.
+                  Annual inspection, 85%+ pass rate.
+                </p>
+              </Card>
+            </FadeInItem>
+          </FadeInStagger>
         </Container>
       </Section>
 
@@ -81,225 +272,257 @@ export default function Home() {
       <Section className="border-y border-charcoal/10 bg-charcoal py-12 text-white md:py-16">
         <Container>
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                number: '1M+',
-                label: 'Restaurant and foodservice outlets in the US',
-                source: 'National Restaurant Association, 2025',
-              },
-              {
-                number: '0',
-                label: 'Federal TPM discard thresholds for frying oil',
-                source: 'FDA / USDA regulatory review',
-              },
-              {
-                number: '25%',
-                label: 'TPM — the NCOMA discard standard, aligned with EU law',
-                source: 'NCOMA Standard; cf. Germany 27%, Belgium/Spain/France 25%',
-              },
-              {
-                number: '40–80%',
-                label: 'Oil life extension from daily filtration alone',
-                source: 'Moreira et al., Deep-Fat Frying: Fundamentals and Applications',
-              },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p className="text-4xl font-bold text-amber md:text-5xl">
-                  {stat.number}
-                </p>
-                <p className="mt-2 text-sm text-white/70">{stat.label}</p>
-                <p className="mt-1 font-sans text-xs text-white/30">
-                  {stat.source}
-                </p>
-              </div>
-            ))}
+            <AnimatedCounter
+              value="1M+"
+              label="Foodservice outlets with no oil quality standard"
+              source="National Restaurant Association, 2025"
+            />
+            <AnimatedCounter
+              value="78%"
+              label="Of operators who have never tested TPM"
+              source="NCOMA 2026 State of the Fryer"
+            />
+            <AnimatedCounter
+              value="25%"
+              label="TPM — the NCOMA discard threshold"
+              source="Aligned with Codex Alimentarius and EU law"
+            />
+            <AnimatedCounter
+              value="40–80%"
+              label="Oil life extension from proper management"
+              source="Moreira et al., Deep-Fat Frying"
+            />
           </div>
         </Container>
       </Section>
 
-      {/* Why It Matters — 4 Editorial Blocks */}
+      {/* The science — why it matters */}
       <Section>
         <Container>
-          <Eyebrow>Why It Matters</Eyebrow>
-          <h2 className="mt-2 text-3xl font-bold md:text-4xl">
-            Four reasons this isn&apos;t optional.
-          </h2>
+          <FadeIn>
+            <Eyebrow>The Science</Eyebrow>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+              This isn&apos;t opinion. It&apos;s peer-reviewed chemistry.
+            </h2>
+          </FadeIn>
 
-          <div className="mt-12 grid gap-12 md:grid-cols-2">
-            {/* Guests */}
-            <div>
-              <h3 className="text-xl font-bold">For the people eating the food</h3>
-              <p className="mt-3 text-charcoal/70">
-                Degraded frying oil produces volatile aldehydes — compounds like
-                4-hydroxynonenal and malondialdehyde that are implicated in
-                oxidative stress research. Grootveld et al. (2017) demonstrated
-                that PUFA-rich oils at frying temperatures generate aldehyde
-                levels that may exceed WHO tolerable daily intake thresholds.
-                Diners have no way to know whether the oil their food was cooked
-                in was tested today or last tested never.
-              </p>
-              <p className="mt-2 font-sans text-xs text-charcoal/40">
-                Grootveld et al. (2017), Lipids in Health and Disease, 16(1), 214.
-              </p>
+          <div className="mt-12 space-y-20">
+            {/* What diners eat */}
+            <div className="grid items-center gap-12 md:grid-cols-2">
+              <SlideIn direction="left">
+                <h3 className="text-xl font-bold">What your customers are actually eating</h3>
+                <p className="mt-3 text-charcoal/70">
+                  Aldehydes from degraded oil don&apos;t stay in the fryer. They absorb
+                  into the food during cooking. Grootveld&apos;s team used NMR spectroscopy
+                  to measure it: PUFA-rich oils at 180°C generated aldehyde concentrations
+                  orders of magnitude above safety thresholds. Those compounds cause
+                  the off-flavors — rancid, sour, fishy — that tell you the oil is done.
+                  But most kitchens have already served dozens of batches by that point.
+                </p>
+                <p className="mt-2 font-sans text-xs text-charcoal/40">
+                  Grootveld et al. (2021), Frontiers in Nutrition; (2015), BBC/De Montfort University
+                </p>
+              </SlideIn>
+              <SlideIn direction="right">
+                <InlineImage
+                  src={IMAGES.frenchFries}
+                  alt="Fried food — quality depends entirely on oil quality"
+                  className="aspect-[4/3]"
+                />
+              </SlideIn>
             </div>
 
-            {/* Operators */}
-            <div>
-              <h3 className="text-xl font-bold">For the operators paying for oil</h3>
-              <p className="mt-3 text-charcoal/70">
-                Most restaurants change oil on a fixed schedule — every two days,
-                every three, whatever someone decided years ago. That means
-                discarding oil that still has usable cycles, or worse, serving
-                food in oil past the safe threshold. The NCOMA guide documents
-                that managed operators extend oil life by 20–40% without
-                compromising food quality. On a $1,200/ton oil at 50+ gallons a
-                week, the math is not subtle.
-              </p>
-              <p className="mt-2 font-sans text-xs text-charcoal/40">
-                NCOMA Certified Cooking Oil Management Guide, 2025.
-              </p>
+            {/* What operators waste */}
+            <div className="grid items-center gap-12 md:grid-cols-2">
+              <SlideIn direction="left" className="order-2 md:order-1">
+                <InlineImage
+                  src={IMAGES.commercialKitchen}
+                  alt="Restaurant kitchen"
+                  className="aspect-[4/3]"
+                />
+              </SlideIn>
+              <SlideIn direction="right" className="order-1 md:order-2">
+                <h3 className="text-xl font-bold">What operators are wasting — or worse</h3>
+                <p className="mt-3 text-charcoal/70">
+                  The median oil change is every 3 days, regardless of the oil, the menu,
+                  the volume, or whether anyone filtered. That schedule either dumps oil
+                  with usable cycles left — costing thousands per year — or keeps serving
+                  food in oil past the threshold. One fryer, two ways to lose.
+                  Managed operators extend oil life 20–40% and know exactly when to change.
+                </p>
+                <p className="mt-2 font-sans text-xs text-charcoal/40">
+                  NCOMA 2026 State of the Fryer; Moreira et al., Deep-Fat Frying: Fundamentals
+                </p>
+              </SlideIn>
             </div>
 
-            {/* Planet */}
-            <div>
-              <h3 className="text-xl font-bold">For the planet absorbing the waste</h3>
-              <p className="mt-3 text-charcoal/70">
-                The US foodservice industry generates billions of pounds of used
-                cooking oil annually. Improperly discarded oil contaminates
-                waterways and clogs municipal sewer systems. Better oil
-                management means less oil consumed per cover served — fewer
-                deliveries, less waste hauled, lower GHG per meal. High oleic
-                palm oil from Colombian OxG hybrids delivers 3.6 tonnes per
-                hectare per year — six times the land efficiency of sunflower at
-                0.6 t/ha/yr.
-              </p>
-              <p className="mt-2 font-sans text-xs text-charcoal/40">
-                FAO Oilcrops Indices, 2026; Alcock et al. (2022), Science of the Total Environment.
-              </p>
+            {/* What PUFA does */}
+            <div className="grid items-center gap-12 md:grid-cols-2">
+              <SlideIn direction="left">
+                <h3 className="text-xl font-bold">Why the oil type matters more than the price</h3>
+                <p className="mt-3 text-charcoal/70">
+                  Linoleic acid — the dominant fatty acid in soybean, corn, and conventional
+                  sunflower oil — oxidizes <strong>10–40× faster</strong> than oleic acid.
+                  Same fryer, same temperature, different chemistry. Conventional soybean
+                  oil (58% PUFA) lasts 72 fry cycles. High oleic sunflower (9% PUFA) lasts
+                  210. The plant doesn&apos;t matter. The fatty acid profile does.
+                </p>
+                <p className="mt-2 font-sans text-xs text-charcoal/40">
+                  Choe &amp; Min (2007), Journal of Food Science; Holman &amp; Elmer (1947), JAOCS
+                </p>
+              </SlideIn>
+              <SlideIn direction="right">
+                <InlineImage
+                  src={IMAGES.oilPouring}
+                  alt="Cooking oil — composition determines everything"
+                  className="aspect-[4/3]"
+                />
+              </SlideIn>
             </div>
-
-            {/* Craft */}
-            <div>
-              <h3 className="text-xl font-bold">For the craft of cooking itself</h3>
-              <p className="mt-3 text-charcoal/70">
-                Oil is an ingredient. A fryer running degraded oil produces food
-                with softer texture, greasier mouthfeel, and off-flavors from
-                hexanal and short-chain aldehydes. Saguy &amp; Dana (2003) showed
-                degraded oil increases fat absorption by 20–40%. A chef who
-                sources high-quality proteins and produce but ignores the medium
-                those ingredients cook in is undermining their own work. The
-                fryer deserves the same attention as the sauté station.
-              </p>
-              <p className="mt-2 font-sans text-xs text-charcoal/40">
-                Saguy &amp; Dana (2003), Journal of Food Engineering, 56(2–3), 143–152.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Voices */}
-      <Section className="border-t border-charcoal/10 bg-white">
-        <Container>
-          <Eyebrow>From the Kitchen</Eyebrow>
-          <h2 className="mt-2 text-3xl font-bold">
-            What operators are saying
-          </h2>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {[
-              {
-                quote:
-                  '[NEEDS: real chef/operator quote about oil management or certification experience]',
-                name: '[NEEDS: real name]',
-                title: '[NEEDS: real title and restaurant]',
-              },
-              {
-                quote:
-                  '[NEEDS: real chef/operator quote about the economics of oil management]',
-                name: '[NEEDS: real name]',
-                title: '[NEEDS: real title and restaurant]',
-              },
-              {
-                quote:
-                  '[NEEDS: real chef/operator quote about consumer transparency]',
-                name: '[NEEDS: real name]',
-                title: '[NEEDS: real title and restaurant]',
-              },
-            ].map((voice, i) => (
-              <Card key={i} className="flex flex-col justify-between">
-                <blockquote className="text-lg italic leading-relaxed text-charcoal/70">
-                  &ldquo;{voice.quote}&rdquo;
-                </blockquote>
-                <div className="mt-6 border-t border-charcoal/10 pt-4">
-                  <p className="font-sans text-sm font-semibold">{voice.name}</p>
-                  <p className="font-sans text-xs text-charcoal/50">
-                    {voice.title}
-                  </p>
-                </div>
-              </Card>
-            ))}
           </div>
         </Container>
       </Section>
 
       {/* Featured Report */}
-      <Section className="border-t border-charcoal/10">
+      <Section className="border-t border-charcoal/10 bg-white">
         <Container>
           <div className="grid items-center gap-12 md:grid-cols-2">
-            <div>
+            <FadeIn>
               <Badge variant="amber">Featured Report</Badge>
               <h2 className="mt-4 text-3xl font-bold md:text-4xl">
                 The 2026 State of the Fryer
               </h2>
               <p className="mt-4 text-charcoal/70">
-                The first comprehensive look at how American restaurants
-                actually manage their frying oil — who tests, who filters, who
-                tracks cost per cycle, and who is still guessing. Original
-                research from NCOMA with data from operators across every
-                segment of US foodservice.
+                412 operators. 38 states. The first comprehensive survey of how American
+                restaurants actually manage their frying oil. The findings are worse than
+                expected.
               </p>
+              <ul className="mt-4 space-y-2 font-sans text-sm text-charcoal/60">
+                <li>• 78% have never measured TPM</li>
+                <li>• 25% have no filtration equipment at all</li>
+                <li>• 96% unaware of the 25% TPM international standard</li>
+                <li>• 84% cannot name a single oil degradation pathway</li>
+              </ul>
               <div className="mt-6">
                 <Button href="/reports/state-of-the-fryer-2026">
-                  Read the Report
+                  Read the Full Report
                 </Button>
               </div>
-            </div>
-            <div className="placeholder-image aspect-[4/3]">
-              840 × 630 — Report cover image
-            </div>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <InlineImage
+                src={IMAGES.dataCharts}
+                alt="Data from the 2026 State of the Fryer report"
+                className="aspect-[4/3]"
+              />
+            </FadeIn>
           </div>
         </Container>
       </Section>
 
-      {/* Closing CTA */}
-      <Section className="border-t border-charcoal/10 bg-charcoal text-white">
+      {/* Leadership */}
+      <Section className="border-t border-charcoal/10">
         <Container>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">
-              The oil in your fryer is the most used, least managed ingredient
-              in your kitchen.
+          <FadeIn>
+            <Eyebrow>Who We Are</Eyebrow>
+            <h2 className="mt-2 text-3xl font-bold">
+              Built by the people who know the fryer
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-white/60">
-              NCOMA certification gives your kitchen a standard, your staff a
-              credential, and your guests a reason to trust the food.
+            <p className="mt-4 max-w-2xl text-charcoal/60">
+              Not regulators. Not academics. Operators and engineers who spent decades
+              inside America&apos;s commercial kitchens and decided the standard needed to exist.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button href="/operators#get-certified" size="lg">
-                Get Certified
-              </Button>
-              <Button
-                href="/seal"
-                variant="outline"
-                size="lg"
-                className="border-white/20 text-white hover:border-white/40"
-              >
-                Learn About the Seal
-              </Button>
-            </div>
-          </div>
+          </FadeIn>
+
+          <FadeInStagger className="mt-12 grid gap-8 md:grid-cols-3">
+            <FadeInItem>
+              <Card>
+                <div className="mb-4">
+                  <Avatar name="Matt McMahon" src="/images/board/matt-mcmahon.jpg" />
+                </div>
+                <p className="font-sans text-base font-semibold">Matt McMahon</p>
+                <p className="font-sans text-sm text-amber">President</p>
+                <p className="mt-2 text-sm text-charcoal/60">
+                  240+ restaurant openings. $72M in sales across Arizona &amp; New Mexico.
+                  Developed Bulk Oil Management Solutions saving 100,000+ lbs of waste.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card>
+                <div className="mb-4">
+                  <Avatar name="Conrad Canter" src="/images/board/conrad-canter.jpg" />
+                </div>
+                <p className="font-sans text-base font-semibold">Conrad Canter</p>
+                <p className="font-sans text-sm text-amber">Technical Director</p>
+                <p className="mt-2 text-sm text-charcoal/60">
+                  Inventor of the Zeco Filtration Machine — patented 0.5-micron closed-loop
+                  system serving hundreds of restaurants across the Southwest.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card>
+                <div className="mb-4">
+                  <Avatar name="Pablo Herrera" src="/images/board/pablo-herrera.jpg" />
+                </div>
+                <p className="font-sans text-base font-semibold">Pablo Herrera</p>
+                <p className="font-sans text-sm text-amber">Chief Instigator</p>
+                <p className="mt-2 text-sm text-charcoal/60">
+                  Built the Oil Atlas, designed the certification framework, and won&apos;t
+                  stop asking the questions the oil industry would rather you didn&apos;t.
+                </p>
+              </Card>
+            </FadeInItem>
+          </FadeInStagger>
+
+          <FadeIn delay={0.3} className="mt-8 text-center">
+            <Button href="/about" variant="outline">
+              About NCOMA
+            </Button>
+          </FadeIn>
         </Container>
       </Section>
+
+      {/* Closing CTA — the mandate */}
+      <section className="relative overflow-hidden border-t border-charcoal/10 bg-charcoal py-20 text-white md:py-28">
+        <div className="absolute inset-0 opacity-15">
+          <HeroImage
+            src={IMAGES.heroFrying}
+            alt=""
+            className="absolute inset-0"
+            overlay={false}
+          />
+        </div>
+        <Container className="relative z-10">
+          <FadeIn>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold md:text-4xl">
+                Your customers can&apos;t see what&apos;s in the fryer.
+                <br />
+                <span className="text-amber">The WIYO! seal can.</span>
+              </h2>
+              <p className="mx-auto mt-4 max-w-lg text-white/60">
+                Certification gives your kitchen a standard, your staff a credential,
+                and your guests the one thing they&apos;ve never had: proof.
+              </p>
+              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Button href="/operators#get-certified" size="lg">
+                  Get Certified
+                </Button>
+                <Button
+                  href="/field-notes"
+                  variant="outline"
+                  size="lg"
+                  className="border-white/20 text-white hover:border-white/40"
+                >
+                  Read the Science
+                </Button>
+              </div>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
     </main>
   )
 }

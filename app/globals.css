@@ -46,6 +46,10 @@
   --container-xl: 80rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-foreground);
@@ -55,6 +59,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Selection color */
+::selection {
+  background: rgba(200, 132, 26, 0.2);
+  color: var(--color-charcoal);
+}
+
+/* Hero animations — CSS-based for instant rendering */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-hero-1 { animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+.animate-hero-2 { animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both; }
+.animate-hero-3 { animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
