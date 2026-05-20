@@ -1,5 +1,18 @@
 import type { Metadata } from 'next'
+import { Source_Serif_4, Inter } from 'next/font/google'
 import './globals.css'
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`${sourceSerif.variable} ${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   )
