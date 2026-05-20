@@ -9,6 +9,7 @@ const nav = [
   { label: 'The Seal', href: '/seal' },
   { label: 'For Operators', href: '/operators' },
   { label: 'For Consumers', href: '/consumers' },
+  { label: 'Oil Atlas', href: '/atlas' },
   { label: 'Field Notes', href: '/field-notes' },
   { label: 'Reports', href: '/reports' },
   { label: 'About', href: '/about' },

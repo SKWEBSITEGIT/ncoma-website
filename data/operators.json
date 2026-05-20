@@ -1,0 +1,100 @@
+{
+  "operators": [
+    {
+      "id": "wiyo-2026-00001",
+      "name": "The Golden Fryer",
+      "tier": "gold",
+      "address": "142 Main St, Austin, TX 78701",
+      "lat": 30.2672,
+      "lng": -97.7431,
+      "oilType": "High Oleic Palm Olein (OxG)",
+      "certifiedSince": "2026-01-15",
+      "lastInspection": "2026-01-15",
+      "category": "Quick Service"
+    },
+    {
+      "id": "wiyo-2026-00002",
+      "name": "Crisp & Co.",
+      "tier": "silver",
+      "address": "800 Congress Ave, Austin, TX 78701",
+      "lat": 30.271,
+      "lng": -97.7407,
+      "oilType": "High Oleic Sunflower",
+      "certifiedSince": "2026-02-01",
+      "lastInspection": "2026-02-01",
+      "category": "Casual Dining"
+    },
+    {
+      "id": "wiyo-2026-00003",
+      "name": "Fat Duck Kitchen",
+      "tier": "bronze",
+      "address": "1500 Red River St, Austin, TX 78701",
+      "lat": 30.2749,
+      "lng": -97.7355,
+      "oilType": "Canola",
+      "certifiedSince": "2026-03-10",
+      "lastInspection": "2026-03-10",
+      "category": "Food Truck"
+    },
+    {
+      "id": "wiyo-2026-00004",
+      "name": "Nashville Heat",
+      "tier": "gold",
+      "address": "422 Broadway, Nashville, TN 37203",
+      "lat": 36.1588,
+      "lng": -86.7762,
+      "oilType": "Beef Tallow",
+      "certifiedSince": "2026-01-20",
+      "lastInspection": "2026-01-20",
+      "category": "Quick Service"
+    },
+    {
+      "id": "wiyo-2026-00005",
+      "name": "Fryer's Delight",
+      "tier": "silver",
+      "address": "75 9th Ave, New York, NY 10011",
+      "lat": 40.7425,
+      "lng": -74.0049,
+      "oilType": "High Oleic Soybean",
+      "certifiedSince": "2026-02-15",
+      "lastInspection": "2026-02-15",
+      "category": "Casual Dining"
+    },
+    {
+      "id": "wiyo-2026-00006",
+      "name": "The Oil Standard",
+      "tier": "gold",
+      "address": "500 Bourbon St, New Orleans, LA 70130",
+      "lat": 29.9584,
+      "lng": -90.0659,
+      "oilType": "High Oleic Palm Olein (OxG)",
+      "certifiedSince": "2026-03-01",
+      "lastInspection": "2026-03-01",
+      "category": "Fine Dining"
+    },
+    {
+      "id": "wiyo-2026-00007",
+      "name": "South Fry Co.",
+      "tier": "bronze",
+      "address": "200 Peachtree St NE, Atlanta, GA 30303",
+      "lat": 33.7599,
+      "lng": -84.3879,
+      "oilType": "Peanut Oil",
+      "certifiedSince": "2026-04-01",
+      "lastInspection": "2026-04-01",
+      "category": "Quick Service"
+    },
+    {
+      "id": "wiyo-2026-00008",
+      "name": "Pacific Tempura House",
+      "tier": "silver",
+      "address": "1 Ferry Building, San Francisco, CA 94111",
+      "lat": 37.7955,
+      "lng": -122.3937,
+      "oilType": "Rice Bran Oil",
+      "certifiedSince": "2026-02-28",
+      "lastInspection": "2026-02-28",
+      "category": "Casual Dining"
+    }
+  ]
+}

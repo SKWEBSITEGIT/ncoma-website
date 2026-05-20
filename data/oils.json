@@ -1,0 +1,484 @@
+{
+  "oils": [
+    {
+      "slug": "ho-palm-olein-oxg",
+      "name": "High Oleic Palm Olein (OxG Hybrid)",
+      "family": "Palm",
+      "processing": "Fractionated, physically refined",
+      "fattyAcids": { "safa": 34, "mufa": 52, "pufa": 14 },
+      "smokePoint": 230,
+      "osi": 45,
+      "fryCycles": 355,
+      "transFat": 0,
+      "confidence": "high",
+      "sustainability": {
+        "deforestationRisk": "medium",
+        "certifications": ["RSPO", "ISCC"],
+        "notes": "OxG interspecific hybrid (E. oleifera × E. guineensis) yields 20–30% more oil per hectare than conventional African palm. Colombia is the leading OxG producer with mandatory no-deforestation commitments since 2010. RSPO and ISCC certification available."
+      },
+      "health": {
+        "ldlEffect": "neutral",
+        "trans": "zero",
+        "bioactives": "tocotrienols, carotenoids (if red fraction retained)",
+        "notes": "High oleic profile (>50% C18:1) comparable to olive oil in monounsaturated content. Lower SAFA than conventional palm (34% vs 45%). Retains tocotrienols — vitamin E isoforms with documented antioxidant activity. No trans fat from processing or frying."
+      },
+      "profile": "The top-performing frying oil in the Fedepalma/UCaldas standardized trials. OxG palm olein delivered 355 fry cycles before reaching 25% TPM — more than 3× the durability of conventional sunflower and 5× that of soybean. Its high oleic acid content (52% MUFA) resists oxidative degradation, while the saturated fraction provides thermal stability without generating trans fats. The fractionated olein has a lower cloud point than whole palm oil, suitable for temperate-climate operations. Availability in the US market is limited compared to Southeast Asian palm — most OxG production is in Colombia."
+    },
+    {
+      "slug": "ho-sunflower",
+      "name": "High Oleic Sunflower",
+      "family": "Seed",
+      "processing": "Expeller or solvent extracted, refined",
+      "fattyAcids": { "safa": 9, "mufa": 82, "pufa": 9 },
+      "smokePoint": 232,
+      "osi": 25,
+      "fryCycles": 210,
+      "transFat": 0,
+      "confidence": "high",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Grown on temperate cropland in the US, Argentina, and Ukraine. Low deforestation risk. Moderate water footprint. Yield per hectare is significantly lower than palm, requiring more land for equivalent volume."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "vitamin E (alpha-tocopherol)",
+        "notes": "Highest MUFA content of any common frying oil (82%). Very low saturated fat (9%). Associated with favorable LDL outcomes in the PREDIMED dietary framework. Excellent alpha-tocopherol content."
+      },
+      "profile": "The highest-MUFA oil commercially available for frying — 82% oleic acid with only 9% PUFA. This fatty acid profile makes it exceptionally resistant to oxidation. The Fedepalma/UCaldas data shows 210 fry cycles to 25% TPM, roughly double that of conventional sunflower. It is the premium choice for operators who want a seed oil with near-zero saturated fat. Widely available through major US distributors (Bunge, Cargill, ADM)."
+    },
+    {
+      "slug": "ho-soybean",
+      "name": "High Oleic Soybean",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 11, "mufa": 73, "pufa": 16 },
+      "smokePoint": 228,
+      "osi": 20,
+      "fryCycles": 180,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": ["RTRS"],
+        "notes": "US-grown high oleic soy (Plenish, Vistive Gold) on established Midwest cropland. Low deforestation risk for domestic production. RTRS certification available for imported soy."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "vitamin E, phytosterols",
+        "notes": "High oleic varieties reduce PUFA from ~55% to 16%, dramatically improving oxidative stability. AHA considers soybean oil heart-healthy. Developed specifically to replace partially hydrogenated soybean oil after the 2018 FDA trans fat ban."
+      },
+      "profile": "Developed by DuPont (Plenish) and Monsanto/Bayer (Vistive Gold) specifically to replace partially hydrogenated soybean oil. The high oleic variety shifts the fatty acid profile from PUFA-dominant (55%) to MUFA-dominant (73%), extending fry life to approximately 180 cycles — roughly 2.5× conventional soybean. Growing US market share since the 2018 trans fat ban, with strong supply chain infrastructure through existing soybean processors."
+    },
+    {
+      "slug": "ho-canola",
+      "name": "High Oleic Canola",
+      "family": "Seed",
+      "processing": "Expeller or solvent extracted, refined",
+      "fattyAcids": { "safa": 7, "mufa": 75, "pufa": 15 },
+      "smokePoint": 230,
+      "osi": 22,
+      "fryCycles": 190,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Grown in Canada and northern US on existing cropland. Low deforestation risk. Good rotational crop for soil health. Cargill's Clear Valley and Dow's Omega-9 are leading brands."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "alpha-linolenic acid (reduced), vitamin E",
+        "notes": "Lowest saturated fat of any high oleic option (7%). PUFA reduced from 28% to 15% vs conventional canola, retaining some ALA omega-3. AHA recommended."
+      },
+      "profile": "The high oleic variant of North America's most popular frying oil. Reduces PUFA from 28% to 15% while keeping canola's signature low saturated fat (7% — the lowest of any common frying oil). Estimated 190 fry cycles, roughly 60% longer than conventional canola. Gaining market share rapidly as Cargill (Clear Valley), Bunge, and ADM expand high oleic canola offerings to foodservice. Operators switching from conventional canola get significantly longer oil life with the same neutral flavor profile."
+    },
+    {
+      "slug": "mid-oleic-sunflower",
+      "name": "Mid-Oleic Sunflower (NuSun)",
+      "family": "Seed",
+      "processing": "Expeller or solvent extracted, refined",
+      "fattyAcids": { "safa": 9, "mufa": 65, "pufa": 26 },
+      "smokePoint": 228,
+      "osi": 16,
+      "fryCycles": 150,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "US-grown, primarily in the Dakotas, Kansas, and Colorado. NuSun is the National Sunflower Association's trademarked mid-oleic variety. Low environmental footprint."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "vitamin E",
+        "notes": "Moderate improvement over conventional sunflower — MUFA up from 20% to 65%, PUFA down from 66% to 26%. A meaningful step toward oxidative stability without reaching high oleic levels."
+      },
+      "profile": "NuSun is the National Sunflower Association's mid-oleic variety, bred as a compromise between conventional sunflower (66% PUFA) and high oleic (9% PUFA). At 65% MUFA and 26% PUFA, it delivers approximately 150 fry cycles — a 40% improvement over conventional sunflower. Widely used in US snack food manufacturing. Available in foodservice channels but less common than high oleic sunflower for restaurant frying."
+    },
+    {
+      "slug": "beef-tallow",
+      "name": "Beef Tallow",
+      "family": "Animal",
+      "processing": "Rendered, filtered",
+      "fattyAcids": { "safa": 50, "mufa": 42, "pufa": 4 },
+      "smokePoint": 210,
+      "osi": 30,
+      "fryCycles": 280,
+      "transFat": 2.5,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Byproduct of beef processing — no additional land use when sourced as rendering output. Environmental impact attributed to cattle production, not the fat itself. Supply tied to beef industry demand."
+      },
+      "health": {
+        "ldlEffect": "unfavorable",
+        "trans": "2–3% naturally occurring ruminant trans fat",
+        "bioactives": "CLA (conjugated linoleic acid)",
+        "notes": "High saturated fat (50%) raises LDL cholesterol in most dietary contexts. Contains naturally occurring trans fats (2–3%) from rumen biohydrogenation — chemically distinct from industrial trans fats. Contains CLA, which has mixed evidence for health benefits."
+      },
+      "profile": "The classic American frying fat, displaced by seed oils in the 1980s–90s and now returning in premium burger and fry operations. Tallow's low PUFA content (4%) gives it exceptional oxidative stability — 280 fry cycles in controlled testing. The flavor is distinctive and prized by operators positioning around traditional methods. Trade-offs: 50% saturated fat, 2–3% naturally occurring trans fat, and a flavor profile that transfers to everything fried in it. Not suitable for vegetarian, halal (if not halal-certified), or health-forward menus."
+    },
+    {
+      "slug": "evoo",
+      "name": "Extra Virgin Olive Oil",
+      "family": "Fruit",
+      "processing": "Cold pressed, unrefined",
+      "fattyAcids": { "safa": 14, "mufa": 73, "pufa": 11 },
+      "smokePoint": 190,
+      "osi": 18,
+      "fryCycles": 150,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": ["PDO", "PGI"],
+        "notes": "Mediterranean tree crop on established orchards — minimal deforestation risk. High water footprint from irrigation. Carbon sequestration in mature olive groves partially offsets emissions."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "polyphenols (oleocanthal, hydroxytyrosol), squalene, vitamin E",
+        "notes": "The PREDIMED trial (2013, NEJM) demonstrated 30% cardiovascular risk reduction with EVOO-supplemented Mediterranean diet. Polyphenol content survives moderate frying temperatures. Oleocanthal has documented anti-inflammatory properties comparable to ibuprofen."
+      },
+      "profile": "The most studied oil for health outcomes, but among the most expensive for commercial frying. EVOO's polyphenol content (oleocanthal, hydroxytyrosol) provides natural antioxidant protection during frying, partially compensating for a moderate smoke point (190°C). At 150 fry cycles, its performance is respectable for its PUFA level. Viable primarily for Mediterranean-concept restaurants and fine dining where the flavor and health positioning justify the cost. Widespread adulteration in the global EVOO market is a sourcing concern."
+    },
+    {
+      "slug": "canola",
+      "name": "Canola (Conventional)",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 7, "mufa": 63, "pufa": 28 },
+      "smokePoint": 220,
+      "osi": 12,
+      "fryCycles": 120,
+      "transFat": 0,
+      "confidence": "high",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Grown primarily in Canada and northern US on existing cropland. Low deforestation risk. Good rotational crop. The most widely available frying oil in North American foodservice distribution."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "alpha-linolenic acid (ALA omega-3), vitamin E",
+        "notes": "Lowest saturated fat of any common cooking oil (7%). Contains ALA omega-3 (9–11%), though much is lost during high-heat frying. AHA recommended. The 28% PUFA is the primary liability for frying stability."
+      },
+      "profile": "The most widely used frying oil in North American foodservice — estimated 25–30% of the US market. Canola offers the lowest saturated fat content (7%) and a neutral flavor that works across all cuisines. However, its 28% PUFA makes it significantly less stable than high oleic alternatives. At 120 fry cycles, it delivers roughly half the useful life of high oleic sunflower. The Grootveld research demonstrates that PUFA-rich oils generate volatile aldehydes at frying temperatures — operators using conventional canola should test TPM frequently and expect shorter oil life."
+    },
+    {
+      "slug": "soybean",
+      "name": "Soybean Oil (Conventional)",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 16, "mufa": 23, "pufa": 58 },
+      "smokePoint": 225,
+      "osi": 7,
+      "fryCycles": 72,
+      "transFat": 0,
+      "confidence": "high",
+      "sustainability": {
+        "deforestationRisk": "medium",
+        "certifications": ["RTRS"],
+        "notes": "World's most produced vegetable oil. South American expansion linked to deforestation in Cerrado and Amazon biomes. US production on established cropland is lower risk."
+      },
+      "health": {
+        "ldlEffect": "neutral",
+        "trans": "zero when not partially hydrogenated",
+        "bioactives": "vitamin E, phytosterols, ALA omega-3",
+        "notes": "Very high PUFA (58%) — primary concern for frying. Generates significant volatile aldehydes at frying temperatures per Grootveld et al. (2014). Was the primary oil partially hydrogenated for trans fat production before the 2018 FDA ban."
+      },
+      "profile": "The largest-volume frying oil in the US by historical usage, but one of the weakest performers for frying durability. At 58% PUFA, soybean oil degrades rapidly — only 72 fry cycles to 25% TPM in the Fedepalma/UCaldas trials, roughly one-fifth the life of high oleic palm olein. Grootveld et al. demonstrated that PUFA-rich oils at frying temperatures generate volatile aldehydes at levels that may exceed WHO tolerable daily intake thresholds. Many large chains have already switched to high oleic alternatives."
+    },
+    {
+      "slug": "conv-palm-olein",
+      "name": "Conventional Palm Olein",
+      "family": "Palm",
+      "processing": "Fractionated, physically refined",
+      "fattyAcids": { "safa": 45, "mufa": 40, "pufa": 12 },
+      "smokePoint": 230,
+      "osi": 35,
+      "fryCycles": 300,
+      "transFat": 0,
+      "confidence": "high",
+      "sustainability": {
+        "deforestationRisk": "high",
+        "certifications": ["RSPO", "ISCC"],
+        "notes": "Conventional African palm (E. guineensis) historically linked to deforestation in Southeast Asia and West Africa. RSPO certification partially addresses this. Indonesian and Malaysian plantations account for ~85% of global supply. Limited direct use in US foodservice — more common in processed food manufacturing."
+      },
+      "health": {
+        "ldlEffect": "unfavorable",
+        "trans": "zero",
+        "bioactives": "tocotrienols, carotenoids (if unrefined)",
+        "notes": "Higher saturated fat (45%) than OxG varieties. Palmitic acid (C16:0) associated with LDL elevation in meta-analyses, though the sn-2 positioning in palm oil may modulate absorption."
+      },
+      "profile": "The global frying standard — palm olein accounts for roughly one-third of world vegetable oil production. Outstanding thermal stability from its high saturated fat content (45%): 300 fry cycles to 25% TPM. In the US, conventional palm olein is more common in processed food manufacturing and institutional foodservice than in independent restaurants. Sustainability concerns (deforestation, orangutan habitat) make it a reputational risk for consumer-facing brands without RSPO certification."
+    },
+    {
+      "slug": "avocado",
+      "name": "Avocado Oil",
+      "family": "Fruit",
+      "processing": "Cold pressed or refined",
+      "fattyAcids": { "safa": 12, "mufa": 71, "pufa": 14 },
+      "smokePoint": 250,
+      "osi": 15,
+      "fryCycles": 140,
+      "transFat": 0,
+      "confidence": "low",
+      "sustainability": {
+        "deforestationRisk": "medium",
+        "certifications": [],
+        "notes": "Extremely high water footprint — avocados require 1,000+ liters per kg of fruit. Mexican expansion linked to deforestation. Low oil yield per hectare."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "lutein, vitamin E, phytosterols",
+        "notes": "Favorable fatty acid profile similar to olive oil. Contains lutein (eye health). UC Davis (2020) found 82% of commercial avocado oil samples were oxidized or adulterated — sourcing quality is a major concern."
+      },
+      "profile": "Marketed as a premium frying oil with a genuinely high smoke point (250°C refined). The fatty acid profile is favorable — 71% MUFA, similar to olive oil. However, the economics are prohibitive for most commercial frying operations. The UC Davis study (Hilary Green et al., 2020) found widespread adulteration and oxidation in commercial avocado oil. At 140 fry cycles with low confidence data, it sits in the middle of the performance range. Suitable only for ultra-premium operations where the brand story justifies the cost."
+    },
+    {
+      "slug": "coconut-refined",
+      "name": "Coconut Oil (Refined)",
+      "family": "Fruit",
+      "processing": "Copra-dried, expeller extracted, refined",
+      "fattyAcids": { "safa": 82, "mufa": 6, "pufa": 2 },
+      "smokePoint": 204,
+      "osi": 35,
+      "fryCycles": 250,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": ["Fair Trade"],
+        "notes": "Grown on small island plantations, primarily Philippines and Indonesia. Low deforestation risk. Fair Trade options available. Low water footprint."
+      },
+      "health": {
+        "ldlEffect": "unfavorable",
+        "trans": "zero",
+        "bioactives": "lauric acid, MCTs",
+        "notes": "82% saturated fat — the highest of any common cooking oil. AHA explicitly advises against coconut oil for cardiovascular health (2017 Presidential Advisory). Contains MCTs, but the LDL-raising effect of lauric acid is well established in clinical trials."
+      },
+      "profile": "Near-total saturation (82%) gives coconut oil excellent oxidative stability — 250 fry cycles with minimal PUFA degradation. The flavor is distinctive and suits Southeast Asian cuisines. However, the AHA explicitly advises against its use due to LDL-raising effects of lauric acid. Best suited for operations where the coconut flavor is specifically desired and diners understand the saturated fat content."
+    },
+    {
+      "slug": "refined-olive",
+      "name": "Refined Olive Oil",
+      "family": "Fruit",
+      "processing": "Refined from virgin olive oil",
+      "fattyAcids": { "safa": 14, "mufa": 73, "pufa": 11 },
+      "smokePoint": 210,
+      "osi": 15,
+      "fryCycles": 160,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Same olive grove production as EVOO. Refined from oil that doesn't meet extra virgin standards. Established Mediterranean orchards."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "reduced polyphenols (refining removes most), vitamin E",
+        "notes": "Same fatty acid profile as EVOO but most polyphenols removed by refining. Still high-MUFA (73%) with cardiovascular benefits from the fatty acid composition alone."
+      },
+      "profile": "A practical middle ground between EVOO's health positioning and commercial frying economics. Retains the same fatty acid profile (73% MUFA) but loses most polyphenols. The higher smoke point (210°C vs 190°C) and neutral flavor make it more versatile for frying. At 160 cycles, it outperforms most seed oils. Used in Mediterranean, Italian, and Spanish restaurant concepts where olive oil is part of the brand identity."
+    },
+    {
+      "slug": "peanut",
+      "name": "Peanut Oil",
+      "family": "Legume",
+      "processing": "Expeller or solvent extracted, refined",
+      "fattyAcids": { "safa": 17, "mufa": 46, "pufa": 32 },
+      "smokePoint": 225,
+      "osi": 12,
+      "fryCycles": 130,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Nitrogen-fixing legume, beneficial for soil. Primarily grown in US (Georgia, Texas), China, India. Low deforestation risk."
+      },
+      "health": {
+        "ldlEffect": "neutral",
+        "trans": "zero",
+        "bioactives": "resveratrol, phytosterols, vitamin E",
+        "notes": "Moderate PUFA (32%) limits frying stability. Contains resveratrol. Allergen: refined peanut oil is generally safe for peanut-allergic individuals (proteins removed by refining), but cross-contact risk requires dedicated fryer protocols."
+      },
+      "profile": "A traditional deep-frying oil valued for its distinctive nutty flavor, particularly in Asian, Southern US, and turkey-frying applications. Five Guys and Chick-fil-A both use peanut oil as a brand differentiator. The 46% MUFA provides moderate stability, but 32% PUFA limits fry life to approximately 130 cycles. The critical operational consideration is allergen management — peanut allergy requires dedicated fryer protocols and clear disclosure."
+    },
+    {
+      "slug": "corn",
+      "name": "Corn Oil",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 13, "mufa": 28, "pufa": 55 },
+      "smokePoint": 225,
+      "osi": 8,
+      "fryCycles": 85,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Byproduct of corn wet milling (ethanol and starch production). Low marginal land use. US corn belt production."
+      },
+      "health": {
+        "ldlEffect": "neutral",
+        "trans": "zero",
+        "bioactives": "phytosterols (highest of any common oil), vitamin E",
+        "notes": "Very high PUFA (55%) — poor frying stability. Highest phytosterol content of any common cooking oil, which may modestly reduce cholesterol absorption in dietary contexts."
+      },
+      "profile": "A low-cost byproduct of corn processing with neutral flavor but poor frying stability. At 55% PUFA, corn oil degrades rapidly — 85 fry cycles to 25% TPM. Common in institutional foodservice (schools, hospitals) where purchasing decisions are driven by commodity contracts. Not recommended for high-volume frying operations where oil life is a significant cost factor."
+    },
+    {
+      "slug": "conv-sunflower",
+      "name": "Conventional Sunflower",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 11, "mufa": 20, "pufa": 66 },
+      "smokePoint": 225,
+      "osi": 6,
+      "fryCycles": 107,
+      "transFat": 0,
+      "confidence": "high",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Temperate cropland in Ukraine, Russia, Argentina, US. Ukraine conflict disrupted global supply in 2022–2023."
+      },
+      "health": {
+        "ldlEffect": "neutral",
+        "trans": "zero",
+        "bioactives": "vitamin E (alpha-tocopherol)",
+        "notes": "Very high PUFA (66%) — second highest after safflower. Generates significant volatile aldehydes at frying temperatures. Vitamin E is consumed rapidly as antioxidant defense during frying."
+      },
+      "profile": "The direct comparison case for high oleic sunflower. Conventional sunflower's 66% PUFA — primarily linoleic acid (C18:2) — makes it one of the least stable frying oils: 107 cycles to 25% TPM, roughly half the life of the high oleic variety. This is the clearest illustration of why fatty acid profile, not oil type, determines frying performance. Two sunflower oils, same plant, completely different frying behavior."
+    },
+    {
+      "slug": "lard",
+      "name": "Lard (Pork Fat)",
+      "family": "Animal",
+      "processing": "Rendered, filtered",
+      "fattyAcids": { "safa": 39, "mufa": 45, "pufa": 11 },
+      "smokePoint": 190,
+      "osi": 22,
+      "fryCycles": 200,
+      "transFat": 0.5,
+      "confidence": "low",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Byproduct of pork processing. No additional land use. Supply tied to pork demand. Not suitable for halal or kosher operations."
+      },
+      "health": {
+        "ldlEffect": "neutral to unfavorable",
+        "trans": "minimal (0.5% naturally occurring)",
+        "bioactives": "vitamin D (if pasture-raised)",
+        "notes": "More balanced than its reputation — 45% MUFA is closer to canola than to coconut. Lower saturated fat (39%) than tallow or coconut. Dietary restrictions (halal, kosher, vegetarian) limit applicability."
+      },
+      "profile": "Lard has a better fatty acid profile than its reputation suggests — 45% MUFA, closer to canola than to coconut oil. At 200 fry cycles, it outperforms most seed oils. The lower smoke point (190°C) limits high-temperature applications. Dietary restrictions (halal, kosher, vegetarian) are the primary barrier. Returning in artisanal and heritage-cooking operations. Common in Mexican, Chinese, and traditional European frying."
+    },
+    {
+      "slug": "rice-bran",
+      "name": "Rice Bran Oil",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 20, "mufa": 39, "pufa": 35 },
+      "smokePoint": 232,
+      "osi": 14,
+      "fryCycles": 140,
+      "transFat": 0,
+      "confidence": "low",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Byproduct of rice milling — no additional land use. Very low marginal environmental impact. Primarily produced in India, Thailand, Japan."
+      },
+      "health": {
+        "ldlEffect": "favorable",
+        "trans": "zero",
+        "bioactives": "gamma-oryzanol, tocotrienols, phytosterols",
+        "notes": "Contains gamma-oryzanol, a unique antioxidant shown to reduce cholesterol absorption. Rich in tocotrienols. Popular in Japan for frying — the preferred oil for tempura in many high-end operations."
+      },
+      "profile": "Popular in Asian foodservice, particularly Japan, where it is valued for producing clean, crisp fried food with minimal flavor transfer. Contains gamma-oryzanol, a unique antioxidant that provides modest additional protection during frying. At 140 fry cycles, it sits in the middle of the performance range. Limited availability in North American foodservice supply chains — primarily available through specialty importers."
+    },
+    {
+      "slug": "grapeseed",
+      "name": "Grapeseed Oil",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 10, "mufa": 17, "pufa": 71 },
+      "smokePoint": 216,
+      "osi": 5,
+      "fryCycles": 60,
+      "transFat": 0,
+      "confidence": "low",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": [],
+        "notes": "Byproduct of winemaking — very low marginal environmental impact. Extremely low oil yield per hectare."
+      },
+      "health": {
+        "ldlEffect": "neutral",
+        "trans": "zero",
+        "bioactives": "proanthocyanidins, vitamin E",
+        "notes": "The highest PUFA (71%) of any common cooking oil — the worst possible profile for frying. Proanthocyanidins are rapidly consumed at frying temperatures. Sometimes marketed as healthy but linoleic acid dominance generates maximum aldehyde load at frying temps."
+      },
+      "profile": "The worst-performing frying oil in this atlas. At 71% PUFA, grapeseed oil has the highest polyunsaturated content of any common cooking oil — maximum oxidative degradation and aldehyde generation at frying temperatures. Only 60 fry cycles to 25% TPM. Grapeseed oil is a finishing and sautéing oil, not a frying oil. Its presence in commercial fryers reflects marketing positioning rather than frying science."
+    },
+    {
+      "slug": "cottonseed",
+      "name": "Cottonseed Oil",
+      "family": "Seed",
+      "processing": "Solvent extracted, refined",
+      "fattyAcids": { "safa": 26, "mufa": 18, "pufa": 52 },
+      "smokePoint": 216,
+      "osi": 9,
+      "fryCycles": 90,
+      "transFat": 0,
+      "confidence": "medium",
+      "sustainability": {
+        "deforestationRisk": "low",
+        "certifications": ["BCI"],
+        "notes": "Byproduct of cotton fiber production. Very high water footprint from cotton irrigation. Heavy pesticide use in conventional cotton."
+      },
+      "health": {
+        "ldlEffect": "neutral",
+        "trans": "zero",
+        "bioactives": "vitamin E",
+        "notes": "High PUFA (52%) similar to soybean. Historically exempt from some food safety regulations because cotton was classified as a fiber crop, not a food crop. Gossypol (a toxic compound) removed during refining."
+      },
+      "profile": "A byproduct of the cotton industry with a long history in American frying — Crisco was originally cottonseed oil. The fatty acid profile (52% PUFA) is similar to soybean, yielding only 90 fry cycles to 25% TPM. Its continued use in foodservice is largely inertial. More common in the southern US where cotton processing infrastructure makes it locally available."
+    }
+  ]
+}
