@@ -467,10 +467,11 @@ export default function Home() {
                   <Avatar name="Pablo Herrera" src="/images/board/pablo-herrera.jpg" />
                 </div>
                 <p className="font-sans text-base font-semibold">Pablo Herrera</p>
-                <p className="font-sans text-sm text-amber">Chief Instigator</p>
+                <p className="font-sans text-sm text-amber">Founder, The Oil Insurgency</p>
                 <p className="mt-2 text-sm text-charcoal/60">
-                  Built the Oil Atlas, designed the certification framework, and won&apos;t
-                  stop asking the questions the oil industry would rather you didn&apos;t.
+                  Built the Oil Atlas, designed the certification framework, and launched
+                  The Oil Insurgency — forcing transparency into every commercial fryer
+                  in America.
                 </p>
               </Card>
             </FadeInItem>

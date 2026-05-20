@@ -1,4 +1,7 @@
 import { Container, Section, Eyebrow, Button, Card, Badge, Callout, Footnotes, FootnoteRef } from '@/components/ui'
+import { HeroImage } from '@/components/HeroImage'
+import { IMAGES } from '@/lib/images'
+import { FadeIn } from '@/components/AnimatedSection'
 
 export const metadata = { title: 'The WIYO! Seal' }
 
@@ -48,13 +51,12 @@ const faqs = [
 export default function Seal() {
   return (
     <main>
-      <Section className="pt-20 md:pt-28">
-        <Container size="md">
-          <Eyebrow>The Seal</Eyebrow>
-          <h1 className="mt-2 text-4xl font-bold md:text-5xl">
-            What the WIYO! seal means — and why it exists.
-          </h1>
-          <p className="mt-6 text-lg text-charcoal/70">
+      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+        <HeroImage src={IMAGES.certificate} alt="Certification standard" className="absolute inset-0" />
+        <Container size="md" className="relative z-10 py-20 md:py-28">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">The Seal</p>
+          <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">What the WIYO! seal means — and why it exists.</h1>
+          <p className="animate-hero-3 mt-6 text-lg text-white/70">
             There are over one million foodservice outlets in the United States.
             <FootnoteRef id={1} /> Not one of them is required by federal law to
             test its frying oil. No mandated TPM threshold. No certification. No
@@ -63,14 +65,17 @@ export default function Seal() {
             international best practice.
           </p>
         </Container>
-      </Section>
+      </section>
 
       {/* Three Tiers */}
       <Section className="border-t border-charcoal/10">
         <Container>
+          <FadeIn>
           <h2 className="text-3xl font-bold">Three certification tiers</h2>
+          </FadeIn>
 
           {/* Bronze */}
+          <FadeIn>
           <div className="mt-12 border-l-4 border-l-bronze pl-8">
             <Badge variant="bronze">Bronze — Foundation</Badge>
             <h3 className="mt-3 text-2xl font-bold">Managed Oil</h3>
@@ -89,8 +94,10 @@ export default function Seal() {
               <li>Oil Log maintained with per-session entries: date, fryer ID, oil type, TPM readings, filtration events, top-off volumes, discard decisions, staff initials</li>
             </ul>
           </div>
+          </FadeIn>
 
           {/* Silver */}
+          <FadeIn>
           <div className="mt-12 border-l-4 border-l-silver pl-8">
             <Badge variant="silver">Silver — Certified Staff</Badge>
             <h3 className="mt-3 text-2xl font-bold">Trained Kitchen</h3>
@@ -108,8 +115,10 @@ export default function Seal() {
               <li>Filter media inventory adequate (minimum one-week supply)</li>
             </ul>
           </div>
+          </FadeIn>
 
           {/* Gold */}
+          <FadeIn>
           <div className="mt-12 border-l-4 border-l-gold pl-8">
             <Badge variant="gold">Gold — Exemplary</Badge>
             <h3 className="mt-3 text-2xl font-bold">Full Transparency</h3>
@@ -126,13 +135,16 @@ export default function Seal() {
               <li>UCO disposal records maintained (hauler receipts or disposal log)</li>
             </ul>
           </div>
+          </FadeIn>
         </Container>
       </Section>
 
       {/* Audit Methodology */}
       <Section className="border-t border-charcoal/10 bg-white">
         <Container size="md">
+          <FadeIn>
           <h2 className="text-3xl font-bold">How the audit works</h2>
+          </FadeIn>
           <p className="mt-4 text-charcoal/70">
             NCOMA inspections evaluate six sections. Each item is pass/fail.
             Overall pass requires 85% with no zero scores in Section C (oil

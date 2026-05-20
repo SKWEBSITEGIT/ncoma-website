@@ -1,17 +1,19 @@
 import { Container, Section, Eyebrow, Button, Callout, Footnotes, FootnoteRef } from '@/components/ui'
+import { HeroImage, InlineImage } from '@/components/HeroImage'
+import { IMAGES } from '@/lib/images'
+import { FadeIn } from '@/components/AnimatedSection'
 
 export const metadata = { title: 'For Consumers' }
 
 export default function Consumers() {
   return (
     <main>
-      <Section className="pt-20 md:pt-28">
-        <Container size="md">
-          <Eyebrow>For Consumers</Eyebrow>
-          <h1 className="mt-2 text-4xl font-bold md:text-5xl">
-            What you fry in is what you serve.
-          </h1>
-          <p className="mt-6 text-lg text-charcoal/70">
+      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+        <HeroImage src={IMAGES.restaurantDining} alt="Restaurant dining experience" className="absolute inset-0" />
+        <Container size="md" className="relative z-10 py-20 md:py-28">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">For Consumers</p>
+          <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">What you fry in is what you serve.</h1>
+          <p className="animate-hero-3 mt-6 text-lg text-white/70">
             You read ingredient labels. You ask about sourcing. You check
             whether the chicken is antibiotic-free. But when your food is
             deep-fried, the oil it cooks in becomes part of the meal — and right
@@ -19,12 +21,14 @@ export default function Consumers() {
             last tested never.
           </p>
         </Container>
-      </Section>
+      </section>
 
       {/* Why it matters */}
       <Section className="border-t border-charcoal/10">
         <Container size="md">
+          <FadeIn>
           <h2 className="text-3xl font-bold">Why the oil matters</h2>
+          </FadeIn>
           <div className="mt-8 space-y-6 text-charcoal/70">
             <p>
               Frying oil degrades every time food enters the fryer. Water from
@@ -68,13 +72,17 @@ export default function Consumers() {
               seal solves.
             </p>
           </div>
+
+          <InlineImage src={IMAGES.frenchFries} alt="Golden french fries" className="mt-10 aspect-[16/7]" />
         </Container>
       </Section>
 
       {/* What the seal tells you */}
       <Section className="border-t border-charcoal/10 bg-white">
         <Container size="md">
+          <FadeIn>
           <h2 className="text-3xl font-bold">What the WIYO! seal tells you</h2>
+          </FadeIn>
           <div className="mt-8 space-y-4">
             {[
               'The kitchen filters its oil daily — at minimum',
@@ -96,7 +104,9 @@ export default function Consumers() {
       {/* Ask your restaurant */}
       <Section className="border-t border-charcoal/10">
         <Container size="md">
+          <FadeIn>
           <h2 className="text-3xl font-bold">Ask your restaurant</h2>
+          </FadeIn>
           <p className="mt-4 text-charcoal/70">
             You don&apos;t need a chemistry degree. Three questions change the
             conversation:

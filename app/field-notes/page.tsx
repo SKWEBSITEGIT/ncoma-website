@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import { Container, Section, Eyebrow } from '@/components/ui'
+import { HeroImage } from '@/components/HeroImage'
+import { IMAGES } from '@/lib/images'
+import { FadeIn } from '@/components/AnimatedSection'
 import { getFieldNotes } from '@/lib/content'
 
 export const metadata = { title: 'Field Notes' }
@@ -9,26 +12,25 @@ export default function FieldNotesIndex() {
 
   return (
     <main>
-      <Section className="pt-20 md:pt-28">
-        <Container size="md">
-          <Eyebrow>Field Notes</Eyebrow>
-          <h1 className="mt-2 text-4xl font-bold md:text-5xl">
-            Science for the kitchen.
-          </h1>
-          <p className="mt-6 text-lg text-charcoal/70">
+      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+        <HeroImage src={IMAGES.scientificResearch} alt="Scientific research and oil analysis" className="absolute inset-0" />
+        <Container size="md" className="relative z-10 py-20 md:py-28">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">Field Notes</p>
+          <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">Science for the kitchen.</h1>
+          <p className="animate-hero-3 mt-6 text-lg text-white/70">
             Technical articles on oil chemistry, degradation science, filtration,
             and operational best practices — written for operators, not
             academics.
           </p>
         </Container>
-      </Section>
+      </section>
 
       <Section className="border-t border-charcoal/10">
         <Container size="md">
           <div className="space-y-8">
             {articles.map((article) => (
+              <FadeIn key={article.meta.slug}>
               <Link
-                key={article.meta.slug}
                 href={`/field-notes/${article.meta.slug}`}
                 className="block border-b border-charcoal/5 pb-8 transition-colors hover:border-charcoal/20"
               >
@@ -47,6 +49,7 @@ export default function FieldNotesIndex() {
                   ))}
                 </div>
               </Link>
+              </FadeIn>
             ))}
           </div>
         </Container>

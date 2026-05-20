@@ -1,17 +1,19 @@
 import { Container, Section, Eyebrow, Button, Card, Badge, Callout, Footnotes, FootnoteRef } from '@/components/ui'
+import { HeroImage, InlineImage } from '@/components/HeroImage'
+import { IMAGES } from '@/lib/images'
+import { FadeIn } from '@/components/AnimatedSection'
 
 export const metadata = { title: 'For Operators' }
 
 export default function Operators() {
   return (
     <main>
-      <Section className="pt-20 md:pt-28">
-        <Container size="md">
-          <Eyebrow>For Operators</Eyebrow>
-          <h1 className="mt-2 text-4xl font-bold md:text-5xl">
-            Stop guessing. Start managing.
-          </h1>
-          <p className="mt-6 text-lg text-charcoal/70">
+      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+        <HeroImage src={IMAGES.kitchenLine} alt="Commercial kitchen line" className="absolute inset-0" />
+        <Container size="md" className="relative z-10 py-20 md:py-28">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">For Operators</p>
+          <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">Stop guessing. Start managing.</h1>
+          <p className="animate-hero-3 mt-6 text-lg text-white/70">
             Most restaurants change their frying oil on a schedule — every two
             days, every three days, whatever someone decided years ago. That
             means discarding oil that still has cycles left, or worse, serving
@@ -19,12 +21,14 @@ export default function Operators() {
             operators know the difference.
           </p>
         </Container>
-      </Section>
+      </section>
 
       {/* The Economics */}
       <Section className="border-t border-charcoal/10">
         <Container>
+          <FadeIn>
           <h2 className="text-3xl font-bold">The economics of managed oil</h2>
+          </FadeIn>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             <div>
               <h3 className="text-xl font-bold">Oil life extension</h3>
@@ -69,13 +73,17 @@ export default function Operators() {
               </p>
             </div>
           </div>
+
+          <InlineImage src={IMAGES.deepFryer} alt="Commercial deep fryer in operation" className="mt-12 aspect-[21/9]" />
         </Container>
       </Section>
 
       {/* 4-Step Process */}
       <Section className="border-t border-charcoal/10 bg-white" id="get-certified">
         <Container size="md">
+          <FadeIn>
           <h2 className="text-3xl font-bold">Four steps to certification</h2>
+          </FadeIn>
           <div className="mt-8 space-y-8">
             {[
               {
@@ -117,7 +125,9 @@ export default function Operators() {
       {/* What Auditors Check */}
       <Section className="border-t border-charcoal/10">
         <Container size="md">
+          <FadeIn>
           <h2 className="text-3xl font-bold">What auditors check</h2>
+          </FadeIn>
           <p className="mt-4 text-charcoal/70">
             A preview of the NCOMA kitchen inspection checklist. No surprises —
             every item is published in the Certified Cooking Oil Management Guide.
