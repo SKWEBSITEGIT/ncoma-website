@@ -21,9 +21,10 @@ export default function Home() {
               What is <span className="text-amber">in</span> your oil<span className="text-amber">?</span>
             </h1>
             <p className="animate-hero-2 mx-auto mt-6 max-w-2xl text-lg text-white/80 md:text-xl">
-              Acrolein. 4-hydroxynonenal. Trans,trans-2,4-decadienal.
-              If those words mean nothing to you, you&apos;re not testing your frying oil.
-              Neither are 78% of American restaurants.
+              Carcinogens. Aldehydes. Trans fats. Free radicals.
+              If your restaurant isn&apos;t testing its frying oil, this is what&apos;s
+              in it — and what your customers are eating. 78% of American
+              restaurants have never checked.
             </p>
             <div className="animate-hero-3 mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button href="#the-problem" size="lg">
@@ -194,6 +195,97 @@ export default function Home() {
               </SlideIn>
             </div>
           </div>
+        </Container>
+      </Section>
+
+      {/* What it does to your body */}
+      <Section className="border-t border-charcoal/10 bg-white">
+        <Container>
+          <FadeIn>
+            <Eyebrow>The Health Impact</Eyebrow>
+            <h2 className="mt-2 text-3xl font-bold md:text-4xl">
+              This is what degraded oil does to the people eating it.
+            </h2>
+            <p className="mt-4 max-w-3xl text-charcoal/60">
+              When cooking oil reaches high temperatures or is reused without testing,
+              its chemical structure breaks down through oxidation and thermal stress.
+              The result is a toxic cocktail that transfers directly into food — and
+              into the bodies of everyone who eats it.
+            </p>
+          </FadeIn>
+
+          <FadeInStagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <FadeInItem>
+              <Card className="h-full border-t-4 border-t-red-500">
+                <h3 className="font-sans text-lg font-bold">Cancer Risk</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  Degraded oils contain mutagenic compounds and carcinogens.
+                  Chronic consumption — and even inhalation of frying fumes — is
+                  linked to higher rates of lung, colorectal, and breast cancers
+                  in peer-reviewed epidemiological studies.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card className="h-full border-t-4 border-t-red-500">
+                <h3 className="font-sans text-lg font-bold">Cardiovascular Disease</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  Degraded oils alter your lipid profile — raising LDL
+                  (&ldquo;bad&rdquo;) cholesterol while lowering HDL (&ldquo;good&rdquo;)
+                  cholesterol. They promote atherosclerosis: the stiffening and
+                  narrowing of arteries that leads to heart attacks and strokes.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card className="h-full border-t-4 border-t-red-500">
+                <h3 className="font-sans text-lg font-bold">Neurological Damage</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  4-Hydroxynonenal (4-HNE) — generated in every fryer running
+                  degraded PUFA-rich oil — plays a documented role in the
+                  progression of neurodegenerative disorders including
+                  Alzheimer&apos;s and Parkinson&apos;s disease.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card className="h-full border-t-4 border-t-amber">
+                <h3 className="font-sans text-lg font-bold">Trans Fat Formation</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  Heat alters the structure of unsaturated fats, creating trans
+                  fats — the same compounds the FDA moved to eliminate from the
+                  food supply. Every hour of frying in degraded oil produces more.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card className="h-full border-t-4 border-t-amber">
+                <h3 className="font-sans text-lg font-bold">Oxidative Stress</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  Free radicals and aldehydes from degraded oil damage cells and
+                  DNA. This chronic internal stress is linked to premature aging,
+                  inflammation, and the development of degenerative diseases.
+                </p>
+              </Card>
+            </FadeInItem>
+            <FadeInItem>
+              <Card className="h-full border-t-4 border-t-amber">
+                <h3 className="font-sans text-lg font-bold">Digestive Distress</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
+                  In the short term, rancid oil causes stomach irritation, nausea,
+                  and indigestion. The off-flavors — rancid, sour, fishy — are
+                  your body telling you the oil should have been changed days ago.
+                </p>
+              </Card>
+            </FadeInItem>
+          </FadeInStagger>
+
+          <FadeIn delay={0.3} className="mt-10">
+            <p className="mx-auto max-w-2xl text-center text-sm text-charcoal/40">
+              Sources: Harvard T.H. Chan School of Public Health; Grootveld et al. (2021),
+              Frontiers in Nutrition; Choe &amp; Min (2007), Journal of Food Science.
+            </p>
+          </FadeIn>
         </Container>
       </Section>
 
