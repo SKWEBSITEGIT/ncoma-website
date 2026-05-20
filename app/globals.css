@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme inline {
+  /* Brand colors */
+  --color-amber: #C8841A;
+  --color-amber-light: #D9A54B;
+  --color-amber-dark: #A06A10;
+  --color-charcoal: #1F1F1F;
+  --color-offwhite: #FAF6F0;
+  --color-olive: #5C6A3E;
+  --color-olive-light: #7A8B56;
+
+  /* Functional colors */
+  --color-background: var(--color-offwhite);
+  --color-foreground: var(--color-charcoal);
+
+  /* Tier colors */
+  --color-bronze: #A67C52;
+  --color-silver: #8A8D8F;
+  --color-gold: #C8841A;
+
+  /* Fonts */
+  --font-serif: 'Source Serif 4', 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Type scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Spacing */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+
+  /* Container */
+  --container-sm: 40rem;
+  --container-md: 48rem;
+  --container-lg: 64rem;
+  --container-xl: 80rem;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* UI elements use sans */
+nav, button, label, input, select, textarea, th,
+[data-ui] {
+  font-family: var(--font-sans);
+}
+
+/* Prose constraints for long-form reading */
+.prose {
+  max-width: 70ch;
+}
+
+/* Footnotes */
+.footnote-ref {
+  font-size: 0.75rem;
+  vertical-align: super;
+  line-height: 0;
+  color: var(--color-amber);
+  text-decoration: none;
+}
+
+.footnote-ref:hover {
+  text-decoration: underline;
+}
+
+/* Placeholder image boxes */
+.placeholder-image {
+  background: #E8E2D8;
+  border: 1px dashed #C4BBAD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8A8178;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+}

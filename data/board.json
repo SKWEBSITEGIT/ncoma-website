@@ -1,0 +1,76 @@
+{
+  "directors": [
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio — 2-3 sentences on background and role]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    }
+  ],
+  "advisors": [
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    },
+    {
+      "name": "[NEEDS: real name]",
+      "title": "[NEEDS: real title]",
+      "organization": "[NEEDS: real organization]",
+      "bio": "[NEEDS: real bio]",
+      "headshot": "/images/board/placeholder.jpg"
+    }
+  ]
+}

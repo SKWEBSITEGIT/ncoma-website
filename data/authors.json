@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "ncoma-editorial",
+    "name": "NCOMA Editorial",
+    "role": "Staff",
+    "bio": "The editorial team at the National Cooking Oil Management Association.",
+    "avatar": "/images/authors/ncoma-editorial.jpg"
+  },
+  {
+    "slug": "placeholder-author-1",
+    "name": "[NEEDS: real author name]",
+    "role": "[NEEDS: real role]",
+    "bio": "[NEEDS: real bio]",
+    "avatar": "/images/authors/placeholder.jpg"
+  }
+]
