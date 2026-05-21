@@ -88,7 +88,7 @@ export default function Atlas() {
               <button
                 key={f}
                 onClick={() => setFamily(f)}
-                className={`h-8 px-3 font-sans text-sm transition-colors ${
+                className={`h-8 px-3 font-sans text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 ${
                   family === f
                     ? 'bg-charcoal text-white'
                     : 'border border-charcoal/20 text-charcoal/60 hover:border-charcoal/40'
@@ -108,8 +108,9 @@ export default function Atlas() {
             )}
           </div>
 
-          <div className="mt-6 overflow-x-auto">
+          <div className="mt-6 overflow-x-auto" role="region" aria-label="Oil comparison data">
             <table className="w-full min-w-[800px] font-sans text-sm">
+              <caption className="sr-only">Frying oil comparison data — sortable by fry cycles, fatty acid composition, smoke point, and oxidative stability</caption>
               <thead>
                 <tr className="border-b border-charcoal/10 text-left">
                   <th className="w-8 pb-3 pr-2"></th>
@@ -138,6 +139,7 @@ export default function Atlas() {
                         checked={selected.includes(oil.slug)}
                         onChange={() => toggleSelect(oil.slug)}
                         disabled={!selected.includes(oil.slug) && selected.length >= 3}
+                        aria-label={`Select ${oil.name} for comparison`}
                         className="accent-amber"
                       />
                     </td>
@@ -195,7 +197,7 @@ function ThBtn({
     <th className="pb-3 px-2">
       <button
         onClick={() => onClick(sortKey)}
-        className={`font-semibold transition-colors ${active ? 'text-charcoal' : 'text-charcoal/50 hover:text-charcoal/70'}`}
+        className={`font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 ${active ? 'text-charcoal' : 'text-charcoal/50 hover:text-charcoal/70'}`}
       >
         {label}
         {active && <span className="ml-0.5">{dir === 'asc' ? '↑' : '↓'}</span>}

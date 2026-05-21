@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
+import Image from 'next/image'
 
 export { IMAGES } from '@/lib/images'
 
@@ -9,15 +10,16 @@ interface HeroImageProps {
   alt: string
   className?: string
   overlay?: 'gradient' | 'dark' | 'light' | false
+  priority?: boolean
 }
 
 const overlayClasses = {
-  gradient: 'bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/20',
-  dark: 'bg-charcoal/70',
-  light: 'bg-charcoal/40',
+  gradient: 'bg-gradient-to-t from-charcoal/90 via-charcoal/70 to-charcoal/40',
+  dark: 'bg-charcoal/80',
+  light: 'bg-charcoal/50',
 }
 
-export function HeroImage({ src, alt, className = '', overlay = 'gradient' }: HeroImageProps) {
+export function HeroImage({ src, alt, className = '', overlay = 'gradient', priority = true }: HeroImageProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,13 +27,7 @@ export function HeroImage({ src, alt, className = '', overlay = 'gradient' }: He
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
       className={`overflow-hidden ${className}`}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt={alt}
-        className="absolute inset-0 h-full w-full object-cover"
-        loading="eager"
-      />
+      <Image src={src} alt={alt} fill className="object-cover" priority={priority} />
       {overlay && (
         <div className={`absolute inset-0 ${overlayClasses[overlay]}`} />
       )}
@@ -48,13 +44,7 @@ export function InlineImage({ src, alt, className = '' }: { src: string; alt: st
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className={`relative overflow-hidden rounded-lg ${className}`}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt={alt}
-        className="absolute inset-0 h-full w-full object-cover"
-        loading="lazy"
-      />
+      <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
     </motion.div>
   )
 }

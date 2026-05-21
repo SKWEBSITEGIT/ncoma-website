@@ -11,15 +11,16 @@ export default function About() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[60vh] items-end overflow-hidden">
         <HeroImage
           src={IMAGES.commercialKitchen}
           alt="Professional kitchen environment"
           className="absolute inset-0"
+          overlay="dark"
         />
-        <Container size="md" className="relative z-10 py-20 md:py-28">
-          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">About</p>
-          <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">
+        <Container size="md" className="relative z-10 pb-16 pt-32 md:pb-20">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-amber">About</p>
+          <h1 className="animate-hero-2 mt-2 max-w-3xl text-4xl font-bold text-white md:text-5xl">
             We built the standard the industry never had.
           </h1>
         </Container>
@@ -142,7 +143,8 @@ export default function About() {
         </Container>
       </Section>
 
-      {/* Advisory Committee */}
+      {/* Advisory Committee — renders only when real advisors exist */}
+      {board.advisors.length > 0 && (
       <Section className="border-t border-charcoal/10">
         <Container>
           <FadeIn>
@@ -150,7 +152,7 @@ export default function About() {
             <p className="mt-2 text-charcoal/50">Expanding — reach out if you want to help build the standard.</p>
           </FadeIn>
           <FadeInStagger className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {board.advisors.filter(m => !m.name.includes('NEEDS')).map((member, i) => (
+            {(board.advisors as Array<{ name: string; title: string; organization: string; bio: string; headshot: string }>).map((member, i) => (
               <FadeInItem key={i}>
                 <Card>
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-charcoal/5 text-xl font-bold text-charcoal/30">
@@ -169,6 +171,7 @@ export default function About() {
           </FadeInStagger>
         </Container>
       </Section>
+      )}
 
       {/* Contact */}
       <Section className="border-t border-charcoal/10 bg-white">
@@ -178,15 +181,15 @@ export default function About() {
             <div className="mt-6 space-y-2 font-sans text-sm text-charcoal/60">
               <p>
                 General inquiries:{' '}
-                <span className="text-charcoal">info@ncoma.org</span>
+                <a href="mailto:info@ncoma.org" className="text-amber hover:underline">info@ncoma.org</a>
               </p>
               <p>
                 Certification:{' '}
-                <span className="text-charcoal">certification@ncoma.org</span>
+                <a href="mailto:certification@ncoma.org" className="text-amber hover:underline">certification@ncoma.org</a>
               </p>
               <p>
                 Media &amp; press:{' '}
-                <span className="text-charcoal">press@ncoma.org</span>
+                <a href="mailto:press@ncoma.org" className="text-amber hover:underline">press@ncoma.org</a>
               </p>
             </div>
           </FadeIn>

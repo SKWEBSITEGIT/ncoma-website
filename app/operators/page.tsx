@@ -1,4 +1,4 @@
-import { Container, Section, Eyebrow, Button, Card, Badge, Callout, Footnotes, FootnoteRef } from '@/components/ui'
+import { Container, Section, Eyebrow, Button, Badge, Footnotes, FootnoteRef } from '@/components/ui'
 import { HeroImage, InlineImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
@@ -8,18 +8,15 @@ export const metadata = { title: 'For Operators' }
 export default function Operators() {
   return (
     <main>
-      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
-        <HeroImage src={IMAGES.kitchenLine} alt="Commercial kitchen line" className="absolute inset-0" />
-        <Container size="md" className="relative z-10 py-20 md:py-28">
-          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">For Operators</p>
+      <section className="relative flex min-h-[50vh] items-end overflow-hidden">
+        <HeroImage src={IMAGES.kitchenLine} alt="Commercial kitchen line" className="absolute inset-0" overlay="dark" />
+        <Container size="md" className="relative z-10 pb-16 pt-32 md:pb-20">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-amber">For Operators</p>
           <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">Stop guessing. Start managing.</h1>
-          <p className="animate-hero-2 mt-3 text-base text-white/50">NCOMA certification for commercial kitchens</p>
-          <p className="animate-hero-3 mt-6 text-lg text-white/70">
-            Most restaurants change their frying oil on a schedule — every two
-            days, every three days, whatever someone decided years ago. That
-            means discarding oil that still has cycles left, or worse, serving
-            food in oil that&apos;s already past the safe threshold. NCOMA-certified
-            operators know the difference.
+          <p className="animate-hero-3 mt-6 max-w-xl text-lg leading-relaxed text-white/80">
+            Most restaurants change oil on a fixed schedule — wasting oil with
+            cycles left, or serving food in oil past the threshold.
+            NCOMA-certified operators know the difference.
           </p>
         </Container>
       </section>
@@ -118,7 +115,7 @@ export default function Operators() {
             ))}
           </div>
           <div className="mt-12">
-            <Button size="lg">Start Your Application</Button>
+            <Button href="/contact" size="lg">Start Your Application</Button>
           </div>
         </Container>
       </Section>
@@ -165,45 +162,26 @@ export default function Operators() {
       <Section className="border-t border-charcoal/10 bg-white">
         <Container>
           <h2 className="text-3xl font-bold">Pricing</h2>
-          <Callout className="mt-6">
-            <p className="font-sans text-sm">
-              [NEEDS: confirmed pricing. Placeholder ranges shown.]
-            </p>
-          </Callout>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            <Card className="border-t-4 border-t-bronze">
+          <p className="mt-4 text-charcoal/70">
+            Certification pricing varies by operation size and tier. Each tier
+            builds on the one below it:
+          </p>
+          <div className="mt-8 space-y-4">
+            <div className="flex items-start gap-4">
               <Badge variant="bronze">Bronze</Badge>
-              <p className="mt-4 text-3xl font-bold">$XXX</p>
-              <p className="font-sans text-sm text-charcoal/50">per kitchen / year</p>
-              <ul className="mt-4 space-y-2 font-sans text-sm text-charcoal/60">
-                <li>On-site inspection</li>
-                <li>WIYO! Bronze seal</li>
-                <li>Oil Log templates</li>
-                <li>Annual renewal</li>
-              </ul>
-            </Card>
-            <Card className="border-t-4 border-t-silver">
+              <p className="text-sm text-charcoal/60">On-site inspection, WIYO! Bronze seal, Oil Log templates, annual renewal.</p>
+            </div>
+            <div className="flex items-start gap-4">
               <Badge variant="silver">Silver</Badge>
-              <p className="mt-4 text-3xl font-bold">$XXX</p>
-              <p className="font-sans text-sm text-charcoal/50">per kitchen / year</p>
-              <ul className="mt-4 space-y-2 font-sans text-sm text-charcoal/60">
-                <li>Everything in Bronze</li>
-                <li>COT exam for one staff member</li>
-                <li>WIYO! Silver seal</li>
-                <li>Equipment verification</li>
-              </ul>
-            </Card>
-            <Card className="border-t-4 border-t-gold">
+              <p className="text-sm text-charcoal/60">Everything in Bronze, plus COT exam for one staff member, equipment verification.</p>
+            </div>
+            <div className="flex items-start gap-4">
               <Badge variant="gold">Gold</Badge>
-              <p className="mt-4 text-3xl font-bold">$XXX</p>
-              <p className="font-sans text-sm text-charcoal/50">per kitchen / year</p>
-              <ul className="mt-4 space-y-2 font-sans text-sm text-charcoal/60">
-                <li>Everything in Silver</li>
-                <li>Consumer-facing WIYO! seal kit</li>
-                <li>Cost-per-cycle analytics</li>
-                <li>Priority listing in directory</li>
-              </ul>
-            </Card>
+              <p className="text-sm text-charcoal/60">Everything in Silver, plus consumer-facing WIYO! seal kit, cost-per-cycle analytics, priority directory listing.</p>
+            </div>
+          </div>
+          <div className="mt-8">
+            <Button href="/contact">Request a Quote</Button>
           </div>
         </Container>
       </Section>

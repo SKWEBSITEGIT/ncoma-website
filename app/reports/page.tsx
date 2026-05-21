@@ -18,15 +18,14 @@ export default function ReportsIndex() {
 
   return (
     <main>
-      <section className="relative flex min-h-[40vh] items-center overflow-hidden">
-        <HeroImage src={IMAGES.analytics} alt="Data analytics and research" className="absolute inset-0" />
-        <Container size="md" className="relative z-10 py-20 md:py-28">
-          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">Reports</p>
+      <section className="relative flex min-h-[40vh] items-end overflow-hidden">
+        <HeroImage src={IMAGES.analytics} alt="Data analytics and research" className="absolute inset-0" overlay="dark" />
+        <Container size="md" className="relative z-10 pb-12 pt-28 md:pb-16">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-amber">Reports</p>
           <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">Research and industry data.</h1>
-          <p className="animate-hero-3 mt-6 text-lg text-white/70">
-            NCOMA publishes original research on oil management practices,
-            cost economics, and frying science. These reports inform the
-            standard and make the case for managed oil.
+          <p className="animate-hero-3 mt-4 max-w-xl text-lg leading-relaxed text-white/80">
+            Original research on oil management, cost economics, and frying
+            science. Data that makes the case for managed oil.
           </p>
         </Container>
       </section>

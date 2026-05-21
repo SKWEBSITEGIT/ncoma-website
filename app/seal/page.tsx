@@ -1,4 +1,4 @@
-import { Container, Section, Eyebrow, Button, Card, Badge, Callout, Footnotes, FootnoteRef } from '@/components/ui'
+import { Container, Section, Eyebrow, Button, Badge, Footnotes, FootnoteRef } from '@/components/ui'
 import { HeroImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: 'What does it cost?',
-    a: '[NEEDS: confirmed pricing — placeholder: Individual COT exam: $XXX. Kitchen COMK inspection: $XXX–$XXX depending on size. Annual renewal: $XXX. Multi-unit COMP programs priced per location.]',
+    a: 'Pricing is tailored to operation size and tier. Contact us at certification@ncoma.org for a quote.',
   },
   {
     q: 'As a diner, how do I verify a restaurant is certified?',
@@ -51,18 +51,15 @@ const faqs = [
 export default function Seal() {
   return (
     <main>
-      <section className="relative flex min-h-[60vh] items-center overflow-hidden">
-        <HeroImage src={IMAGES.certificate} alt="Certification standard" className="absolute inset-0" />
-        <Container size="md" className="relative z-10 py-20 md:py-28">
-          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">The Seal</p>
-          <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">What the WIYO! seal means — and why it exists.</h1>
-          <p className="animate-hero-3 mt-6 max-w-2xl text-lg text-white/70">
-            There are over one million foodservice outlets in the United States.
-            <FootnoteRef id={1} /> Not one of them is required by federal law to
-            test its frying oil. No mandated TPM threshold. No certification. No
-            public disclosure of oil type or condition. The WIYO! seal fills
-            that gap with a voluntary, industry-built standard aligned with
-            international best practice.
+      <section className="relative flex min-h-[60vh] items-end overflow-hidden">
+        <HeroImage src={IMAGES.certificate} alt="Certification standard" className="absolute inset-0" overlay="dark" />
+        <Container size="md" className="relative z-10 pb-16 pt-32 md:pb-20">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-amber">The Seal</p>
+          <h1 className="animate-hero-2 mt-2 max-w-3xl text-4xl font-bold text-white md:text-5xl">What the WIYO! seal means — and why it exists.</h1>
+          <p className="animate-hero-3 mt-6 max-w-xl text-lg leading-relaxed text-white/80">
+            Over one million US foodservice outlets.<FootnoteRef id={1} /> Not
+            one required by federal law to test its frying oil. The WIYO! seal
+            fills that gap.
           </p>
         </Container>
       </section>
@@ -177,27 +174,13 @@ export default function Seal() {
       <Section className="border-t border-charcoal/10">
         <Container size="md">
           <h2 className="text-3xl font-bold">Pricing</h2>
-          <Callout className="mt-6">
-            <p className="font-sans text-sm">
-              [NEEDS: confirmed pricing from Pablo. Placeholder ranges below.]
-            </p>
-          </Callout>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            <Card>
-              <p className="font-sans text-sm font-semibold text-charcoal/50">Individual</p>
-              <p className="mt-2 text-3xl font-bold">$XXX</p>
-              <p className="mt-1 font-sans text-sm text-charcoal/60">COT exam fee</p>
-            </Card>
-            <Card>
-              <p className="font-sans text-sm font-semibold text-charcoal/50">Single Kitchen</p>
-              <p className="mt-2 text-3xl font-bold">$XXX–XXX</p>
-              <p className="mt-1 font-sans text-sm text-charcoal/60">COMK inspection + certification</p>
-            </Card>
-            <Card>
-              <p className="font-sans text-sm font-semibold text-charcoal/50">Multi-Unit</p>
-              <p className="mt-2 text-3xl font-bold">Custom</p>
-              <p className="mt-1 font-sans text-sm text-charcoal/60">COMP program, priced per location</p>
-            </Card>
+          <p className="mt-4 text-charcoal/70">
+            Certification pricing varies by operation size, number of fryers, and
+            tier level. Individual COT exams, single-kitchen COMK inspections, and
+            multi-unit COMP programs are each priced separately.
+          </p>
+          <div className="mt-6">
+            <Button href="/contact">Request a Quote</Button>
           </div>
         </Container>
       </Section>
@@ -229,12 +212,14 @@ export default function Seal() {
               <input
                 type="text"
                 placeholder="e.g. WIYO-2026-00142"
-                className="h-12 flex-1 border border-charcoal/20 bg-white px-4 font-sans text-sm focus:border-amber focus:outline-none"
+                aria-label="WIYO verification code"
+                disabled
+                className="h-12 flex-1 border border-charcoal/20 bg-white px-4 font-sans text-sm opacity-50 cursor-not-allowed"
               />
-              <Button>Verify</Button>
+              <Button disabled className="opacity-50 cursor-not-allowed">Verify</Button>
             </div>
             <p className="mt-3 font-sans text-xs text-charcoal/40">
-              Verification checks against the NCOMA certification database. Results show tier, certification date, and last inspection.
+              Verification database launching with certified operators.
             </p>
           </div>
         </Container>

@@ -25,7 +25,7 @@ export default function CostPerCycleAnalysis() {
           HERO
       ════════════════════════════════════════════════════ */}
       <section className="relative min-h-[75vh] overflow-hidden">
-        <HeroImage src={IMAGES.oilPouring} alt="Golden oil pouring into a fryer" />
+        <HeroImage src={IMAGES.oilPouring} alt="Golden oil pouring into a fryer" className="absolute inset-0" overlay="dark" />
         <div className="relative z-10 flex min-h-[75vh] flex-col justify-end pb-16 pt-32 md:pb-24">
           <Container size="lg">
             <div className="max-w-2xl">
@@ -40,7 +40,7 @@ export default function CostPerCycleAnalysis() {
                 cycles each delivers before reaching 25% Total Polar Materials.
               </p>
             </div>
-            <div className="animate-hero-3 mt-10 flex items-center gap-3 font-sans text-sm text-white/50">
+            <div className="animate-hero-3 mt-10 flex items-center gap-3 font-sans text-sm text-white/70">
               <span>NCOMA Research Division</span>
               <span>·</span>
               <time>May 2026</time>
@@ -381,7 +381,7 @@ export default function CostPerCycleAnalysis() {
                   minimal polyunsaturated fat. That natural composition is why palm
                   olein ranks first and second on every frying performance metric.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-white/60">
+                <p className="mt-4 text-lg leading-relaxed text-white/70">
                   The interspecific hybrid (OxG) variety further concentrates oleic
                   acid, pushing fry life to 355 cycles — nearly six times that of
                   conventional soybean oil.
@@ -412,7 +412,7 @@ export default function CostPerCycleAnalysis() {
                 <Button href="/atlas" size="lg">
                   Oil Atlas
                 </Button>
-                <Button href="/calculator" variant="outline" size="lg">
+                <Button href="/tools/cost-calculator" variant="outline" size="lg">
                   Cost Calculator
                 </Button>
               </div>

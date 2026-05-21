@@ -63,53 +63,57 @@ export default function CostCalculator() {
               <h2 className="text-2xl font-bold">Your operation</h2>
               <div className="mt-6 space-y-5">
                 <div>
-                  <label className="font-sans text-sm font-medium text-charcoal/60">
+                  <label htmlFor="pricePerGallon" className="font-sans text-sm font-medium text-charcoal/60">
                     What you pay per gallon of oil ($)
                   </label>
                   <input
+                    id="pricePerGallon"
                     type="number"
                     value={pricePerGallon}
                     onChange={(e) => setPricePerGallon(Number(e.target.value))}
                     step={0.25}
                     min={0.5}
-                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none"
+                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
                 <div>
-                  <label className="font-sans text-sm font-medium text-charcoal/60">
+                  <label htmlFor="gallonsPerWeek" className="font-sans text-sm font-medium text-charcoal/60">
                     Gallons used per week (all fryers)
                   </label>
                   <input
+                    id="gallonsPerWeek"
                     type="number"
                     value={gallonsPerWeek}
                     onChange={(e) => setGallonsPerWeek(Number(e.target.value))}
                     min={1}
-                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none"
+                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
                 <div>
-                  <label className="font-sans text-sm font-medium text-charcoal/60">
+                  <label htmlFor="currentChangeDays" className="font-sans text-sm font-medium text-charcoal/60">
                     How often do you change oil now? (days)
                   </label>
                   <input
+                    id="currentChangeDays"
                     type="number"
                     value={currentChangeDays}
                     onChange={(e) => setCurrentChangeDays(Number(e.target.value))}
                     min={1}
                     max={14}
-                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none"
+                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
                 <div>
-                  <label className="font-sans text-sm font-medium text-charcoal/60">
+                  <label htmlFor="friesPerDay" className="font-sans text-sm font-medium text-charcoal/60">
                     Fried covers per day
                   </label>
                   <input
+                    id="friesPerDay"
                     type="number"
                     value={friesPerDay}
                     onChange={(e) => setFriesPerDay(Number(e.target.value))}
                     min={1}
-                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none"
+                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm tabular-nums focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
                 <div className="flex items-center gap-3">

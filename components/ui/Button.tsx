@@ -28,7 +28,7 @@ export function Button({
   className = '',
   ...props
 }: ButtonProps) {
-  const cls = `inline-flex items-center justify-center font-sans font-medium tracking-wide transition-colors ${styles[variant]} ${sizes[size]} ${className}`
+  const cls = `inline-flex items-center justify-center font-sans font-medium tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 ${styles[variant]} ${sizes[size]} ${className}`
 
   if (href) {
     return (

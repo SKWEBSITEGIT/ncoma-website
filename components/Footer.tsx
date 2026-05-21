@@ -26,7 +26,6 @@ const columns = [
     links: [
       { label: 'About NCOMA', href: '/about' },
       { label: 'Contact & Press', href: '/contact' },
-      { label: 'Styleguide', href: '/styleguide' },
     ],
   },
 ]
@@ -77,22 +76,12 @@ export function Footer() {
                 Oil science, certification updates, and industry research.
               </p>
             </div>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex gap-2"
-            >
-              <input
-                type="email"
-                placeholder="Email address"
-                className="h-10 w-64 border border-white/20 bg-transparent px-3 font-sans text-sm text-white placeholder:text-white/30 focus:border-amber focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="h-10 bg-amber px-5 font-sans text-sm font-medium text-white transition-colors hover:bg-amber-dark"
-              >
-                Subscribe
-              </button>
-            </form>
+            <p className="font-sans text-sm">
+              Follow updates at{' '}
+              <a href="mailto:info@ncoma.org" className="text-white underline hover:text-amber">
+                info@ncoma.org
+              </a>
+            </p>
           </div>
         </div>
 
@@ -100,8 +89,8 @@ export function Footer() {
         <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-8 font-sans text-xs text-white/30 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} National Cooking Oil Management Association. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-white/50">Privacy</Link>
-            <Link href="/terms" className="hover:text-white/50">Terms</Link>
+            <span className="text-white/30">Privacy</span>
+            <span className="text-white/30">Terms</span>
           </div>
         </div>
       </div>

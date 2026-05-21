@@ -8,17 +8,16 @@ export const metadata = { title: 'For Consumers' }
 export default function Consumers() {
   return (
     <main>
-      <section className="relative flex min-h-[55vh] items-center overflow-hidden">
-        <HeroImage src={IMAGES.restaurantDining} alt="Restaurant dining experience" className="absolute inset-0" />
-        <Container size="md" className="relative z-10 py-20 md:py-28">
-          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">For Consumers</p>
-          <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">What you fry in is what you serve.</h1>
-          <p className="animate-hero-3 mt-6 max-w-2xl text-lg text-white/70">
-            You read ingredient labels. You ask about sourcing. You check
-            whether the chicken is antibiotic-free. But when your food is
-            deep-fried, the oil it cooks in becomes part of the meal — and right
-            now, there&apos;s no way to know whether that oil was tested today or
-            last tested never.
+      <section className="relative flex min-h-[55vh] items-end overflow-hidden">
+        <HeroImage src={IMAGES.restaurantDining} alt="Restaurant dining experience" className="absolute inset-0" overlay="dark" />
+        <Container size="md" className="relative z-10 pb-16 pt-32 md:pb-20">
+          <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-amber">For Consumers</p>
+          <h1 className="animate-hero-2 mt-2 max-w-2xl text-4xl font-bold text-white md:text-5xl">What you fry in is what you serve.</h1>
+          <p className="animate-hero-3 mt-6 max-w-xl text-lg leading-relaxed text-white/80">
+            You check sourcing. You read labels. You ask if the chicken is
+            antibiotic-free. But nobody asks about the oil it&apos;s fried
+            in — and right now, there&apos;s no way to know if it was
+            tested today or last tested never.
           </p>
         </Container>
       </section>
@@ -126,34 +125,12 @@ export default function Consumers() {
         </Container>
       </Section>
 
-      {/* Shareable Assets */}
-      <Section className="border-t border-charcoal/10 bg-white">
-        <Container size="md">
-          <h2 className="text-3xl font-bold">Spread the word</h2>
-          <p className="mt-4 text-charcoal/70">
-            Share the WIYO! message. Download assets for social media, or simply
-            ask your favorite restaurant if they&apos;re certified.
-          </p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            {[
-              { label: 'Social card — "We test our oil."', size: '1080 × 1080' },
-              { label: 'Story template — "Ask your restaurant"', size: '1080 × 1920' },
-              { label: 'Table tent PDF — "NCOMA Certified"', size: 'Letter' },
-            ].map((asset, i) => (
-              <div key={i} className="placeholder-image aspect-square">
-                {asset.size} — {asset.label}
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
       {/* Find CTA */}
       <Section className="border-t border-charcoal/10 bg-charcoal text-white">
         <Container>
           <div className="mx-auto max-w-xl text-center">
             <h2 className="text-3xl font-bold">Find certified restaurants</h2>
-            <p className="mt-4 text-white/60">
+            <p className="mt-4 text-white/70">
               Search the NCOMA directory to find restaurants near you that manage
               their oil to a real standard.
             </p>

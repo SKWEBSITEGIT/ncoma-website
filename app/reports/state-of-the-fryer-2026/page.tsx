@@ -40,7 +40,7 @@ export default function StateOfTheFryer2026() {
             <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
               State of the Fryer
             </h1>
-            <p className="mt-4 max-w-xl font-sans text-lg text-white/70 md:text-xl">
+            <p className="mt-4 max-w-xl font-sans text-lg text-white/80 md:text-xl">
               Oil Management Practices in American Commercial Kitchens
             </p>
           </FadeIn>
@@ -312,7 +312,7 @@ export default function StateOfTheFryer2026() {
               <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
                 The Awareness Gap
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl font-sans text-white/60">
+              <p className="mx-auto mt-4 max-w-2xl font-sans text-white/70">
                 Operators overwhelmingly lack foundational knowledge about oil
                 science and global standards&mdash;information that is widely
                 available but never reaches the kitchen.
@@ -434,7 +434,7 @@ export default function StateOfTheFryer2026() {
             <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
               Close the gap in your kitchen.
             </h2>
-            <p className="mx-auto mt-4 max-w-xl font-sans text-lg text-white/60">
+            <p className="mx-auto mt-4 max-w-xl font-sans text-lg text-white/70">
               NCOMA certification gives operators the tools, training, and
               testing protocols to manage oil by data&mdash;not guesswork.
               Join the operators already setting the standard.

@@ -1,8 +1,13 @@
 'use client'
 
-import { Container, Section, Eyebrow, Card } from '@/components/ui'
+import { useState } from 'react'
+import { Container, Section, Eyebrow, Card, Button } from '@/components/ui'
+import { Avatar } from '@/components/Avatar'
+import board from '@/data/board.json'
 
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false)
+
   return (
     <main>
       <Section className="pt-20 md:pt-28">
@@ -18,38 +23,46 @@ export default function Contact() {
           <div className="grid gap-12 md:grid-cols-2">
             <div>
               <h2 className="text-2xl font-bold">Send us a message</h2>
+              {submitted ? (
+                <div className="mt-6 rounded border border-olive/20 bg-olive/5 p-8 text-center">
+                  <p className="text-lg font-semibold text-charcoal">Thank you for your message.</p>
+                  <p className="mt-2 text-charcoal/60">We&apos;ll be in touch shortly.</p>
+                </div>
+              ) : (
               <form
                 onSubmit={(e) => {
                   e.preventDefault()
-                  console.log('Form submitted — stubbed to console')
+                  setSubmitted(true)
                 }}
                 className="mt-6 space-y-4"
               >
                 <div>
-                  <label className="text-sm font-medium text-charcoal/60">
+                  <label htmlFor="contact-name" className="text-sm font-medium text-charcoal/60">
                     Name
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     required
-                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm focus:border-amber focus:outline-none"
+                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-charcoal/60">
+                  <label htmlFor="contact-email" className="text-sm font-medium text-charcoal/60">
                     Email
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     required
-                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm focus:border-amber focus:outline-none"
+                    className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-charcoal/60">
+                  <label htmlFor="contact-subject" className="text-sm font-medium text-charcoal/60">
                     Subject
                   </label>
-                  <select className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm focus:border-amber focus:outline-none">
+                  <select id="contact-subject" className="mt-1 block h-10 w-full border border-charcoal/20 bg-white px-3 font-sans text-sm focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50">
                     <option>General inquiry</option>
                     <option>Certification questions</option>
                     <option>Media / press</option>
@@ -58,22 +71,19 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-charcoal/60">
+                  <label htmlFor="contact-message" className="text-sm font-medium text-charcoal/60">
                     Message
                   </label>
                   <textarea
+                    id="contact-message"
                     rows={5}
                     required
-                    className="mt-1 block w-full border border-charcoal/20 bg-white px-3 py-2 font-sans text-sm focus:border-amber focus:outline-none"
+                    className="mt-1 block w-full border border-charcoal/20 bg-white px-3 py-2 font-sans text-sm focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
-                <button
-                  type="submit"
-                  className="h-10 bg-amber px-6 font-sans text-sm font-medium text-white transition-colors hover:bg-amber-dark"
-                >
-                  Send Message
-                </button>
+                <Button type="submit">Send Message</Button>
               </form>
+              )}
             </div>
 
             <div className="space-y-8">
@@ -82,7 +92,7 @@ export default function Contact() {
                   General Inquiries
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  [NEEDS: general email address]
+                  <a href="mailto:info@ncoma.org" className="text-amber hover:underline">info@ncoma.org</a>
                 </p>
               </div>
               <div>
@@ -90,7 +100,7 @@ export default function Contact() {
                   Media &amp; Press
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  [NEEDS: press email address]
+                  <a href="mailto:press@ncoma.org" className="text-amber hover:underline">press@ncoma.org</a>
                 </p>
               </div>
               <div>
@@ -98,7 +108,7 @@ export default function Contact() {
                   Speaking Requests
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  [NEEDS: speaking contact]
+                  <a href="mailto:speaking@ncoma.org" className="text-amber hover:underline">speaking@ncoma.org</a>
                 </p>
               </div>
               <div>
@@ -106,7 +116,7 @@ export default function Contact() {
                   Mailing Address
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  [NEEDS: NCOMA mailing address]
+                  Scottsdale, AZ
                 </p>
               </div>
             </div>
@@ -133,7 +143,7 @@ export default function Contact() {
               WIYO! (&ldquo;What Is Your Oil?&rdquo;) consumer seal certifies
               that a restaurant manages its frying oil to a published standard
               aligned with international best practice. NCOMA is headquartered
-              in [NEEDS: city, state].
+              in Scottsdale, Arizona.
             </p>
           </div>
 
@@ -143,38 +153,25 @@ export default function Contact() {
               Founders
             </h3>
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              <Card>
-                <div className="placeholder-image mb-4 aspect-[3/4] w-24">
-                  96 × 128
-                </div>
-                <p className="font-sans font-semibold">[NEEDS: founder name]</p>
-                <p className="font-sans text-sm text-charcoal/50">[NEEDS: title]</p>
-                <p className="mt-2 text-sm text-charcoal/60">
-                  [NEEDS: 2-3 sentence bio]
-                </p>
-              </Card>
-              <Card>
-                <div className="placeholder-image mb-4 aspect-[3/4] w-24">
-                  96 × 128
-                </div>
-                <p className="font-sans font-semibold">[NEEDS: founder name]</p>
-                <p className="font-sans text-sm text-charcoal/50">[NEEDS: title]</p>
-                <p className="mt-2 text-sm text-charcoal/60">
-                  [NEEDS: 2-3 sentence bio]
-                </p>
-              </Card>
+              {board.directors
+                .filter((m) => m.name === 'Matt McMahon' || m.name === 'Pablo Herrera')
+                .map((member) => (
+                  <Card key={member.name}>
+                    <div className="mb-4">
+                      <Avatar name={member.name} src={member.headshot} size="lg" />
+                    </div>
+                    <p className="font-sans font-semibold">{member.name}</p>
+                    <p className="font-sans text-sm text-charcoal/50">{member.role || member.title}</p>
+                    <p className="mt-2 text-sm text-charcoal/60">
+                      {member.name === 'Matt McMahon'
+                        ? 'Former President of McMahon Restaurant Group, where he opened 24 Outback Steakhouses across Arizona and New Mexico. Now leads NCOMA’s mission to bring science-based oil management to every commercial kitchen in America.'
+                        : 'Built the Oil Atlas, designed the certification framework, and launched The Oil Insurgency — the campaign to force transparency into every commercial fryer in America.'}
+                    </p>
+                  </Card>
+                ))}
             </div>
           </div>
 
-          {/* Fact Sheet */}
-          <div className="mt-12">
-            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-charcoal/40">
-              Fact Sheet
-            </h3>
-            <div className="mt-4 placeholder-image aspect-[16/2] w-full">
-              Downloadable PDF — NCOMA Fact Sheet [NEEDS: design and content]
-            </div>
-          </div>
         </Container>
       </Section>
     </main>

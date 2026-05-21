@@ -14,6 +14,7 @@ export default function Home() {
           src={IMAGES.restaurantKitchen}
           alt="Commercial kitchen fryer station"
           className="absolute inset-0"
+          overlay="dark"
         />
         <Container size="lg" className="relative z-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -51,7 +52,7 @@ export default function Home() {
             <h2 className="mt-2 text-3xl font-bold md:text-4xl">
               This is what&apos;s actually in degraded frying oil.
             </h2>
-            <p className="mt-4 max-w-3xl text-white/60">
+            <p className="mt-4 max-w-3xl text-white/70">
               When frying oil breaks down — through heat, oxygen, water, and time — it doesn&apos;t
               just get &ldquo;old.&rdquo; It becomes a cocktail of toxic compounds that transfer
               directly into the food your customers eat.
@@ -65,7 +66,7 @@ export default function Home() {
                 <p className="mt-1 font-sans text-sm font-semibold text-white/90">
                   Above WHO Limits
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/50">
+                <p className="mt-3 text-sm leading-relaxed text-white/70">
                   PUFA-rich oils at frying temperature produce aldehyde concentrations
                   approximately <strong className="text-white/80">20 times higher</strong> than
                   WHO recommended limits. These compounds absorb directly into the food.
@@ -81,7 +82,7 @@ export default function Home() {
                 <p className="mt-1 font-sans text-sm font-semibold text-white/90">
                   Have Never Tested
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/50">
+                <p className="mt-3 text-sm leading-relaxed text-white/70">
                   Of 412 US operators surveyed, <strong className="text-white/80">78% have
                   never measured the Total Polar Materials</strong> in their frying oil.
                   Not once. They don&apos;t know what&apos;s in it. Neither do their customers.
@@ -97,7 +98,7 @@ export default function Home() {
                 <p className="mt-1 font-sans text-sm font-semibold text-white/90">
                   Federal Standards
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/50">
+                <p className="mt-3 text-sm leading-relaxed text-white/70">
                   Germany, France, Spain, Belgium, China, India — <strong className="text-white/80">20+
                   countries mandate TPM discard thresholds.</strong> The United States has
                   no federal limit, no required testing, no standard of any kind.
@@ -297,7 +298,7 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-white md:text-3xl">
                 Nobody is coming to regulate this.
               </h2>
-              <p className="mt-4 text-white/50">
+              <p className="mt-4 text-white/70">
                 The FDA hasn&apos;t signaled interest. No state has enacted TPM legislation.
                 No bill has been introduced. The gap is not closing.
                 So we built the standard ourselves.
@@ -361,7 +362,7 @@ export default function Home() {
       </Section>
 
       {/* Counter Band */}
-      <Section className="border-y border-charcoal/10 bg-charcoal py-12 text-white md:py-16">
+      <section className="border-y border-charcoal/10 bg-charcoal py-12 text-white md:py-16">
         <Container>
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
             <AnimatedCounter
@@ -386,7 +387,7 @@ export default function Home() {
             />
           </div>
         </Container>
-      </Section>
+      </section>
 
       {/* The science — why it matters */}
       <Section size="spacious">
@@ -481,6 +482,7 @@ export default function Home() {
           <blockquote className="mx-auto max-w-4xl px-6 text-center text-2xl italic leading-relaxed text-charcoal/80 md:text-3xl md:leading-relaxed">
             &ldquo;The oil that lasts longest also produces the fewest harmful
             byproducts. Performance and safety are the same priority.&rdquo;
+            <cite className="mt-4 block text-base not-italic text-charcoal/40">— NCOMA position on oil performance and safety</cite>
           </blockquote>
         </section>
       </FadeIn>
@@ -499,11 +501,11 @@ export default function Home() {
                 restaurants actually manage their frying oil. The findings are worse than
                 expected.
               </p>
-              <ul className="mt-4 space-y-2 font-sans text-sm text-charcoal/60">
-                <li>• 78% have never measured TPM</li>
-                <li>• 25% have no filtration equipment at all</li>
-                <li>• 96% unaware of the 25% TPM international standard</li>
-                <li>• 84% cannot name a single oil degradation pathway</li>
+              <ul className="mt-4 space-y-2 pl-5 list-disc font-sans text-sm text-charcoal/60">
+                <li>78% have never measured TPM</li>
+                <li>25% have no filtration equipment at all</li>
+                <li>96% unaware of the 25% TPM international standard</li>
+                <li>84% cannot name a single oil degradation pathway</li>
               </ul>
               <div className="mt-6">
                 <Button href="/reports/state-of-the-fryer-2026">
@@ -595,6 +597,7 @@ export default function Home() {
             alt=""
             className="absolute inset-0"
             overlay={false}
+            priority={false}
           />
         </div>
         <Container className="relative z-10">
@@ -605,7 +608,7 @@ export default function Home() {
                 <br />
                 <span className="text-amber">The WIYO! seal can.</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-lg text-white/60">
+              <p className="mx-auto mt-4 max-w-lg text-white/70">
                 Certification gives your kitchen a standard, your staff a credential,
                 and your guests the one thing they&apos;ve never had: proof.
               </p>

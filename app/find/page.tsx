@@ -50,16 +50,17 @@ export default function Find() {
             <input
               type="text"
               placeholder="Search by name, city, or oil type…"
+              aria-label="Search certified restaurants"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="h-12 flex-1 border border-charcoal/20 bg-white px-4 font-sans text-sm focus:border-amber focus:outline-none"
+              className="h-12 flex-1 border border-charcoal/20 bg-white px-4 font-sans text-sm focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
             />
             <div className="flex gap-2">
               {(['all', 'bronze', 'silver', 'gold'] as Tier[]).map((t) => (
                 <button
                   key={t}
                   onClick={() => setTier(t)}
-                  className={`h-10 px-4 font-sans text-sm transition-colors ${
+                  className={`h-10 px-4 font-sans text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 ${
                     tier === t
                       ? 'bg-charcoal text-white'
                       : 'border border-charcoal/20 text-charcoal/60 hover:border-charcoal/40'
@@ -75,12 +76,8 @@ export default function Find() {
             {filtered.length} certified {filtered.length === 1 ? 'restaurant' : 'restaurants'}
           </div>
 
-          {/* Map placeholder */}
-          <div className="mt-6 placeholder-image aspect-[16/7] w-full">
-            Map — requires Mapbox token in .env.local
-          </div>
-
           {/* List */}
+          <h2 className="sr-only">Search results</h2>
           <div className="mt-8 space-y-4">
             {filtered.map((op) => (
               <div
@@ -114,9 +111,6 @@ export default function Find() {
             )}
           </div>
 
-          <p className="mt-8 font-sans text-xs text-charcoal/40">
-            This directory shows sample data for development purposes. In production, the NCOMA certification database will populate this list with verified operators. Each listing includes the WIYO! verification code, which can be checked at /seal.
-          </p>
         </Container>
       </Section>
     </main>
