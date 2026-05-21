@@ -142,7 +142,7 @@ export function TestingDonut() {
 const oilData = [
   { name: 'Soybean', value: 46, color: C.danger },
   { name: 'Canola', value: 28, color: C.amberDark },
-  { name: 'Palm blends', value: 8, color: C.amber },
+  { name: 'Fruit oil (palm)', value: 8, color: C.amber },
   { name: 'Peanut', value: 7, color: C.amberLight },
   { name: 'High Oleic', value: 4, color: C.olive },
   { name: 'Other', value: 7, color: C.light },

@@ -113,7 +113,7 @@ export default function Consumers() {
           </p>
           <div className="mt-8 space-y-6">
             {[
-              { q: 'What oil do you fry in?', why: 'The type of oil matters. High oleic oils (palm, sunflower) produce far fewer degradation byproducts than conventional PUFA-rich seed oils (corn, soybean, grapeseed) at the same temperature.' },
+              { q: 'What oil do you fry in?', why: 'The type of oil matters. Fruit oils like palm and high oleic varieties (sunflower, canola) produce far fewer degradation byproducts than conventional PUFA-rich seed oils (corn, soybean, grapeseed) at the same temperature.' },
               { q: 'How often do you test it?', why: 'If the answer is "we don\'t" or "we change it every X days," there\'s no data behind the decision. NCOMA-certified kitchens test TPM at minimum daily.' },
               { q: 'Are you NCOMA certified?', why: 'The WIYO! seal means the kitchen has been independently inspected and meets a published standard. No seal, no standard.' },
             ].map((item, i) => (
