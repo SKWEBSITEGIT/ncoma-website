@@ -3,7 +3,7 @@
     {
       "slug": "ho-palm-olein-oxg",
       "name": "High Oleic Palm Olein (OxG Hybrid)",
-      "family": "Palm",
+      "family": "Fruit",
       "processing": "Fractionated, physically refined",
       "fattyAcids": { "safa": 34, "mufa": 52, "pufa": 14 },
       "smokePoint": 230,
@@ -219,7 +219,7 @@
     {
       "slug": "conv-palm-olein",
       "name": "Conventional Palm Olein",
-      "family": "Palm",
+      "family": "Fruit",
       "processing": "Fractionated, physically refined",
       "fattyAcids": { "safa": 45, "mufa": 40, "pufa": 12 },
       "smokePoint": 230,

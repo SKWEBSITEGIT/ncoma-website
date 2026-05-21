@@ -7,12 +7,11 @@ import oilData from '@/data/oils.json'
 
 type SortKey = 'name' | 'fryCycles' | 'mufa' | 'pufa' | 'safa' | 'smokePoint' | 'osi'
 type SortDir = 'asc' | 'desc'
-type Family = 'all' | 'Palm' | 'Seed' | 'Fruit' | 'Animal' | 'Legume'
+type Family = 'all' | 'Seed' | 'Fruit' | 'Animal' | 'Legume'
 
 const familyColors: Record<string, string> = {
-  Palm: 'bg-amber/20 text-amber',
   Seed: 'bg-olive/20 text-olive',
-  Fruit: 'bg-emerald-100 text-emerald-700',
+  Fruit: 'bg-amber/20 text-amber',
   Animal: 'bg-red-100 text-red-700',
   Legume: 'bg-yellow-100 text-yellow-700',
 }
@@ -85,7 +84,7 @@ export default function Atlas() {
         <Container size="xl">
           <div className="flex flex-wrap items-center gap-3">
             <span className="font-sans text-sm font-medium text-charcoal/50">Filter:</span>
-            {(['all', 'Palm', 'Seed', 'Fruit', 'Animal', 'Legume'] as Family[]).map((f) => (
+            {(['all', 'Fruit', 'Seed', 'Animal', 'Legume'] as Family[]).map((f) => (
               <button
                 key={f}
                 onClick={() => setFamily(f)}
