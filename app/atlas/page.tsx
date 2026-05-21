@@ -10,9 +10,9 @@ type SortDir = 'asc' | 'desc'
 type Family = 'all' | 'Seed' | 'Fruit' | 'Animal' | 'Legume'
 
 const familyColors: Record<string, string> = {
-  Seed: 'bg-olive/20 text-olive',
-  Fruit: 'bg-amber/20 text-amber',
-  Animal: 'bg-red-100 text-red-700',
+  Fruit: 'bg-emerald-100 text-emerald-700',
+  Seed: 'bg-red-100 text-red-700',
+  Animal: 'bg-amber/20 text-amber',
   Legume: 'bg-yellow-100 text-yellow-700',
 }
 
