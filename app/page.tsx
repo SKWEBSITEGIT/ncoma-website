@@ -291,17 +291,36 @@ export default function Home() {
       </Section>
 
       {/* The line — transition from problem to solution */}
-      <section className="border-y border-charcoal/10 bg-charcoal py-12 md:py-16">
+      <section className="border-y border-charcoal/10 bg-charcoal py-16 md:py-24">
         <Container>
           <FadeIn>
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl font-bold text-white md:text-3xl">
-                Nobody is coming to regulate this.
+              <p className="font-sans text-sm font-medium uppercase tracking-widest text-amber">
+                The Gap
+              </p>
+              <h2 className="mt-4 text-2xl font-bold text-white md:text-3xl">
+                Most American kitchens have no standard for frying oil.
               </h2>
               <p className="mt-4 text-white/70">
                 The FDA hasn&apos;t signaled interest. No state has enacted TPM legislation.
-                No bill has been introduced. The gap is not closing.
-                So we built the standard ourselves.
+                No bill has been introduced. Nobody is coming to regulate this.
+              </p>
+              <p className="mt-6 text-lg font-semibold text-amber">
+                NCOMA changes that.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="mx-auto mt-12 max-w-2xl border-t border-white/10 pt-10">
+              <blockquote className="text-center text-base italic leading-relaxed text-white/60">
+                &ldquo;The National Cooking Oil Management Association exists to
+                establish what no federal regulation currently requires: a rigorous,
+                knowledge-based standard for how cooking oil is selected, managed,
+                tested, and replaced in American commercial kitchens.&rdquo;
+              </blockquote>
+              <p className="mt-3 text-center font-sans text-xs font-medium uppercase tracking-wider text-white/30">
+                NCOMA Mission Statement
               </p>
             </div>
           </FadeIn>
@@ -479,10 +498,13 @@ export default function Home() {
       {/* Pull Quote — full bleed */}
       <FadeIn>
         <section className="border-y border-charcoal/10 bg-offwhite py-20 md:py-28">
-          <blockquote className="mx-auto max-w-4xl px-6 text-center text-2xl italic leading-relaxed text-charcoal/80 md:text-3xl md:leading-relaxed">
-            &ldquo;The oil that lasts longest also produces the fewest harmful
-            byproducts. Performance and safety are the same priority.&rdquo;
-            <cite className="mt-4 block text-base not-italic text-charcoal/40">— NCOMA position on oil performance and safety</cite>
+          <blockquote className="mx-auto max-w-4xl px-6 text-center">
+            <p className="text-3xl font-bold leading-tight text-charcoal md:text-5xl">
+              The oil is an ingredient.
+            </p>
+            <p className="mt-2 text-3xl font-bold leading-tight text-amber md:text-5xl">
+              Manage it like one.
+            </p>
           </blockquote>
         </section>
       </FadeIn>

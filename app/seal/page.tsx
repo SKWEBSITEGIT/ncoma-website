@@ -64,6 +64,22 @@ export default function Seal() {
         </Container>
       </section>
 
+      {/* Certified Oil Manager */}
+      <section className="border-t border-charcoal/10 bg-offwhite py-10 md:py-14">
+        <Container size="md">
+          <FadeIn>
+            <div className="text-center">
+              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-amber">Certified Oil Manager</p>
+              <p className="mx-auto mt-3 max-w-2xl text-lg leading-relaxed text-charcoal/70">
+                This designation certifies mastery of the science, management,
+                and testing practices that define professional cooking oil
+                stewardship.
+              </p>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
       {/* Three Tiers */}
       <Section className="border-t border-charcoal/10">
         <Container>

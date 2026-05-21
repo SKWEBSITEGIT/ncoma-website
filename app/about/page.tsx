@@ -49,12 +49,12 @@ export default function About() {
                 operate on instinct, arbitrary schedules, and visual guesswork.
               </p>
               <p>
-                NCOMA was founded by people who have spent decades inside
-                America&apos;s fryers. Not regulators. Not academics. The industry
-                itself — operators who opened 240+ restaurants, engineers who
-                invented patented filtration systems, and strategists who saw
-                the same problem from different angles and decided it was time for
-                a standard.
+                NCOMA was built by the people who have been inside America&apos;s
+                fryers for decades — not by regulators, not by academics, but by
+                the industry itself. Operators who opened 240+ restaurants,
+                engineers who invented patented filtration systems, and
+                strategists who saw the same problem from different angles and
+                decided it was time for a standard.
               </p>
               <p>
                 The association&apos;s first act was to produce the{' '}
@@ -73,8 +73,8 @@ export default function About() {
                 the WIYO! consumer seal — so diners can see, at a glance, whether
                 their restaurant manages its oil to a real standard.
               </p>
-              <p>
-                The mission is simple: raise the standard of oil management in
+              <p className="font-semibold text-charcoal">
+                Our mission is simple: raise the standard of oil management in
                 every commercial kitchen in this country. One kitchen at a time.
               </p>
             </div>
@@ -94,10 +94,9 @@ export default function About() {
               tested, and replaced in American commercial kitchens.
             </blockquote>
             <p className="mt-6 text-charcoal/70">
-              We believe that better-managed oil means better food, safer
-              kitchens, and stronger margins for the operators who feed this
-              country. The NCOMA Certified Oil Manager designation is how we get
-              there.
+              We believe that better-managed oil means better food and safer
+              kitchens. The NCOMA Certified Oil Manager designation is how we
+              get there — one kitchen at a time.
             </p>
           </FadeIn>
         </Container>

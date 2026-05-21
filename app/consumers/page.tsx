@@ -22,6 +22,15 @@ export default function Consumers() {
         </Container>
       </section>
 
+      {/* Tagline */}
+      <section className="border-t border-charcoal/10 bg-offwhite py-10 md:py-14">
+        <Container>
+          <p className="text-center text-2xl font-bold text-charcoal md:text-3xl">
+            Your food is only as good <span className="text-amber">as the oil it&apos;s cooked in.</span>
+          </p>
+        </Container>
+      </section>
+
       {/* Why it matters */}
       <Section className="border-t border-charcoal/10">
         <Container size="md">

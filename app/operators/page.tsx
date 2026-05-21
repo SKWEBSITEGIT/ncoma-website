@@ -21,6 +21,15 @@ export default function Operators() {
         </Container>
       </section>
 
+      {/* Tagline */}
+      <section className="border-t border-charcoal/10 bg-offwhite py-10 md:py-14">
+        <Container>
+          <p className="text-center text-2xl font-bold text-charcoal md:text-3xl">
+            Great frying starts <span className="text-amber">before the food hits the oil.</span>
+          </p>
+        </Container>
+      </section>
+
       {/* The Economics */}
       <Section className="border-t border-charcoal/10">
         <Container>
