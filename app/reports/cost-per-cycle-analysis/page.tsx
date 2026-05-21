@@ -263,18 +263,8 @@ export default function CostPerCycleAnalysis() {
                 acid profile.
               </p>
               <div className="mt-8">
-                <Card className="rounded-lg p-4 md:p-6">
+                <Card className="rounded-lg p-6 md:p-8">
                   <SunflowerComparisonChart />
-                  <div className="mt-4 grid grid-cols-2 gap-4 font-sans text-sm">
-                    <div className="text-center">
-                      <p className="font-semibold text-charcoal/40">Conv. Sunflower</p>
-                      <p className="text-xs text-charcoal/40">66% PUFA · 20% MUFA · 6h OSI</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="font-semibold text-olive">HO Sunflower</p>
-                      <p className="text-xs text-charcoal/40">9% PUFA · 82% MUFA · 25h OSI</p>
-                    </div>
-                  </div>
                 </Card>
               </div>
             </FadeIn>

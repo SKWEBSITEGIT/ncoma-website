@@ -4,7 +4,14 @@ import { FadeIn, FadeInStagger, FadeInItem, SlideIn } from '@/components/Animate
 import { AnimatedCounter } from '@/components/AnimatedCounter'
 import { HeroImage, InlineImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
-import { TestingDonut, OilTypesBar, PurchaseCriteriaBar, InternationalBar } from './charts'
+import {
+  TestingDonut,
+  OilTypesBar,
+  PurchaseCriteriaBar,
+  InternationalBar,
+  AwarenessGrid,
+  ChangeFrequencyVisual,
+} from './charts'
 
 export const metadata = {
   title: '2026 State of the Fryer — NCOMA',
@@ -272,14 +279,26 @@ export default function StateOfTheFryer2026() {
             ))}
           </FadeInStagger>
 
-          <FadeIn delay={0.3}>
-            <Callout variant="warning" className="mt-10">
-              <p className="font-sans text-sm text-charcoal/80">
-                <strong>Median oil-change frequency: 3 days</strong>&mdash;regardless
-                of oil type, fryer volume, or throughput. This one-size-fits-all
-                cadence suggests decisions are driven by habit, not measurement.
+        </Container>
+      </Section>
+
+      {/* ═══════════════ CHANGE FREQUENCY ═══════════════ */}
+      <Section className="bg-offwhite">
+        <Container size="md">
+          <FadeIn>
+            <div className="text-center">
+              <Eyebrow>Finding 03b</Eyebrow>
+              <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+                The 3-Day Myth
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl font-sans text-charcoal/60">
+                A fixed schedule that gets every operation wrong. It either wastes
+                oil with cycles left or serves food in oil past the threshold.
               </p>
-            </Callout>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.15} className="mt-10">
+            <ChangeFrequencyVisual />
           </FadeIn>
         </Container>
       </Section>
@@ -301,39 +320,9 @@ export default function StateOfTheFryer2026() {
             </div>
           </FadeIn>
 
-          <FadeInStagger className="mt-14 grid gap-8 sm:grid-cols-3">
-            {[
-              {
-                value: '91%',
-                label: 'Unaware any country mandates TPM testing',
-                source: 'NCOMA Survey 2026',
-              },
-              {
-                value: '96%',
-                label: 'Unaware of the 25% TPM discard threshold',
-                source: 'NCOMA Survey 2026',
-              },
-              {
-                value: '84%',
-                label: "Can't name a single degradation pathway",
-                source: 'NCOMA Survey 2026',
-              },
-            ].map((item) => (
-              <FadeInItem key={item.value}>
-                <div className="text-center">
-                  <p className="text-5xl font-bold text-amber md:text-6xl">
-                    {item.value}
-                  </p>
-                  <p className="mt-3 font-sans text-sm leading-snug text-white/70">
-                    {item.label}
-                  </p>
-                  <p className="mt-1 font-sans text-xs text-white/30">
-                    {item.source}
-                  </p>
-                </div>
-              </FadeInItem>
-            ))}
-          </FadeInStagger>
+          <FadeIn delay={0.15} className="mt-14">
+            <AwarenessGrid />
+          </FadeIn>
         </Container>
       </Section>
 
