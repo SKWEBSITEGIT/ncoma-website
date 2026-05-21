@@ -18,7 +18,7 @@ export default function ReportsIndex() {
 
   return (
     <main>
-      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[40vh] items-center overflow-hidden">
         <HeroImage src={IMAGES.analytics} alt="Data analytics and research" className="absolute inset-0" />
         <Container size="md" className="relative z-10 py-20 md:py-28">
           <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">Reports</p>

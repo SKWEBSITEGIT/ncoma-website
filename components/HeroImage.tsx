@@ -8,10 +8,16 @@ interface HeroImageProps {
   src: string
   alt: string
   className?: string
-  overlay?: boolean
+  overlay?: 'gradient' | 'dark' | 'light' | false
 }
 
-export function HeroImage({ src, alt, className = '', overlay = true }: HeroImageProps) {
+const overlayClasses = {
+  gradient: 'bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/20',
+  dark: 'bg-charcoal/70',
+  light: 'bg-charcoal/40',
+}
+
+export function HeroImage({ src, alt, className = '', overlay = 'gradient' }: HeroImageProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,7 +33,7 @@ export function HeroImage({ src, alt, className = '', overlay = true }: HeroImag
         loading="eager"
       />
       {overlay && (
-        <div className="absolute inset-0 bg-charcoal/60" />
+        <div className={`absolute inset-0 ${overlayClasses[overlay]}`} />
       )}
     </motion.div>
   )

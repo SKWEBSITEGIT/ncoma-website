@@ -51,12 +51,12 @@ const faqs = [
 export default function Seal() {
   return (
     <main>
-      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[60vh] items-center overflow-hidden">
         <HeroImage src={IMAGES.certificate} alt="Certification standard" className="absolute inset-0" />
         <Container size="md" className="relative z-10 py-20 md:py-28">
           <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">The Seal</p>
           <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">What the WIYO! seal means — and why it exists.</h1>
-          <p className="animate-hero-3 mt-6 text-lg text-white/70">
+          <p className="animate-hero-3 mt-6 max-w-2xl text-lg text-white/70">
             There are over one million foodservice outlets in the United States.
             <FootnoteRef id={1} /> Not one of them is required by federal law to
             test its frying oil. No mandated TPM threshold. No certification. No

@@ -13,6 +13,7 @@ export default function Operators() {
         <Container size="md" className="relative z-10 py-20 md:py-28">
           <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">For Operators</p>
           <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">Stop guessing. Start managing.</h1>
+          <p className="animate-hero-2 mt-3 text-base text-white/50">NCOMA certification for commercial kitchens</p>
           <p className="animate-hero-3 mt-6 text-lg text-white/70">
             Most restaurants change their frying oil on a schedule — every two
             days, every three days, whatever someone decided years ago. That

@@ -35,7 +35,7 @@ export function Footer() {
   return (
     <footer className="border-t border-charcoal/10 bg-charcoal text-white/70">
       <div className="mx-auto max-w-[80rem] px-6 py-16">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-4">
           {/* Brand column */}
           <div>
             <p className="text-xl font-bold text-white">NCOMA</p>
@@ -47,7 +47,7 @@ export function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <p className="font-sans text-xs font-semibold uppercase tracking-wider text-white/40">
+              <p className="font-sans text-xs font-semibold uppercase tracking-wider text-olive-light">
                 {col.title}
               </p>
               <ul className="mt-4 space-y-3">

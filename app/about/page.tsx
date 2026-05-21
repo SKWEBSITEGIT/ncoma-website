@@ -11,7 +11,7 @@ export default function About() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[60vh] items-center overflow-hidden">
         <HeroImage
           src={IMAGES.commercialKitchen}
           alt="Professional kitchen environment"
@@ -111,7 +111,7 @@ export default function About() {
           <FadeInStagger className="mt-8 grid gap-8 md:grid-cols-3">
             {board.directors.map((member, i) => (
               <FadeInItem key={i}>
-                <Card className="h-full">
+                <Card variant="profile" className="h-full">
                   <div className="mb-4">
                     <Avatar name={member.name} src={member.headshot} size="lg" />
                   </div>

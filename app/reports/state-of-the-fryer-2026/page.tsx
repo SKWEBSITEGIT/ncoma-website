@@ -46,7 +46,7 @@ export default function StateOfTheFryer2026() {
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="mt-12 flex flex-wrap gap-10 md:gap-16">
+            <div className="mt-12 grid grid-cols-2 gap-6 sm:flex sm:flex-wrap sm:gap-10 md:gap-16">
               <AnimatedCounter
                 value="412"
                 label="Operators surveyed"

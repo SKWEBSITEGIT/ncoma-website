@@ -8,12 +8,12 @@ export const metadata = { title: 'For Consumers' }
 export default function Consumers() {
   return (
     <main>
-      <section className="relative flex min-h-[50vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[55vh] items-center overflow-hidden">
         <HeroImage src={IMAGES.restaurantDining} alt="Restaurant dining experience" className="absolute inset-0" />
         <Container size="md" className="relative z-10 py-20 md:py-28">
           <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-white/60">For Consumers</p>
           <h1 className="animate-hero-2 mt-2 text-4xl font-bold text-white md:text-5xl">What you fry in is what you serve.</h1>
-          <p className="animate-hero-3 mt-6 text-lg text-white/70">
+          <p className="animate-hero-3 mt-6 max-w-2xl text-lg text-white/70">
             You read ingredient labels. You ask about sourcing. You check
             whether the chicken is antibiotic-free. But when your food is
             deep-fried, the oil it cooks in becomes part of the meal — and right

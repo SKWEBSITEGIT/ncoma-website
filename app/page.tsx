@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero — the uncomfortable question */}
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-[85vh]">
         <HeroImage
           src={IMAGES.restaurantKitchen}
           alt="Commercial kitchen fryer station"
@@ -112,8 +112,8 @@ export default function Home() {
       </section>
 
       {/* What's actually in the oil — the gross part */}
-      <Section className="border-t border-charcoal/10">
-        <Container>
+      <Section className="border-t border-charcoal/10" size="spacious">
+        <Container size="xl">
           <FadeIn>
             <Eyebrow>The Chemistry of Neglect</Eyebrow>
             <h2 className="mt-2 text-3xl font-bold md:text-4xl">
@@ -150,7 +150,7 @@ export default function Home() {
                       the food during frying. Diners eat it. Staff breathe it.
                     </p>
                   </div>
-                  <div className="border-l-4 border-l-amber pl-5">
+                  <div className="border-l-4 border-l-olive pl-5">
                     <h3 className="font-sans text-base font-bold text-charcoal">Total Polar Materials (TPM)</h3>
                     <p className="mt-1 text-sm text-charcoal/60">
                       The umbrella measurement for all degradation products — polymers,
@@ -162,7 +162,7 @@ export default function Home() {
               </SlideIn>
               <SlideIn direction="right">
                 <div className="space-y-4">
-                  <div className="bg-charcoal p-8 text-center">
+                  <div className="bg-charcoal p-5 text-center md:p-8">
                     <p className="font-sans text-6xl font-bold text-amber md:text-8xl">30%+</p>
                     <p className="mt-2 font-sans text-sm text-white/70">
                       TPM levels found in unregulated US fryers
@@ -172,7 +172,7 @@ export default function Home() {
                       Athens restaurants: 17%. The US — with no testing — is flying blind.
                     </p>
                   </div>
-                  <div className="bg-charcoal/5 p-8 text-center">
+                  <div className="bg-charcoal/5 p-5 text-center md:p-8">
                     <p className="font-sans text-4xl font-bold text-charcoal md:text-5xl">3 days</p>
                     <p className="mt-2 font-sans text-sm text-charcoal/50">
                       Median oil change frequency — regardless of oil type, volume, or filtration
@@ -182,7 +182,7 @@ export default function Home() {
                       Serves food in bad oil. Condition-based testing is the only answer.
                     </p>
                   </div>
-                  <div className="bg-charcoal/5 p-8 text-center">
+                  <div className="bg-charcoal/5 p-5 text-center md:p-8">
                     <p className="font-sans text-4xl font-bold text-charcoal md:text-5xl">20–40%</p>
                     <p className="mt-2 font-sans text-sm text-charcoal/50">
                       More fat absorbed by food fried in degraded oil
@@ -199,7 +199,7 @@ export default function Home() {
       </Section>
 
       {/* What it does to your body */}
-      <Section className="border-t border-charcoal/10 bg-white">
+      <Section className="border-t border-charcoal/10 bg-white" size="tight">
         <Container>
           <FadeIn>
             <Eyebrow>The Health Impact</Eyebrow>
@@ -308,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* THE SOLUTION — WIYO! Seal */}
-      <Section className="bg-white" id="seal">
+      <Section className="bg-white" id="seal" size="spacious">
         <Container>
           <FadeIn>
             <Eyebrow>The Solution</Eyebrow>
@@ -324,7 +324,7 @@ export default function Home() {
 
           <FadeInStagger className="mt-12 grid gap-8 md:grid-cols-3">
             <FadeInItem>
-              <Card>
+              <Card variant="elevated">
                 <Badge variant="bronze">Bronze — Foundation</Badge>
                 <h3 className="mt-4 text-xl font-bold">Managed Oil</h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
@@ -335,7 +335,7 @@ export default function Home() {
               </Card>
             </FadeInItem>
             <FadeInItem>
-              <Card>
+              <Card variant="elevated">
                 <Badge variant="silver">Silver — Certified Staff</Badge>
                 <h3 className="mt-4 text-xl font-bold">Trained Kitchen</h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
@@ -346,7 +346,7 @@ export default function Home() {
               </Card>
             </FadeInItem>
             <FadeInItem>
-              <Card>
+              <Card variant="elevated">
                 <Badge variant="gold">Gold — Exemplary</Badge>
                 <h3 className="mt-4 text-xl font-bold">Full Transparency</h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
@@ -389,7 +389,7 @@ export default function Home() {
       </Section>
 
       {/* The science — why it matters */}
-      <Section>
+      <Section size="spacious">
         <Container>
           <FadeIn>
             <Eyebrow>The Science</Eyebrow>
@@ -475,6 +475,16 @@ export default function Home() {
         </Container>
       </Section>
 
+      {/* Pull Quote — full bleed */}
+      <FadeIn>
+        <section className="border-y border-charcoal/10 bg-offwhite py-20 md:py-28">
+          <blockquote className="mx-auto max-w-4xl px-6 text-center text-2xl italic leading-relaxed text-charcoal/80 md:text-3xl md:leading-relaxed">
+            &ldquo;The oil that lasts longest also produces the fewest harmful
+            byproducts. Performance and safety are the same priority.&rdquo;
+          </blockquote>
+        </section>
+      </FadeIn>
+
       {/* Featured Report */}
       <Section className="border-t border-charcoal/10 bg-white">
         <Container>
@@ -528,12 +538,12 @@ export default function Home() {
 
           <FadeInStagger className="mt-12 grid gap-8 md:grid-cols-3">
             <FadeInItem>
-              <Card>
+              <Card variant="profile">
                 <div className="mb-4">
                   <Avatar name="Matt McMahon" src="/images/board/matt-mcmahon.jpg" />
                 </div>
                 <p className="font-sans text-base font-semibold">Matt McMahon</p>
-                <p className="font-sans text-sm text-amber">President</p>
+                <p className="font-sans text-sm text-olive">President</p>
                 <p className="mt-2 text-sm text-charcoal/60">
                   240+ restaurant openings. $72M in sales across Arizona &amp; New Mexico.
                   Developed Bulk Oil Management Solutions saving 100,000+ lbs of waste.
@@ -541,12 +551,12 @@ export default function Home() {
               </Card>
             </FadeInItem>
             <FadeInItem>
-              <Card>
+              <Card variant="profile">
                 <div className="mb-4">
                   <Avatar name="Conrad Canter" src="/images/board/conrad-canter.jpg" />
                 </div>
                 <p className="font-sans text-base font-semibold">Conrad Canter</p>
-                <p className="font-sans text-sm text-amber">Technical Director</p>
+                <p className="font-sans text-sm text-olive">Technical Director</p>
                 <p className="mt-2 text-sm text-charcoal/60">
                   Inventor of the Zeco Filtration Machine — patented 0.5-micron closed-loop
                   system serving hundreds of restaurants across the Southwest.
@@ -554,12 +564,12 @@ export default function Home() {
               </Card>
             </FadeInItem>
             <FadeInItem>
-              <Card>
+              <Card variant="profile">
                 <div className="mb-4">
                   <Avatar name="Pablo Herrera" src="/images/board/pablo-herrera.jpg" />
                 </div>
                 <p className="font-sans text-base font-semibold">Pablo Herrera</p>
-                <p className="font-sans text-sm text-amber">Founder, The Oil Insurgency</p>
+                <p className="font-sans text-sm text-olive">Founder, The Oil Insurgency</p>
                 <p className="mt-2 text-sm text-charcoal/60">
                   Built the Oil Atlas, designed the certification framework, and launched
                   The Oil Insurgency — forcing transparency into every commercial fryer
