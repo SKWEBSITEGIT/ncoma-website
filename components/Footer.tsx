@@ -78,8 +78,8 @@ export function Footer() {
             </div>
             <p className="font-sans text-sm">
               Follow updates at{' '}
-              <a href="mailto:info@ncoma.org" className="text-white underline hover:text-amber">
-                info@ncoma.org
+              <a href="mailto:info@whatisinyouroil.com" className="text-white underline hover:text-amber">
+                info@whatisinyouroil.com
               </a>
             </p>
           </div>

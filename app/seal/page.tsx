@@ -36,11 +36,11 @@ const faqs = [
   },
   {
     q: 'What does it cost?',
-    a: 'Pricing is tailored to operation size and tier. Contact us at certification@ncoma.org for a quote.',
+    a: 'Pricing is tailored to operation size and tier. Contact us at certification@whatisinyouroil.com for a quote.',
   },
   {
     q: 'As a diner, how do I verify a restaurant is certified?',
-    a: 'Look for the WIYO! seal on the window, menu, or table tent. You can also search the certified operator directory at ncoma.org/find. Each certified kitchen has a verification code linked to its current certification status.',
+    a: 'Look for the WIYO! seal on the window, menu, or table tent. You can also search the certified operator directory at whatisinyouroil.com/find. Each certified kitchen has a verification code linked to its current certification status.',
   },
   {
     q: 'What happens if a certified kitchen fails re-inspection?',

@@ -92,7 +92,7 @@ export default function Contact() {
                   General Inquiries
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  <a href="mailto:info@ncoma.org" className="text-amber hover:underline">info@ncoma.org</a>
+                  <a href="mailto:info@whatisinyouroil.com" className="text-amber hover:underline">info@whatisinyouroil.com</a>
                 </p>
               </div>
               <div>
@@ -100,7 +100,7 @@ export default function Contact() {
                   Media &amp; Press
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  <a href="mailto:press@ncoma.org" className="text-amber hover:underline">press@ncoma.org</a>
+                  <a href="mailto:press@whatisinyouroil.com" className="text-amber hover:underline">press@whatisinyouroil.com</a>
                 </p>
               </div>
               <div>
@@ -108,7 +108,7 @@ export default function Contact() {
                   Speaking Requests
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  <a href="mailto:speaking@ncoma.org" className="text-amber hover:underline">speaking@ncoma.org</a>
+                  <a href="mailto:speaking@whatisinyouroil.com" className="text-amber hover:underline">speaking@whatisinyouroil.com</a>
                 </p>
               </div>
               <div>

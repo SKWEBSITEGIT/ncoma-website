@@ -180,15 +180,15 @@ export default function About() {
             <div className="mt-6 space-y-2 font-sans text-sm text-charcoal/60">
               <p>
                 General inquiries:{' '}
-                <a href="mailto:info@ncoma.org" className="text-amber hover:underline">info@ncoma.org</a>
+                <a href="mailto:info@whatisinyouroil.com" className="text-amber hover:underline">info@whatisinyouroil.com</a>
               </p>
               <p>
                 Certification:{' '}
-                <a href="mailto:certification@ncoma.org" className="text-amber hover:underline">certification@ncoma.org</a>
+                <a href="mailto:certification@whatisinyouroil.com" className="text-amber hover:underline">certification@whatisinyouroil.com</a>
               </p>
               <p>
                 Media &amp; press:{' '}
-                <a href="mailto:press@ncoma.org" className="text-amber hover:underline">press@ncoma.org</a>
+                <a href="mailto:press@whatisinyouroil.com" className="text-amber hover:underline">press@whatisinyouroil.com</a>
               </p>
             </div>
           </FadeIn>
