@@ -2,6 +2,7 @@ import { Container, Section, Eyebrow, Button, Badge, Footnotes, FootnoteRef } fr
 import { HeroImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
+import { TierCards } from '@/components/TierCards'
 
 export const metadata = { title: 'The WIYO! Seal' }
 
@@ -24,7 +25,7 @@ const faqs = [
   },
   {
     q: 'What\'s the difference between Bronze, Silver, and Gold?',
-    a: 'Bronze is the operational baseline — daily filtration, TPM testing, proper discard protocols. Silver adds certified staff (COT designation) and equipment verification. Gold adds consumer transparency — oil type disclosed, WIYO! seal displayed, cost-per-cycle tracking, and advanced filtration.',
+    a: 'All three tiers earn the WIYO! seal. Bronze covers the operational baseline — daily filtration, TPM testing, proper discard protocols. Silver adds certified staff (COT designation) and equipment verification. Gold adds full consumer transparency — oil type disclosed to diners, cost-per-cycle tracking, and advanced filtration.',
   },
   {
     q: 'Do I need special equipment?',
@@ -84,71 +85,15 @@ export default function Seal() {
       <Section className="border-t border-charcoal/10">
         <Container>
           <FadeIn>
-          <h2 className="text-3xl font-bold">Three certification tiers</h2>
-          </FadeIn>
-
-          {/* Bronze */}
-          <FadeIn>
-          <div className="mt-12 border-l-4 border-l-bronze pl-8">
-            <Badge variant="bronze">Bronze — Foundation</Badge>
-            <h3 className="mt-3 text-2xl font-bold">Managed Oil</h3>
-            <p className="mt-3 text-charcoal/70">
-              The operational baseline. A Bronze kitchen has implemented the
-              core NCOMA protocols:
+            <h2 className="text-center text-3xl font-bold">Three certification tiers</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-center text-charcoal/60">
+              Every tier earns the WIYO! seal. The tier tells diners how deep the commitment goes.
+              Click a card to see the full details.
             </p>
-            <ul className="mt-4 list-disc space-y-2 pl-6 text-charcoal/70">
-              <li>Daily filtration during every active service period, documented in the Oil Log</li>
-              <li>TPM testing minimum daily; every service period recommended during heavy frying</li>
-              <li>Discard at 25% TPM or sensory triggers (persistent foam, continuous smoke at operating temp, off-flavors), whichever comes first</li>
-              <li>Fryers covered with fitted lids whenever not in active use</li>
-              <li>Salt at the pass, never above or near the fryer</li>
-              <li>Oil storage sealed, dark, cool; FIFO rotation; no clear containers near light</li>
-              <li>Post-boil-out sacrificial oil rinse before new oil load</li>
-              <li>Oil Log maintained with per-session entries: date, fryer ID, oil type, TPM readings, filtration events, top-off volumes, discard decisions, staff initials</li>
-            </ul>
-          </div>
           </FadeIn>
-
-          {/* Silver */}
-          <FadeIn>
-          <div className="mt-12 border-l-4 border-l-silver pl-8">
-            <Badge variant="silver">Silver — Certified Staff</Badge>
-            <h3 className="mt-3 text-2xl font-bold">Trained Kitchen</h3>
-            <p className="mt-3 text-charcoal/70">
-              Everything in Bronze, plus verified knowledge and equipment standards:
-            </p>
-            <ul className="mt-4 list-disc space-y-2 pl-6 text-charcoal/70">
-              <li>At least one staff member holds NCOMA Certified Oil Technician (COT) status</li>
-              <li>Staff can explain the three degradation pathways (hydrolysis, oxidation, polymerization) without reference material</li>
-              <li>Staff can define TPM and demonstrate correct meter operation</li>
-              <li>Staff know why fish and seafood require a dedicated fryer</li>
-              <li>Thermostat accuracy verified within ±5°C using independent probe, weekly; calibration records in Oil Log</li>
-              <li>Fryer vessel is stainless steel or documented equivalent — no copper or brass utensils in oil contact</li>
-              <li>Dedicated fish/allergen fryer or documented full oil-change protocol</li>
-              <li>Filter media inventory adequate (minimum one-week supply)</li>
-            </ul>
+          <div className="mt-12">
+            <TierCards />
           </div>
-          </FadeIn>
-
-          {/* Gold */}
-          <FadeIn>
-          <div className="mt-12 border-l-4 border-l-gold pl-8">
-            <Badge variant="gold">Gold — Exemplary</Badge>
-            <h3 className="mt-3 text-2xl font-bold">Full Transparency</h3>
-            <p className="mt-3 text-charcoal/70">
-              Everything in Silver, plus consumer transparency and data maturity:
-            </p>
-            <ul className="mt-4 list-disc space-y-2 pl-6 text-charcoal/70">
-              <li>Oil type disclosed to diners (menu, table tent, or signage)</li>
-              <li>Consumer-facing WIYO! seal displayed (window, menu, or digital)</li>
-              <li>30+ days of Oil Log history available for review at time of inspection</li>
-              <li>Advanced filtration — 0.5-micron closed-loop (Zeco or equivalent) or documented equivalent performance</li>
-              <li>Cost-per-cycle tracking: oil cost, cycle count, and savings documented</li>
-              <li>Annual inspection pass rate of 85%+ with no zero scores in Section C (Oil Quality)</li>
-              <li>UCO disposal records maintained (hauler receipts or disposal log)</li>
-            </ul>
-          </div>
-          </FadeIn>
         </Container>
       </Section>
 
