@@ -25,7 +25,8 @@ const columns = [
     title: 'Organization',
     links: [
       { label: 'About NCOMA', href: '/about' },
-      { label: 'Contact & Press', href: '/contact' },
+      { label: 'Contact Us', href: '/contact' },
+      { label: 'Get Certified', href: '/operators#get-certified' },
     ],
   },
 ]

@@ -2,6 +2,7 @@ import { Container, Section, Eyebrow, Button, Callout, Footnotes, FootnoteRef } 
 import { HeroImage, InlineImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
+import { CTABanner } from '@/components/CTABanner'
 
 export const metadata = { title: 'For Consumers' }
 
@@ -90,6 +91,9 @@ export default function Consumers() {
         <Container size="md">
           <FadeIn>
           <h2 className="text-3xl font-bold">What the WIYO! seal tells you</h2>
+          <p className="mt-2 text-sm text-charcoal/50">
+            WIYO! stands for <strong className="text-charcoal/70">&ldquo;What Is Your Oil?&rdquo;</strong> — the question NCOMA believes every diner deserves an answer to.
+          </p>
           </FadeIn>
           <div className="mt-8 space-y-4">
             {[
@@ -135,22 +139,26 @@ export default function Consumers() {
       </Section>
 
       {/* Find CTA */}
-      <Section className="border-t border-charcoal/10 bg-charcoal text-white">
-        <Container>
-          <div className="mx-auto max-w-xl text-center">
-            <h2 className="text-3xl font-bold">Find certified restaurants</h2>
-            <p className="mt-4 text-white/70">
-              Search the NCOMA directory to find restaurants near you that manage
-              their oil to a real standard.
-            </p>
-            <div className="mt-8">
-              <Button href="/find" size="lg">
-                Search the Directory
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <CTABanner
+        variant="dark"
+        heading="Find certified restaurants near you"
+        subheading="Search the NCOMA directory to find restaurants that manage their oil to a real, science-based standard."
+        primaryLabel="Search the Directory"
+        primaryHref="/find"
+        secondaryLabel="Learn About the Seal"
+        secondaryHref="/seal"
+      />
+
+      {/* Operator CTA */}
+      <CTABanner
+        variant="amber"
+        heading="Are you a restaurant operator?"
+        subheading="Get your kitchen certified and show your customers you take oil quality seriously."
+        primaryLabel="Get Certified →"
+        primaryHref="/operators#get-certified"
+        secondaryLabel="Contact Us"
+        secondaryHref="/contact"
+      />
 
       <Section className="border-t border-charcoal/10">
         <Container size="md">

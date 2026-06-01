@@ -2,6 +2,7 @@ import { Container, Section, Eyebrow, Button, Badge, Footnotes, FootnoteRef } fr
 import { HeroImage, InlineImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
+import { CTABanner } from '@/components/CTABanner'
 
 export const metadata = { title: 'For Operators' }
 
@@ -194,6 +195,17 @@ export default function Operators() {
           </div>
         </Container>
       </Section>
+
+      {/* Final CTA */}
+      <CTABanner
+        variant="amber"
+        heading="Don't wait for regulation. Set the standard now."
+        subheading="NCOMA certification saves you money on oil, improves food quality, and gives your customers proof you care."
+        primaryLabel="Start Your Application →"
+        primaryHref="/contact"
+        secondaryLabel="Calculate Your Savings"
+        secondaryHref="/tools/cost-calculator"
+      />
 
       <Section className="border-t border-charcoal/10">
         <Container size="md">

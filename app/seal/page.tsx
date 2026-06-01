@@ -3,6 +3,7 @@ import { HeroImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
 import { TierCards } from '@/components/TierCards'
+import { CTABanner } from '@/components/CTABanner'
 
 export const metadata = { title: 'The WIYO! Seal' }
 
@@ -56,7 +57,7 @@ export default function Seal() {
         <HeroImage src={IMAGES.certificate} alt="Certification standard" className="absolute inset-0" overlay="dark" />
         <Container size="md" className="relative z-10 pb-16 pt-32 md:pb-20">
           <p className="animate-hero-1 font-sans text-xs font-semibold uppercase tracking-widest text-amber">The Seal</p>
-          <h1 className="animate-hero-2 mt-2 max-w-3xl text-4xl font-bold text-white md:text-5xl">What the WIYO! seal means — and why it exists.</h1>
+          <h1 className="animate-hero-2 mt-2 max-w-3xl text-4xl font-bold text-white md:text-5xl">The WIYO! Seal — &ldquo;What Is Your Oil?&rdquo;</h1>
           <p className="animate-hero-3 mt-6 max-w-xl text-lg leading-relaxed text-white/80">
             Over one million US foodservice outlets.<FootnoteRef id={1} /> Not
             one required by federal law to test its frying oil. The WIYO! seal
@@ -185,6 +186,17 @@ export default function Seal() {
           </div>
         </Container>
       </Section>
+
+      {/* CTA */}
+      <CTABanner
+        variant="dark"
+        heading="Ready to earn the WIYO! seal?"
+        subheading="Whether you're an operator looking to certify or a diner who wants to know more — we're here to help."
+        primaryLabel="Start Certification →"
+        primaryHref="/operators#get-certified"
+        secondaryLabel="Contact Us"
+        secondaryHref="/contact"
+      />
 
       {/* Footnotes */}
       <Section className="border-t border-charcoal/10">

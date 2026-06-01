@@ -3,6 +3,7 @@ import { FadeIn, FadeInStagger, FadeInItem } from '@/components/AnimatedSection'
 import { HeroImage } from '@/components/HeroImage'
 import { Avatar } from '@/components/Avatar'
 import { IMAGES } from '@/lib/images'
+import { CTABanner } from '@/components/CTABanner'
 import board from '@/data/board.json'
 
 export const metadata = { title: 'About NCOMA' }
@@ -172,28 +173,16 @@ export default function About() {
       </Section>
       )}
 
-      {/* Contact */}
-      <Section className="border-t border-charcoal/10 bg-white">
-        <Container size="md">
-          <FadeIn>
-            <h2 className="text-2xl font-bold">Contact</h2>
-            <div className="mt-6 space-y-2 font-sans text-sm text-charcoal/60">
-              <p>
-                General inquiries:{' '}
-                <a href="mailto:info@whatisinyouroil.com" className="text-amber hover:underline">info@whatisinyouroil.com</a>
-              </p>
-              <p>
-                Certification:{' '}
-                <a href="mailto:certification@whatisinyouroil.com" className="text-amber hover:underline">certification@whatisinyouroil.com</a>
-              </p>
-              <p>
-                Media &amp; press:{' '}
-                <a href="mailto:press@whatisinyouroil.com" className="text-amber hover:underline">press@whatisinyouroil.com</a>
-              </p>
-            </div>
-          </FadeIn>
-        </Container>
-      </Section>
+      {/* CTA */}
+      <CTABanner
+        variant="amber"
+        heading="Want to join the mission?"
+        subheading="Whether you want to certify your kitchen, partner with NCOMA, or just learn more — reach out."
+        primaryLabel="Contact Us →"
+        primaryHref="/contact"
+        secondaryLabel="Get Certified"
+        secondaryHref="/operators#get-certified"
+      />
     </main>
   )
 }

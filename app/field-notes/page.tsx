@@ -3,6 +3,7 @@ import { Container, Section, Eyebrow } from '@/components/ui'
 import { HeroImage } from '@/components/HeroImage'
 import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
+import { CTABanner } from '@/components/CTABanner'
 import { getFieldNotes } from '@/lib/content'
 
 export const metadata = { title: 'Field Notes' }
@@ -53,6 +54,16 @@ export default function FieldNotesIndex() {
           </div>
         </Container>
       </Section>
+
+      <CTABanner
+        variant="light"
+        heading="Ready to put the science into practice?"
+        subheading="NCOMA certification is built on the same research you just read. Get your kitchen certified."
+        primaryLabel="Get Certified →"
+        primaryHref="/operators#get-certified"
+        secondaryLabel="Contact Us"
+        secondaryHref="/contact"
+      />
     </main>
   )
 }

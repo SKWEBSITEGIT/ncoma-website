@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     'Over 1 million US restaurants. Zero federal requirements to test frying oil. NCOMA is building the standard. The WIYO! seal certifies kitchens that manage their oil to science-based thresholds.',
 }
+import { CTABanner } from '@/components/CTABanner'
 import { FadeIn, FadeInStagger, FadeInItem, SlideIn } from '@/components/AnimatedSection'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
 import { HeroImage, InlineImage } from '@/components/HeroImage'
@@ -343,9 +344,11 @@ export default function Home() {
               The WIYO! seal. Three tiers. One standard.
             </h2>
             <p className="mt-4 max-w-2xl text-charcoal/60">
-              <strong className="text-charcoal">What Is Your Oil?</strong> — the question every
-              diner should ask and every kitchen should be able to answer. The WIYO! seal means
-              this kitchen tests, filters, logs, and manages its oil to a published standard.
+              <strong className="text-charcoal">WIYO! stands for &ldquo;What Is Your Oil?&rdquo;</strong> — the
+              question every diner should ask and every kitchen should be able to answer.
+              When you see the WIYO! seal on a restaurant window, it means that kitchen has been
+              independently inspected and certified by NCOMA. They test their oil daily, filter it,
+              log every reading, and discard it at the science-backed threshold. No guessing.
             </p>
           </FadeIn>
 
@@ -502,6 +505,17 @@ export default function Home() {
         </Container>
       </Section>
 
+      {/* Mid-page CTA */}
+      <CTABanner
+        variant="amber"
+        heading="Your kitchen deserves a standard."
+        subheading="NCOMA certification proves your oil is tested, filtered, and managed to a science-based threshold. Show your customers you care about what's in the fryer."
+        primaryLabel="Get Certified →"
+        primaryHref="/operators#get-certified"
+        secondaryLabel="Talk to Us"
+        secondaryHref="/contact"
+      />
+
       {/* Pull Quote — full bleed */}
       <FadeIn>
         <section className="border-y border-charcoal/10 bg-offwhite py-20 md:py-28">
@@ -635,7 +649,10 @@ export default function Home() {
         <Container className="relative z-10">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold md:text-4xl">
+              <p className="font-sans text-sm font-semibold uppercase tracking-widest text-amber">
+                WIYO! = &ldquo;What Is Your Oil?&rdquo;
+              </p>
+              <h2 className="mt-4 text-3xl font-bold md:text-4xl">
                 Your customers can&apos;t see what&apos;s in the fryer.
                 <br />
                 <span className="text-amber">The WIYO! seal can.</span>
@@ -644,9 +661,17 @@ export default function Home() {
                 Certification gives your kitchen a standard, your staff a credential,
                 and your guests the one thing they&apos;ve never had: proof.
               </p>
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <Button href="/operators#get-certified" size="lg">
-                  Get Certified
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Button href="/operators#get-certified" size="lg" className="animate-pulse-subtle">
+                  Get Certified →
+                </Button>
+                <Button
+                  href="/contact"
+                  variant="outline"
+                  size="lg"
+                  className="border-white/20 text-white hover:border-white/40"
+                >
+                  Contact Us
                 </Button>
                 <Button
                   href="/field-notes"

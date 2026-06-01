@@ -27,7 +27,10 @@ const navGroups = [
   },
   {
     label: 'info',
-    links: [{ label: 'About', href: '/about' }],
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Contact', href: '/contact' },
+    ],
   },
 ]
 
@@ -41,7 +44,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-charcoal/5 backdrop-blur-md bg-offwhite/90">
       <div className="mx-auto flex h-16 max-w-[80rem] items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-charcoal">
-          <Image src="/images/ncoma-logo.png" alt="NCOMA" width={32} height={32} className="h-8 w-8" />
+          <Image src="/images/ncoma-logo.png" alt="NCOMA" width={40} height={40} className="h-10 w-10" />
           NCOMA
         </Link>
 
@@ -76,9 +79,12 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
-          <Button href="/operators#get-certified" size="sm">
-            Get Certified
+        <div className="hidden items-center gap-3 lg:flex">
+          <Button href="/contact" variant="outline" size="sm">
+            Contact Us
+          </Button>
+          <Button href="/operators#get-certified" size="md" className="animate-pulse-subtle">
+            Get Certified →
           </Button>
         </div>
 
@@ -140,10 +146,13 @@ export function Header() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: allLinks.length * 0.06 + 0.1, duration: 0.3 }}
-                className="mt-8"
+                className="mt-8 space-y-3"
               >
                 <Button href="/operators#get-certified" size="lg" className="w-full">
-                  Get Certified
+                  Get Certified →
+                </Button>
+                <Button href="/contact" variant="outline" size="lg" className="w-full">
+                  Contact Us
                 </Button>
               </motion.div>
             </nav>
