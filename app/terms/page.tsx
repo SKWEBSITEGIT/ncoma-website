@@ -108,7 +108,8 @@ export default function Terms() {
                 Questions about these terms? Email{' '}
                 <a href="mailto:info@whatisinyouroil.com" className="text-amber hover:underline">
                   info@whatisinyouroil.com
-                </a>.
+                </a>{' '}
+                or write to: NCOMA, 5355 N 51st Ave #1, Glendale, AZ 85301.
               </p>
             </section>
           </div>

@@ -153,7 +153,8 @@ export default function Contact() {
                   Mailing Address
                 </h3>
                 <p className="mt-2 text-charcoal/70">
-                  Scottsdale, AZ
+                  5355 N 51st Ave #1<br />
+                  Glendale, AZ 85301
                 </p>
               </div>
             </div>
@@ -180,7 +181,7 @@ export default function Contact() {
               WIYO! (&ldquo;What Is Your Oil?&rdquo;) consumer seal certifies
               that a restaurant manages its frying oil to a published standard
               aligned with international best practice. NCOMA is headquartered
-              in Scottsdale, Arizona.
+              in Glendale, Arizona.
             </p>
           </div>
 

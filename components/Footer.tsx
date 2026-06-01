@@ -43,6 +43,10 @@ export function Footer() {
               The National Cooking Oil Management Association. The standard
               American kitchens have been missing.
             </p>
+            <p className="mt-4 font-sans text-xs leading-relaxed text-white/40">
+              5355 N 51st Ave #1<br />
+              Glendale, AZ 85301
+            </p>
           </div>
 
           {columns.map((col) => (
