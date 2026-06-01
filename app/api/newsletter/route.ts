@@ -1,9 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import fs from 'fs'
+import path from 'path'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID
+
+// Load the welcome email HTML at build time
+let welcomeHtml: string
+try {
+  welcomeHtml = fs.readFileSync(
+    path.join(process.cwd(), 'emails', 'welcome-email.html'),
+    'utf-8'
+  )
+} catch {
+  welcomeHtml = ''
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -56,40 +69,19 @@ export async function POST(req: NextRequest) {
           </div>
         `,
       }),
-      // Welcome email to subscriber
+      // Welcome email to subscriber — full Issue #1 newsletter
       resend.emails.send({
         from: 'NCOMA <info@whatisinyouroil.com>',
         to: [email],
-        subject: 'Welcome to the NCOMA Newsletter',
-        html: `
+        subject: 'Welcome to NCOMA — The US has no federal standard for frying oil quality.',
+        html: welcomeHtml || `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: #1F1F1F; padding: 32px; text-align: center;">
               <h1 style="color: #C8841A; margin: 0; font-size: 24px; letter-spacing: 2px;">NCOMA</h1>
-              <p style="color: rgba(255,255,255,0.6); margin: 8px 0 0; font-size: 13px;">National Cooking Oil Management Association</p>
             </div>
             <div style="padding: 32px; background: #FAF6F0;">
-              <h2 style="color: #1F1F1F; margin: 0 0 16px; font-size: 20px;">You're in.</h2>
-              <p style="color: #555; line-height: 1.7; margin: 0 0 16px;">
-                Thank you for subscribing to the NCOMA newsletter. You'll receive:
-              </p>
-              <ul style="color: #555; line-height: 1.8; padding-left: 20px; margin: 0 0 20px;">
-                <li>Oil science and degradation research</li>
-                <li>Certification program updates</li>
-                <li>Industry reports and data</li>
-                <li>New Field Notes articles</li>
-              </ul>
-              <p style="color: #555; line-height: 1.7; margin: 0 0 24px;">
-                We send infrequently and only when we have something worth reading. No spam, ever.
-              </p>
-              <a href="https://www.whatisinyouroil.com" style="display: inline-block; background: #C8841A; color: white; padding: 12px 28px; text-decoration: none; font-weight: bold; font-size: 14px;">
-                Visit whatisinyouroil.com
-              </a>
-            </div>
-            <div style="padding: 16px 32px; background: #1F1F1F; text-align: center;">
-              <p style="color: rgba(255,255,255,0.3); font-size: 11px; margin: 0;">
-                NCOMA &middot; 5355 N 51st Ave #1, Glendale, AZ 85301<br/>
-                <a href="https://www.whatisinyouroil.com/privacy" style="color: rgba(255,255,255,0.4);">Privacy Policy</a>
-              </p>
+              <h2 style="color: #1F1F1F; margin: 0 0 16px;">Welcome to NCOMA.</h2>
+              <p style="color: #555; line-height: 1.7;">Thank you for subscribing. Visit <a href="https://www.whatisinyouroil.com" style="color: #C8841A;">whatisinyouroil.com</a> to learn more.</p>
             </div>
           </div>
         `,
