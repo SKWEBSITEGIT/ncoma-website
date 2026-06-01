@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
@@ -39,7 +40,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-charcoal/5 backdrop-blur-md bg-offwhite/90">
       <div className="mx-auto flex h-16 max-w-[80rem] items-center justify-between px-6">
-        <Link href="/" className="text-xl font-bold tracking-tight text-charcoal">
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-charcoal">
+          <Image src="/images/ncoma-logo.png" alt="NCOMA" width={32} height={32} className="h-8 w-8" />
           NCOMA
         </Link>
 
