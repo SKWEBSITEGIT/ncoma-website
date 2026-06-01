@@ -11,8 +11,8 @@ export default function Home() {
       {/* Hero — the uncomfortable question */}
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-[85vh]">
         <HeroImage
-          src={IMAGES.restaurantKitchen}
-          alt="Commercial kitchen fryer station"
+          src={IMAGES.heroOilDirty}
+          alt="Dirty deep fryer with degraded cooking oil"
           className="absolute inset-0"
           overlay="dark"
         />
