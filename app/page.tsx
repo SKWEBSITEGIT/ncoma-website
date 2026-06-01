@@ -567,10 +567,12 @@ export default function Home() {
                   <Avatar name="Matt McMahon" src="/images/board/matt-mcmahon.jpg" />
                 </div>
                 <p className="font-sans text-base font-semibold">Matt McMahon</p>
-                <p className="font-sans text-sm text-olive">President</p>
+                <p className="font-sans text-sm text-olive">President &amp; Co-Founder</p>
                 <p className="mt-2 text-sm text-charcoal/60">
-                  240+ restaurant openings. $72M in sales across Arizona &amp; New Mexico.
-                  Developed Bulk Oil Management Solutions saving 100,000+ lbs of waste.
+                  Former owner and operator of casual dining restaurants since 1975 — from
+                  New York to Los Angeles, Detroit to Tampa, and everything in between.
+                  Co-founded NCOMA to bring awareness to degraded oils and their effects on
+                  human health.
                 </p>
               </Card>
             </FadeInItem>
@@ -580,10 +582,11 @@ export default function Home() {
                   <Avatar name="Conrad Canter" src="/images/board/conrad-canter.jpg" />
                 </div>
                 <p className="font-sans text-base font-semibold">Conrad Canter</p>
-                <p className="font-sans text-sm text-olive">Technical Director</p>
+                <p className="font-sans text-sm text-olive">Co-Founder &amp; Technical Director</p>
                 <p className="mt-2 text-sm text-charcoal/60">
-                  Inventor of the Zeco Filtration Machine — patented 0.5-micron closed-loop
-                  system serving hundreds of restaurants across the Southwest.
+                  Inventor of the Zeco Oil Filtration Machine — a patented closed-loop
+                  system that microfilters cooking oil down to 0.5 microns, serving hundreds
+                  of restaurants across the Southwest.
                 </p>
               </Card>
             </FadeInItem>
@@ -593,11 +596,11 @@ export default function Home() {
                   <Avatar name="Pablo Herrera" src="/images/board/pablo-herrera.jpg" />
                 </div>
                 <p className="font-sans text-base font-semibold">Pablo Herrera</p>
-                <p className="font-sans text-sm text-olive">Founder, The Oil Insurgency</p>
+                <p className="font-sans text-sm text-olive">Co-Founder, The Oil Insurgency</p>
                 <p className="mt-2 text-sm text-charcoal/60">
-                  Built the Oil Atlas, designed the certification framework, and launched
-                  The Oil Insurgency — forcing transparency into every commercial fryer
-                  in America.
+                  Founder of The Oil Insurgency, a cooking oil company dedicated to bringing
+                  high-oleic palm oil (HOPO) to the American market — a fruit oil with
+                  superior frying performance and stability. Strategic partner to NCOMA.
                 </p>
               </Card>
             </FadeInItem>
