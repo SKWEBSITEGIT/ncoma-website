@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       from: `WIYO! Contact Form <noreply@whatisinyouroil.com>`,
       to: [RECIPIENT],
       replyTo: email,
-      subject: `[WIYO!] ${subject || 'General inquiry'} — ${name}`,
+      subject: `[NCOMA] ${subject || 'General inquiry'} — ${name}`,
       text: [
         `Name: ${name}`,
         `Email: ${email}`,
