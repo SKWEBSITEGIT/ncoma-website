@@ -163,9 +163,9 @@ export default function Contact() {
                     <p className="font-sans font-semibold">{member.name}</p>
                     <p className="font-sans text-sm text-charcoal/50">{member.role || member.title}</p>
                     <p className="mt-2 text-sm text-charcoal/60">
-                      {member.name === ‘Matt McMahon’
-                        ? ‘Former owner and operator of casual dining restaurants since 1975 — from New York to Los Angeles, Detroit to Tampa, and everything in between. Co-founded NCOMA to educate the American consumer and the hospitality industry on the importance of handling edible oils properly.’
-                        : ‘Founder of The Oil Insurgency (formerly del Llano Farms), a cooking oil company dedicated to bringing high-oleic palm oil (HOPO) to the American market — a fruit oil with superior frying performance and stability. Strategic partner to NCOMA.’}
+                      {member.name === 'Matt McMahon'
+                        ? 'Former owner and operator of casual dining restaurants since 1975 — from New York to Los Angeles, Detroit to Tampa, and everything in between. Co-founded NCOMA to educate the American consumer and the hospitality industry on the importance of handling edible oils properly.'
+                        : 'Founder of The Oil Insurgency (formerly del Llano Farms), a cooking oil company dedicated to bringing high-oleic palm oil (HOPO) to the American market — a fruit oil with superior frying performance and stability. Strategic partner to NCOMA.'}
                     </p>
                   </Card>
                 ))}
