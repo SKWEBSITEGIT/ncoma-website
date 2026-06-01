@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
     await Promise.all([
       // Notify NCOMA
       resend.emails.send({
-        from: 'NCOMA Newsletter <noreply@whatisinyouroil.com>',
+        from: 'NCOMA Newsletter <info@whatisinyouroil.com>',
         to: ['info@whatisinyouroil.com'],
         subject: `[NCOMA] New newsletter subscriber: ${email}`,
         html: `
@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
       }),
       // Welcome email to subscriber
       resend.emails.send({
-        from: 'NCOMA <noreply@whatisinyouroil.com>',
+        from: 'NCOMA <info@whatisinyouroil.com>',
         to: [email],
         subject: 'Welcome to the NCOMA Newsletter',
         html: `

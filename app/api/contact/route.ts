@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
 
     // Send email via Resend
     const { error } = await resend.emails.send({
-      from: `WIYO! Contact Form <noreply@whatisinyouroil.com>`,
+      from: `WIYO! Contact Form <info@whatisinyouroil.com>`,
       to: [RECIPIENT],
       replyTo: email,
       subject: `[NCOMA] ${subject || 'General inquiry'} — ${name}`,
