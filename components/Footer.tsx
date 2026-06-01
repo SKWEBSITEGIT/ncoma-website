@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { FooterNewsletter } from '@/components/FooterNewsletter'
 
 const columns = [
   {
@@ -74,19 +75,14 @@ export function Footer() {
         <div className="mt-16 border-t border-white/10 pt-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="font-sans text-sm font-medium text-white">
-                Stay informed
+              <p className="font-sans text-sm font-semibold text-white">
+                Join the NCOMA Newsletter
               </p>
               <p className="mt-1 text-sm">
-                Oil science, certification updates, and industry research.
+                Oil science, certification updates, and industry research. No spam.
               </p>
             </div>
-            <p className="font-sans text-sm">
-              Follow updates at{' '}
-              <a href="mailto:info@whatisinyouroil.com" className="text-white underline hover:text-amber">
-                info@whatisinyouroil.com
-              </a>
-            </p>
+            <FooterNewsletter />
           </div>
         </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Source_Serif_4, Inter } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { NewsletterPopup } from '@/components/NewsletterPopup'
 import './globals.css'
 
 const sourceSerif = Source_Serif_4({
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />
+        <NewsletterPopup />
       </body>
     </html>
   )
