@@ -11,7 +11,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   return params.then(({ slug }) => {
     const oil = oilData.oils.find((o) => o.slug === slug)
-    return { title: oil ? `${oil.name} — Oil Atlas` : 'Oil Not Found' }
+    return {
+      title: oil ? `${oil.name} — Oil Atlas` : 'Oil Not Found',
+      description: oil ? `${oil.name} frying oil profile: smoke point, fatty acid breakdown, fry cycles, stability, and cost data.` : undefined,
+    }
   })
 }
 

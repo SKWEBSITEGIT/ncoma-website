@@ -11,7 +11,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   return params.then(({ slug }) => {
     const article = getFieldNote(slug)
-    return { title: article ? article.meta.title : 'Not Found' }
+    return {
+      title: article ? article.meta.title : 'Not Found',
+      description: article?.meta.excerpt || undefined,
+    }
   })
 }
 

@@ -11,7 +11,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   return params.then(({ slug }) => {
     const report = getReport(slug)
-    return { title: report ? report.meta.title : 'Not Found' }
+    return {
+      title: report ? report.meta.title : 'Not Found',
+      description: report?.meta.excerpt || undefined,
+    }
   })
 }
 

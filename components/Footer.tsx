@@ -89,8 +89,8 @@ export function Footer() {
         <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-8 font-sans text-xs text-white/30 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} National Cooking Oil Management Association. All rights reserved.</p>
           <div className="flex gap-6">
-            <span className="text-white/30">Privacy</span>
-            <span className="text-white/30">Terms</span>
+            <Link href="/privacy" className="transition-colors hover:text-white/60">Privacy</Link>
+            <Link href="/terms" className="transition-colors hover:text-white/60">Terms</Link>
           </div>
         </div>
       </div>

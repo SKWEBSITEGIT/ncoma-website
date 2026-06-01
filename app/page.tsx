@@ -1,4 +1,11 @@
+import type { Metadata } from 'next'
 import { Container, Section, Eyebrow, Button, Card, Badge } from '@/components/ui'
+
+export const metadata: Metadata = {
+  title: 'NCOMA — What Is In Your Oil?',
+  description:
+    'Over 1 million US restaurants. Zero federal requirements to test frying oil. NCOMA is building the standard. The WIYO! seal certifies kitchens that manage their oil to science-based thresholds.',
+}
 import { FadeIn, FadeInStagger, FadeInItem, SlideIn } from '@/components/AnimatedSection'
 import { AnimatedCounter } from '@/components/AnimatedCounter'
 import { HeroImage, InlineImage } from '@/components/HeroImage'
