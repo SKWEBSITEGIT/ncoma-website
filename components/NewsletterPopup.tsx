@@ -14,7 +14,6 @@ export function NewsletterPopup() {
   const [errorMsg, setErrorMsg] = useState('')
 
   useEffect(() => {
-    // Don't show if already dismissed or subscribed
     const dismissed = localStorage.getItem(STORAGE_KEY)
     if (dismissed) return
 
@@ -46,8 +45,7 @@ export function NewsletterPopup() {
 
       setStatus('success')
       localStorage.setItem(STORAGE_KEY, 'subscribed')
-      // Auto-dismiss after 3 seconds
-      setTimeout(() => setShow(false), 3000)
+      setTimeout(() => setShow(false), 4000)
     } catch (err) {
       setStatus('error')
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong.')
@@ -64,38 +62,41 @@ export function NewsletterPopup() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[60] bg-charcoal/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-sm"
             onClick={dismiss}
           />
 
           {/* Modal */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.92, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-x-4 top-[50%] z-[61] mx-auto max-w-lg -translate-y-1/2 sm:inset-x-auto"
+            exit={{ opacity: 0, scale: 0.92, y: 30 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-x-4 top-[50%] z-[61] mx-auto max-w-md -translate-y-1/2 sm:inset-x-auto"
           >
             <div className="relative overflow-hidden shadow-2xl">
-              {/* Top accent bar */}
-              <div className="h-1.5 bg-amber" />
+              {/* Close button */}
+              <button
+                onClick={dismiss}
+                className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white/60 transition-colors hover:bg-white/20 hover:text-white"
+                aria-label="Close"
+              >
+                <X size={16} />
+              </button>
 
-              {/* Dark header */}
-              <div className="bg-charcoal px-8 pb-6 pt-8 text-center">
-                <button
-                  onClick={dismiss}
-                  className="absolute right-4 top-5 text-white/40 transition-colors hover:text-white"
-                  aria-label="Close"
-                >
-                  <X size={20} />
-                </button>
+              {/* Dark top section — the hook */}
+              <div className="bg-charcoal px-8 pb-8 pt-10">
+                {/* Amber accent line */}
+                <div className="mb-6 h-0.5 w-12 bg-amber" />
 
-                <p className="font-sans text-[10px] font-bold uppercase tracking-[0.25em] text-amber">
-                  NCOMA Newsletter
-                </p>
-                <h2 className="mt-3 text-2xl font-bold text-white md:text-3xl">
-                  The oil science your<br />kitchen needs to know.
+                <h2 className="text-[28px] font-bold leading-tight text-white md:text-[32px]">
+                  Do you know what&apos;s<br />
+                  <span className="text-amber">in your frying oil?</span>
                 </h2>
+                <p className="mt-4 text-sm leading-relaxed text-white/60">
+                  Most restaurants can&apos;t answer that question. We&apos;re changing
+                  that with science, standards, and transparency.
+                </p>
               </div>
 
               {/* Content area */}
@@ -104,7 +105,7 @@ export function NewsletterPopup() {
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="py-4 text-center"
+                    className="py-6 text-center"
                   >
                     <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-olive/10">
                       <svg className="h-7 w-7 text-olive" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -113,45 +114,56 @@ export function NewsletterPopup() {
                     </div>
                     <p className="mt-4 text-lg font-bold text-charcoal">You&apos;re in.</p>
                     <p className="mt-1 text-sm text-charcoal/60">
-                      Check your inbox for a welcome email from NCOMA.
+                      Welcome to the oil transparency movement.
                     </p>
                   </motion.div>
                 ) : (
                   <>
-                    <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-center font-sans text-xs text-charcoal/50">
-                      <p>Degradation science</p>
-                      <p>Certification updates</p>
-                      <p>Industry reports</p>
-                      <p>Field Notes articles</p>
+                    {/* What you get */}
+                    <p className="font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/40">
+                      Join the newsletter
+                    </p>
+                    <div className="mt-3 space-y-2">
+                      {[
+                        'Oil science and degradation research',
+                        'Certification program updates',
+                        'Industry data and reports',
+                      ].map((item) => (
+                        <div key={item} className="flex items-center gap-2.5">
+                          <div className="flex h-4 w-4 shrink-0 items-center justify-center">
+                            <div className="h-1 w-1 rounded-full bg-amber" />
+                          </div>
+                          <p className="font-sans text-xs text-charcoal/60">{item}</p>
+                        </div>
+                      ))}
                     </div>
 
-                    <form onSubmit={handleSubmit} className="mt-6">
-                      <div className="flex gap-2">
-                        <input
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="your@email.com"
-                          required
-                          className="h-12 flex-1 border border-charcoal/15 bg-white px-4 font-sans text-sm text-charcoal placeholder:text-charcoal/30 focus:border-amber focus:outline-none focus:ring-2 focus:ring-amber/20"
-                        />
-                        <button
-                          type="submit"
-                          disabled={status === 'sending'}
-                          className="h-12 shrink-0 bg-amber px-6 font-sans text-sm font-semibold text-white transition-colors hover:bg-amber-dark disabled:opacity-60"
-                        >
-                          {status === 'sending' ? (
-                            <span className="inline-flex items-center gap-2">
-                              <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                              </svg>
-                            </span>
-                          ) : (
-                            'Subscribe'
-                          )}
-                        </button>
-                      </div>
+                    <form onSubmit={handleSubmit} className="mt-5">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="your@email.com"
+                        required
+                        className="h-12 w-full border border-charcoal/15 bg-white px-4 font-sans text-sm text-charcoal placeholder:text-charcoal/30 focus:border-amber focus:outline-none focus:ring-2 focus:ring-amber/20"
+                      />
+                      <button
+                        type="submit"
+                        disabled={status === 'sending'}
+                        className="mt-3 h-12 w-full bg-charcoal font-sans text-sm font-semibold tracking-wide text-white transition-colors hover:bg-charcoal/90 disabled:opacity-60"
+                      >
+                        {status === 'sending' ? (
+                          <span className="inline-flex items-center gap-2">
+                            <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                            </svg>
+                            Subscribing...
+                          </span>
+                        ) : (
+                          'Subscribe'
+                        )}
+                      </button>
 
                       {status === 'error' && (
                         <p className="mt-2 font-sans text-xs text-red-600">{errorMsg}</p>
