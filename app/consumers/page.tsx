@@ -4,7 +4,10 @@ import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
 import { CTABanner } from '@/components/CTABanner'
 
-export const metadata = { title: 'For Consumers' }
+export const metadata = {
+  title: 'For Consumers',
+  description: 'You check sourcing and read labels — but nobody asks about the frying oil. Learn what degraded oil does to your food and how the WIYO! seal protects you.',
+}
 
 export default function Consumers() {
   return (

@@ -6,7 +6,10 @@ import { FadeIn } from '@/components/AnimatedSection'
 import { CTABanner } from '@/components/CTABanner'
 import { getFieldNotes } from '@/lib/content'
 
-export const metadata = { title: 'Field Notes' }
+export const metadata = {
+  title: 'Field Notes',
+  description: 'Oil chemistry, degradation science, filtration, and best practices — written for operators, not academics. The NCOMA knowledge base.',
+}
 
 export default function FieldNotesIndex() {
   const articles = getFieldNotes()

@@ -5,7 +5,10 @@ import { FadeIn } from '@/components/AnimatedSection'
 import { TierCards } from '@/components/TierCards'
 import { CTABanner } from '@/components/CTABanner'
 
-export const metadata = { title: 'The WIYO! Seal' }
+export const metadata = {
+  title: 'The WIYO! Seal',
+  description: 'WIYO! stands for "What Is Your Oil?" — the NCOMA certification seal for restaurants that test, filter, and manage their frying oil to a published science-based standard.',
+}
 
 const faqs = [
   {

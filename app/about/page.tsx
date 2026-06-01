@@ -6,7 +6,10 @@ import { IMAGES } from '@/lib/images'
 import { CTABanner } from '@/components/CTABanner'
 import board from '@/data/board.json'
 
-export const metadata = { title: 'About NCOMA' }
+export const metadata = {
+  title: 'About NCOMA',
+  description: 'NCOMA was built by the people who know the fryer — operators, engineers, and strategists who decided the standard needed to exist. Meet the team behind the WIYO! seal.',
+}
 
 export default function About() {
   return (

@@ -4,7 +4,10 @@ import { IMAGES } from '@/lib/images'
 import { FadeIn } from '@/components/AnimatedSection'
 import { CTABanner } from '@/components/CTABanner'
 
-export const metadata = { title: 'For Operators' }
+export const metadata = {
+  title: 'For Operators',
+  description: 'Stop guessing when to change your oil. NCOMA certification extends oil life 20-40%, improves food quality, and gives your kitchen a science-based standard.',
+}
 
 export default function Operators() {
   return (
