@@ -7,6 +7,41 @@ import board from '@/data/board.json'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setSending(true)
+    setError('')
+
+    const form = e.currentTarget
+    const data = {
+      name: (form.elements.namedItem('contact-name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('contact-email') as HTMLInputElement).value,
+      subject: (form.elements.namedItem('contact-subject') as HTMLSelectElement).value,
+      message: (form.elements.namedItem('contact-message') as HTMLTextAreaElement).value,
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (!res.ok) {
+        const body = await res.json()
+        throw new Error(body.error || 'Failed to send')
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
+    } finally {
+      setSending(false)
+    }
+  }
 
   return (
     <main>
@@ -30,10 +65,7 @@ export default function Contact() {
                 </div>
               ) : (
               <form
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  setSubmitted(true)
-                }}
+                onSubmit={handleSubmit}
                 className="mt-6 space-y-4"
               >
                 <div>
@@ -81,7 +113,12 @@ export default function Contact() {
                     className="mt-1 block w-full border border-charcoal/20 bg-white px-3 py-2 font-sans text-sm focus:border-amber focus:outline-none focus-visible:ring-2 focus-visible:ring-amber/50"
                   />
                 </div>
-                <Button type="submit">Send Message</Button>
+                {error && (
+                  <p className="text-sm text-red-600">{error}</p>
+                )}
+                <Button type="submit" disabled={sending}>
+                  {sending ? 'Sending...' : 'Send Message'}
+                </Button>
               </form>
               )}
             </div>
