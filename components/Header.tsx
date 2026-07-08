@@ -3,38 +3,129 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Button } from '@/components/ui'
 
-const navGroups = [
+type NavItem = {
+  label: string
+  href?: string
+  children?: { label: string; href: string; desc?: string }[]
+}
+
+const navItems: NavItem[] = [
+  { label: 'The Seal', href: '/seal' },
   {
-    label: 'primary',
-    links: [
-      { label: 'The Seal', href: '/seal' },
-      { label: 'For Operators', href: '/operators' },
-      { label: 'For Consumers', href: '/consumers' },
+    label: 'Who It’s For',
+    children: [
+      { label: 'For Operators', href: '/operators', desc: 'Certification, testing & oil management' },
+      { label: 'For Consumers', href: '/consumers', desc: 'What’s in your food?' },
     ],
   },
   {
-    label: 'knowledge',
-    links: [
-      { label: 'Oil Atlas', href: '/atlas' },
-      { label: 'Field Notes', href: '/field-notes' },
-      { label: 'Reports', href: '/reports' },
+    label: 'Learn',
+    children: [
+      { label: 'Field Notes', href: '/field-notes', desc: 'Science, data & industry deep-dives' },
+      { label: 'Oil Atlas', href: '/atlas', desc: 'Global frying oil regulations map' },
+      { label: 'Reports', href: '/reports', desc: 'Research & survey findings' },
     ],
   },
-  {
-    label: 'info',
-    links: [
-      { label: 'About', href: '/about' },
-      { label: 'Contact', href: '/contact' },
-    ],
-  },
+  { label: 'About', href: '/about' },
 ]
 
-const allLinks = navGroups.flatMap((g) => g.links)
+const allLinks = navItems.flatMap((item) =>
+  item.children ? item.children.map((c) => ({ label: c.label, href: c.href })) : [{ label: item.label, href: item.href! }]
+)
+
+function Dropdown({ item, pathname }: { item: NavItem; pathname: string }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+  const timeout = useRef<NodeJS.Timeout | null>(null)
+
+  const hasActiveChild = item.children?.some((c) => pathname === c.href)
+
+  const handleEnter = () => {
+    if (timeout.current) clearTimeout(timeout.current)
+    setOpen(true)
+  }
+
+  const handleLeave = () => {
+    timeout.current = setTimeout(() => setOpen(false), 150)
+  }
+
+  useEffect(() => {
+    return () => {
+      if (timeout.current) clearTimeout(timeout.current)
+    }
+  }, [])
+
+  return (
+    <div
+      ref={ref}
+      className="relative"
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
+      <button
+        className={`relative flex items-center gap-1 py-5 transition-colors ${
+          hasActiveChild
+            ? 'text-charcoal font-semibold'
+            : 'text-charcoal/60 hover:text-charcoal'
+        }`}
+        onClick={() => setOpen(!open)}
+      >
+        {item.label}
+        <ChevronDown
+          size={14}
+          className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+        />
+        {hasActiveChild && (
+          <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber" />
+        )}
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.15 }}
+            className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-1"
+          >
+            <div className="min-w-[220px] rounded-lg border border-charcoal/8 bg-white p-2 shadow-lg shadow-charcoal/5">
+              {item.children?.map((child) => {
+                const isActive = pathname === child.href
+                return (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    onClick={() => setOpen(false)}
+                    className={`block rounded-md px-3 py-2.5 transition-colors ${
+                      isActive
+                        ? 'bg-amber/8 text-charcoal'
+                        : 'text-charcoal/70 hover:bg-charcoal/4 hover:text-charcoal'
+                    }`}
+                  >
+                    <span className={`block text-sm ${isActive ? 'font-semibold' : 'font-medium'}`}>
+                      {child.label}
+                    </span>
+                    {child.desc && (
+                      <span className="block text-xs text-charcoal/40 mt-0.5">
+                        {child.desc}
+                      </span>
+                    )}
+                  </Link>
+                )
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -48,40 +139,35 @@ export function Header() {
           NCOMA
         </Link>
 
-        <nav className="hidden items-center font-sans text-sm lg:flex">
-          {navGroups.map((group, gi) => (
-            <div key={group.label} className="flex items-center">
-              {gi > 0 && (
-                <div className="mx-5 h-4 border-l border-charcoal/10" />
-              )}
-              <div className="flex items-center gap-6">
-                {group.links.map((item) => {
-                  const isActive = pathname === item.href
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`relative py-5 transition-colors ${
-                        isActive
-                          ? 'text-charcoal font-semibold'
-                          : 'text-charcoal/60 hover:text-charcoal'
-                      }`}
-                    >
-                      {item.label}
-                      {isActive && (
-                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber" />
-                      )}
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-          ))}
+        <nav className="hidden items-center gap-7 font-sans text-sm lg:flex">
+          {navItems.map((item) => {
+            if (item.children) {
+              return <Dropdown key={item.label} item={item} pathname={pathname} />
+            }
+
+            const isActive = pathname === item.href
+            return (
+              <Link
+                key={item.href}
+                href={item.href!}
+                className={`relative py-5 transition-colors ${
+                  isActive
+                    ? 'text-charcoal font-semibold'
+                    : 'text-charcoal/60 hover:text-charcoal'
+                }`}
+              >
+                {item.label}
+                {isActive && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber" />
+                )}
+              </Link>
+            )
+          })}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button href="/contact" variant="outline" size="sm">
-            Contact Us
+            Contact
           </Button>
           <Button href="/operators#get-certified" size="md" className="animate-pulse-subtle">
             Get Certified →
