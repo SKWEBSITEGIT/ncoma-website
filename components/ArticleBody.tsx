@@ -2,7 +2,9 @@ import { remark } from 'remark'
 import html from 'remark-html'
 
 export async function ArticleBody({ content }: { content: string }) {
-  const result = await remark().use(html).process(content)
+  // sanitize: false lets raw HTML blocks in our own MDX content through
+  // (content/ is repo-controlled, never user-submitted)
+  const result = await remark().use(html, { sanitize: false }).process(content)
 
   return (
     <div
