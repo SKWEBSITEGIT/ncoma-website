@@ -129,6 +129,15 @@ nav, button, label, input, select, textarea, th,
   color: var(--color-charcoal);
   font-weight: 600;
 }
+.prose-ncoma a {
+  color: var(--color-amber);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.15s;
+}
+.prose-ncoma a:hover {
+  opacity: 0.75;
+}
 .prose-ncoma ul, .prose-ncoma ol {
   padding-left: 1.5rem;
   margin-bottom: 1.25rem;
