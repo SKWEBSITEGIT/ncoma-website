@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Container, Section, Eyebrow, Card } from '@/components/ui'
 import { FadeIn, FadeInStagger, FadeInItem } from '@/components/AnimatedSection'
 import { HeroImage } from '@/components/HeroImage'
@@ -102,6 +103,42 @@ export default function About() {
               kitchens. The NCOMA Certified Oil Manager designation is how we
               get there — one kitchen at a time.
             </p>
+          </FadeIn>
+        </Container>
+      </Section>
+
+      {/* Presentation */}
+      <Section className="border-t border-charcoal/10 bg-charcoal">
+        <Container size="md">
+          <FadeIn>
+            <div className="flex flex-col items-start gap-8 md:flex-row md:items-center">
+              <Image
+                src="/images/ncoma-logo.png"
+                alt="NCOMA"
+                width={112}
+                height={112}
+                className="h-24 w-24 shrink-0 md:h-28 md:w-28"
+              />
+              <div>
+                <p className="font-sans text-xs font-semibold uppercase tracking-widest text-amber">Presentation</p>
+                <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">
+                  Time to Lead vs. Getting Led
+                </h2>
+                <p className="mt-3 max-w-2xl text-white/70">
+                  Why the hospitality industry must get ahead of the degraded
+                  cooking oil crisis — the science, the numbers, and the lesson
+                  of the industries that waited. NCOMA&apos;s case for leading,
+                  in ten slides.
+                </p>
+                <a
+                  href="/docs/NCOMA-Time-to-Lead.pdf"
+                  download
+                  className="mt-6 inline-flex items-center justify-center bg-amber px-6 py-3 font-sans text-sm font-medium tracking-wide text-white transition-colors hover:bg-amber-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2"
+                >
+                  Download the presentation (PDF)
+                </a>
+              </div>
+            </div>
           </FadeIn>
         </Container>
       </Section>
