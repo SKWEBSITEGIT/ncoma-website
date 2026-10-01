@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: 'What\'s the difference between Bronze, Silver, and Gold?',
-    a: 'All three tiers earn the WIYO! seal. Bronze covers the operational baseline — daily filtration, TPM testing, proper discard protocols. Silver adds certified staff (COT designation) and equipment verification. Gold adds full consumer transparency — oil type disclosed to diners, cost-per-cycle tracking, and advanced filtration.',
+    a: 'All three tiers earn the NCOMA™ seal. Bronze certifies a food service operation utilizing Seedless Palm Oil from Colombia. Silver certifies an operation practicing proper filtration procedures utilizing Zeco filtration. Gold certifies an operation that does all three: Colombian Seedless Palm Oil, proper filtration using Zeco, and observing and practicing TPM protocol.',
   },
   {
     q: 'Do I need special equipment?',
@@ -118,7 +118,7 @@ export default function Seal() {
               { label: 'B', title: 'Equipment Inspection', desc: 'Thermostat accuracy, vessel material, utensil standards, filtration equipment condition, TPM meter calibration, fryer covers.' },
               { label: 'C', title: 'Oil Quality at Inspection', desc: 'Live TPM reading, color assessment, foam check, smoke check, viscosity drip test. This section cannot have zero scores.' },
               { label: 'D', title: 'Operational Protocols', desc: 'Salt station placement, oil storage conditions, FIFO rotation, post-boil-out protocol, fish/allergen isolation.' },
-              { label: 'E', title: 'Record-Keeping', desc: 'Oil Log currency, TPM readings logged, filtration events documented, discard decisions recorded, 30+ days history (Gold).' },
+              { label: 'E', title: 'Record-Keeping', desc: 'Oil Log currency, TPM readings logged, filtration events documented, discard decisions recorded, 30+ days history.' },
               { label: 'F', title: 'Filtration Compliance', desc: 'Daily filtration documented, filter media change records, no visible carbon buildup on heating elements, equipment clean and functional.' },
             ].map((section) => (
               <div key={section.label} className="flex gap-4">

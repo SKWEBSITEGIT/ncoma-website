@@ -93,7 +93,7 @@ export default function Operators() {
       <Section className="border-t border-charcoal/10 bg-white" id="get-certified">
         <Container size="md">
           <FadeIn>
-          <h2 className="text-3xl font-bold">Four steps to certification</h2>
+          <h2 className="text-3xl font-bold">Four steps to NCOMA™ certification</h2>
           </FadeIn>
           <div className="mt-8 space-y-8">
             {[
@@ -110,7 +110,7 @@ export default function Operators() {
               {
                 step: '03',
                 title: 'Certify',
-                desc: 'Pass the inspection and receive your WIYO! seal — Bronze, Silver, or Gold based on your level of compliance. Display it. Tell your guests.',
+                desc: 'Pass the inspection and receive your NCOMA™ seal — Bronze, Silver, or Gold based on your level of compliance. Display it. Tell your guests.',
               },
               {
                 step: '04',
@@ -133,11 +133,23 @@ export default function Operators() {
         </Container>
       </Section>
 
-      {/* What Auditors Check */}
+      {/* Certification Standards */}
       <Section className="border-t border-charcoal/10">
         <Container size="md">
           <FadeIn>
-          <h2 className="text-3xl font-bold">What auditors check</h2>
+          <h2 className="text-3xl font-bold">
+            A participating restaurant&apos;s use of the NCOMA™ certification trademark
+            certifies that the fried foods of the participating restaurant are prepared
+            using cooking that is safe, clean, and maintained according to standards
+            established by the certifier, S &amp; K Sales, LLC.
+          </h2>
+          </FadeIn>
+          <FadeIn>
+          <h2 className="mt-12 text-3xl font-bold">
+            NCOMA™ Certification Standards for participating restaurants — What our
+            auditors evaluate and must verify for a participating restaurant to become
+            NCOMA™ certified
+          </h2>
           </FadeIn>
           <p className="mt-4 text-charcoal/70">
             A preview of the NCOMA kitchen inspection checklist. No surprises —
@@ -171,6 +183,43 @@ export default function Operators() {
         </Container>
       </Section>
 
+      {/* Using the NCOMA Trademark */}
+      <Section className="border-t border-charcoal/10 bg-white">
+        <Container size="md">
+          <FadeIn>
+          <h2 className="text-3xl font-bold">
+            Sample of use of the NCOMA™ trademark by a participating restaurant
+          </h2>
+          </FadeIn>
+          <div className="mt-8 space-y-4">
+            {[
+              'The restaurant’s menu displaying the certification mark next to fried food offerings, with the usage format below displayed at the bottom of the menu on the same page as the fried food offerings.',
+              'Restaurant signage displaying the certification mark in the format below, such as on the door of the customer entrance.',
+              'A website page advertising the restaurant’s certified fried-food services and displaying the certification mark in the format below.',
+              'An online ordering page showing the certification mark in connection with the restaurant’s fried-food offerings and displaying the certification mark in the format below at the bottom of the page.',
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber" />
+                <p className="text-charcoal/70">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="mt-12 text-xl font-bold">How to display the mark:</h3>
+          <div className="mt-6 border-2 border-charcoal/15 bg-offwhite p-8 text-center md:p-10">
+            <p className="text-2xl font-bold tracking-wide text-charcoal">NCOMA™</p>
+            <p className="mt-1 text-lg font-semibold text-charcoal">
+              Certified Fried Food Restaurant
+            </p>
+            <p className="mx-auto mt-4 max-w-xl font-sans text-sm leading-relaxed text-charcoal/70">
+              This restaurant&apos;s use of the NCOMA™ certification trademark certifies
+              that our fried foods are prepared using cooking that is safe, clean, and
+              maintained according to the standards established by S &amp; K Sales, LLC.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
       {/* Pricing */}
       <Section className="border-t border-charcoal/10 bg-white">
         <Container>
@@ -182,15 +231,15 @@ export default function Operators() {
           <div className="mt-8 space-y-4">
             <div className="flex items-start gap-4">
               <Badge variant="bronze">Bronze</Badge>
-              <p className="text-sm text-charcoal/60">On-site inspection, WIYO! Bronze seal, Oil Log templates, annual renewal.</p>
+              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Bronze seal, annual renewal. For operations utilizing Colombian Seedless Palm Oil.</p>
             </div>
             <div className="flex items-start gap-4">
               <Badge variant="silver">Silver</Badge>
-              <p className="text-sm text-charcoal/60">Everything in Bronze, plus COT exam for one staff member, equipment verification.</p>
+              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Silver seal, annual renewal. For operations practicing proper filtration with Zeco.</p>
             </div>
             <div className="flex items-start gap-4">
               <Badge variant="gold">Gold</Badge>
-              <p className="text-sm text-charcoal/60">Everything in Silver, plus consumer-facing WIYO! seal kit, cost-per-cycle analytics, priority directory listing.</p>
+              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Gold seal, priority directory listing. For operations with Colombian Seedless Palm Oil, Zeco filtration, and TPM protocol.</p>
             </div>
           </div>
           <div className="mt-8">

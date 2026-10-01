@@ -45,7 +45,7 @@ export default function Home() {
                 size="lg"
                 className="border-white/30 text-white hover:border-white/60"
               >
-                Fix It — Get Certified
+                Fix It — Get NCOMA™ Certified
               </Button>
             </div>
           </div>
@@ -355,34 +355,32 @@ export default function Home() {
           <FadeInStagger className="mt-12 grid gap-8 md:grid-cols-3">
             <FadeInItem>
               <Card variant="elevated">
-                <Badge variant="bronze">Bronze — Foundation</Badge>
-                <h3 className="mt-4 text-xl font-bold">Managed Oil</h3>
+                <Badge variant="bronze">Bronze</Badge>
+                <h3 className="mt-4 text-xl font-bold">Seedless Palm Oil</h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
-                  Daily filtration. TPM testing daily minimum. Oil discarded at 25% TPM.
-                  Fryers covered when idle. Salt at the pass only. Oil Log maintained
-                  every service.
+                  Food service operation utilizing Seedless Palm Oil from Colombia —
+                  a fruit oil, pressed from the flesh of the palm fruit, not a seed.
                 </p>
               </Card>
             </FadeInItem>
             <FadeInItem>
               <Card variant="elevated">
-                <Badge variant="silver">Silver — Certified Staff</Badge>
-                <h3 className="mt-4 text-xl font-bold">Trained Kitchen</h3>
+                <Badge variant="silver">Silver</Badge>
+                <h3 className="mt-4 text-xl font-bold">Zeco Filtration</h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
-                  Everything in Bronze. At least one NCOMA Certified Oil Technician (COT)
-                  on staff. Can name the three degradation pathways. Thermostat verified
-                  ±5°C weekly. Dedicated fish fryer.
+                  Food service operation practicing proper filtration procedures
+                  utilizing Zeco filtration — the patented Positive Seal system.
                 </p>
               </Card>
             </FadeInItem>
             <FadeInItem>
               <Card variant="elevated">
-                <Badge variant="gold">Gold — Exemplary</Badge>
-                <h3 className="mt-4 text-xl font-bold">Full Transparency</h3>
+                <Badge variant="gold">Gold</Badge>
+                <h3 className="mt-4 text-xl font-bold">The Full Standard</h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
-                  Everything in Silver. Oil type disclosed to diners. 30+ days of Oil
-                  Log history. 0.5-micron filtration. Consumer-facing WIYO! seal displayed.
-                  Annual inspection, 85%+ pass rate.
+                  Food service operation using: 1. Colombian Seedless Palm Oil,
+                  2. proper filtration using Zeco, and 3. an operation that observes
+                  and practices TPM protocol.
                 </p>
               </Card>
             </FadeInItem>
