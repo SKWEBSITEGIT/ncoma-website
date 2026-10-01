@@ -32,7 +32,7 @@ function getArticles(type: 'field-notes' | 'reports'): { meta: ArticleMeta; cont
           title: data.title || '',
           subtitle: data.subtitle,
           date: data.date || '',
-          author: data.author || 'NCOMA Editorial',
+          author: data.author || 'NCOMA™ Editorial',
           category: data.category || '',
           tags: data.tags || [],
           excerpt: data.excerpt || '',

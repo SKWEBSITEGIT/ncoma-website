@@ -7,21 +7,21 @@ import { CTABanner } from '@/components/CTABanner'
 
 export const metadata = {
   title: 'The WIYO! Seal',
-  description: 'WIYO! stands for "What Is Your Oil?" — the NCOMA certification seal for restaurants that test, filter, and manage their frying oil to a published science-based standard.',
+  description: 'WIYO! stands for "What Is Your Oil?" — the NCOMA™ certification seal for restaurants that test, filter, and manage their frying oil to a published science-based standard.',
 }
 
 const faqs = [
   {
     q: 'What does the WIYO! seal mean?',
-    a: 'It means the kitchen has been inspected and certified to manage its frying oil to the NCOMA standard — daily filtration, TPM testing, 25% discard threshold, trained staff, and documented record-keeping. It is not a one-time badge; it requires ongoing compliance and annual renewal.',
+    a: 'It means the kitchen has been inspected and certified to manage its frying oil to the NCOMA™ standard — daily filtration, TPM testing, 25% discard threshold, trained staff, and documented record-keeping. It is not a one-time badge; it requires ongoing compliance and annual renewal.',
   },
   {
     q: 'What is TPM and why 25%?',
-    a: 'Total Polar Materials is the percentage of degradation products in frying oil. It captures all three degradation pathways — hydrolysis, oxidation, and polymerization — in a single number. Germany mandates discard at 27%, Belgium/Spain/France at 25%. The US has no federal threshold. NCOMA adopts 25%, aligned with the more protective international standards.',
+    a: 'Total Polar Materials is the percentage of degradation products in frying oil. It captures all three degradation pathways — hydrolysis, oxidation, and polymerization — in a single number. Germany mandates discard at 27%, Belgium/Spain/France at 25%. The US has no federal threshold. NCOMA™ adopts 25%, aligned with the more protective international standards.',
   },
   {
     q: 'How often is oil tested?',
-    a: 'Minimum daily in all operations with active fryers. Every service period is recommended during heavy frying (4+ continuous hours). All readings are recorded in the NCOMA Oil Log.',
+    a: 'Minimum daily in all operations with active fryers. Every service period is recommended during heavy frying (4+ continuous hours). All readings are recorded in the NCOMA™ Oil Log.',
   },
   {
     q: 'What does the audit check?',
@@ -108,7 +108,7 @@ export default function Seal() {
           <h2 className="text-3xl font-bold">How the audit works</h2>
           </FadeIn>
           <p className="mt-4 text-charcoal/70">
-            NCOMA inspections evaluate six sections. Each item is pass/fail.
+            NCOMA™ inspections evaluate six sections. Each item is pass/fail.
             Overall pass requires 85% with no zero scores in Section C (oil
             quality at time of inspection).
           </p>

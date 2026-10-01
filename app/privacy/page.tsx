@@ -3,7 +3,7 @@ import { Container, Section } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'NCOMA privacy policy. How we collect, use, and protect your information.',
+  description: 'NCOMA™ privacy policy. How we collect, use, and protect your information.',
 }
 
 export default function Privacy() {
@@ -20,7 +20,7 @@ export default function Privacy() {
             <section>
               <h2>Who we are</h2>
               <p>
-                The National Cooking Oil Management Association (&ldquo;NCOMA,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) operates the website
+                The National Cooking Oil Management Association (&ldquo;NCOMA™,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) operates the website
                 whatisinyouroil.com. This policy explains how we collect, use, and
                 protect information when you visit our site or use our services.
               </p>
@@ -48,7 +48,7 @@ export default function Privacy() {
                 <li>To respond to your inquiries and provide requested services</li>
                 <li>To process and manage certification applications</li>
                 <li>To improve our website and services</li>
-                <li>To send relevant updates about NCOMA programs (only if you opt in)</li>
+                <li>To send relevant updates about NCOMA™ programs (only if you opt in)</li>
               </ul>
             </section>
 
@@ -105,7 +105,7 @@ export default function Privacy() {
                 <a href="mailto:info@whatisinyouroil.com" className="text-amber hover:underline">
                   info@whatisinyouroil.com
                 </a>{' '}
-                or write to: NCOMA, 5355 N 51st Ave #1, Glendale, AZ 85301.
+                or write to: NCOMA™, 5355 N 51st Ave #1, Glendale, AZ 85301.
               </p>
             </section>
           </div>

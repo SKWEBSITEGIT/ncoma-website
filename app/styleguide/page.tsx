@@ -20,7 +20,7 @@ export default function Styleguide() {
           <Eyebrow>Design System</Eyebrow>
           <h1 className="mt-2 text-5xl font-bold">Styleguide</h1>
           <p className="mt-4 max-w-xl text-charcoal/60">
-            Living reference for NCOMA brand components, colors, and typography.
+            Living reference for NCOMA™ brand components, colors, and typography.
           </p>
         </Container>
       </Section>
@@ -75,7 +75,7 @@ export default function Styleguide() {
             <div>
               <p className="font-sans text-xs uppercase tracking-wider text-charcoal/40">Source Serif 4 — Body</p>
               <p className="mt-2 max-w-lg text-lg">
-                Most American kitchens have no standard for frying oil. NCOMA changes that.
+                Most American kitchens have no standard for frying oil. NCOMA™ changes that.
               </p>
             </div>
             <div>
@@ -168,7 +168,7 @@ export default function Styleguide() {
           <div className="mt-8 space-y-4">
             <Callout>
               <p className="font-sans text-sm">
-                <strong>NCOMA Standard:</strong> Oil must be discarded when TPM reaches 25%.
+                <strong>NCOMA™ Standard:</strong> Oil must be discarded when TPM reaches 25%.
               </p>
             </Callout>
             <Callout variant="warning">

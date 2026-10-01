@@ -6,7 +6,7 @@ import { CTABanner } from '@/components/CTABanner'
 
 export const metadata = {
   title: 'For Operators',
-  description: 'Stop guessing when to change your oil. NCOMA certification extends oil life 20-40%, improves food quality, and gives your kitchen a science-based standard.',
+  description: 'Stop guessing when to change your oil. NCOMA™ certification extends oil life 20-40%, improves food quality, and gives your kitchen a science-based standard.',
 }
 
 export default function Operators() {
@@ -20,7 +20,7 @@ export default function Operators() {
           <p className="animate-hero-3 mt-6 max-w-xl text-lg leading-relaxed text-white/80">
             Most restaurants change oil on a fixed schedule — wasting oil with
             cycles left, or serving food in oil past the threshold.
-            NCOMA-certified operators know the difference.
+            NCOMA™-certified operators know the difference.
           </p>
         </Container>
       </section>
@@ -44,7 +44,7 @@ export default function Operators() {
             <div>
               <h3 className="text-xl font-bold">Oil life extension</h3>
               <p className="mt-3 text-charcoal/70">
-                NCOMA-certified operators extend oil life by 20–40% without
+                NCOMA™-certified operators extend oil life by 20–40% without
                 compromising food quality.<FootnoteRef id={1} /> Daily filtration
                 alone extends oil life by 40–80%.<FootnoteRef id={2} /> On a
                 typical oil cost of $1,000–$1,500 per ton and consumption of
@@ -105,7 +105,7 @@ export default function Operators() {
               {
                 step: '02',
                 title: 'Audit',
-                desc: 'An NCOMA inspector evaluates six sections: staff knowledge, equipment, oil quality (live TPM reading), operational protocols, record-keeping, and filtration compliance. 85% pass rate required, no zeros in oil quality.',
+                desc: 'An NCOMA™ inspector evaluates six sections: staff knowledge, equipment, oil quality (live TPM reading), operational protocols, record-keeping, and filtration compliance. 85% pass rate required, no zeros in oil quality.',
               },
               {
                 step: '03',
@@ -152,7 +152,7 @@ export default function Operators() {
           </h2>
           </FadeIn>
           <p className="mt-4 text-charcoal/70">
-            A preview of the NCOMA kitchen inspection checklist. No surprises —
+            A preview of the NCOMA™ kitchen inspection checklist. No surprises —
             every item is published in the Certified Cooking Oil Management Guide.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -169,7 +169,7 @@ export default function Operators() {
               'No persistent foam at operating temperature',
               'Salt station at the pass, not near the fryer',
               'Oil storage sealed, dark, away from heat',
-              'NCOMA Oil Log current (within last service)',
+              'NCOMA™ Oil Log current (within last service)',
               'Fish/allergen fryer dedicated or documented protocol',
               'Daily filtration documented in log',
               'No visible carbon buildup on heating elements',
@@ -183,7 +183,7 @@ export default function Operators() {
         </Container>
       </Section>
 
-      {/* Using the NCOMA Trademark */}
+      {/* Using the NCOMA™ Trademark */}
       <Section className="border-t border-charcoal/10 bg-white">
         <Container size="md">
           <FadeIn>
@@ -252,7 +252,7 @@ export default function Operators() {
       <CTABanner
         variant="amber"
         heading="Don't wait for regulation. Set the standard now."
-        subheading="NCOMA certification saves you money on oil, improves food quality, and gives your customers proof you care."
+        subheading="NCOMA™ certification saves you money on oil, improves food quality, and gives your customers proof you care."
         primaryLabel="Start Your Application →"
         primaryHref="/contact"
         secondaryLabel="Calculate Your Savings"
@@ -263,9 +263,9 @@ export default function Operators() {
         <Container size="md">
           <Footnotes
             notes={[
-              'NCOMA Certified Cooking Oil Management Guide, 2025. Section 5: Operator ROI.',
+              'NCOMA™ Certified Cooking Oil Management Guide, 2025. Section 5: Operator ROI.',
               'Moreira, R. G., et al. Deep-Fat Frying: Fundamentals and Applications. Aspen Publishers.',
-              'NCOMA Guide, Part 8, Section 8.2. Cost per fry cycle calculation using Fedepalma/UCaldas (2025) frying life data.',
+              'NCOMA™ Guide, Part 8, Section 8.2. Cost per fry cycle calculation using Fedepalma/UCaldas (2025) frying life data.',
               'Saguy, I. S., & Dana, D. (2003). Minimizing oil uptake during deep-fat frying. Journal of Food Engineering, 56(2–3), 143–152.',
               'Zeco Oil Filtration Systems. Manufacturer data and customer testimonials.',
             ]}

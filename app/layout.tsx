@@ -20,8 +20,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'NCOMA — National Cooking Oil Management Association',
-    template: '%s | NCOMA',
+    default: 'NCOMA™ — National Cooking Oil Management Association',
+    template: '%s | NCOMA™',
   },
   description:
     'The first industry-built certification for cooking oil management in American commercial kitchens. Know your oil.',
@@ -29,15 +29,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'NCOMA — What Is In Your Oil?',
-    title: 'NCOMA — National Cooking Oil Management Association',
+    siteName: 'NCOMA™ — What Is In Your Oil?',
+    title: 'NCOMA™ — National Cooking Oil Management Association',
     description:
       'The first industry-built certification for cooking oil management in American commercial kitchens. Know your oil.',
     url: 'https://www.whatisinyouroil.com',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NCOMA — National Cooking Oil Management Association',
+    title: 'NCOMA™ — National Cooking Oil Management Association',
     description:
       'The first industry-built certification for cooking oil management in American commercial kitchens.',
   },

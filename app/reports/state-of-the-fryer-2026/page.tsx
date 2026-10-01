@@ -14,7 +14,7 @@ import {
 } from './charts'
 
 export const metadata = {
-  title: '2026 State of the Fryer — NCOMA',
+  title: '2026 State of the Fryer — NCOMA™',
   description:
     'Oil management practices in American commercial kitchens. A survey of 412 operators across 38 states.',
 }
@@ -35,7 +35,7 @@ export default function StateOfTheFryer2026() {
         <Container size="lg" className="relative z-10 pb-16 pt-40 md:pb-24">
           <FadeIn>
             <p className="font-sans text-sm font-medium uppercase tracking-widest text-amber">
-              NCOMA Research &middot; 2026
+              NCOMA™ Research &middot; 2026
             </p>
             <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
               State of the Fryer
@@ -80,7 +80,7 @@ export default function StateOfTheFryer2026() {
           <FadeIn delay={0.15}>
             <div className="mt-8 columns-1 gap-8 text-lg leading-relaxed text-charcoal/70 md:columns-2">
               <p>
-                NCOMA&rsquo;s inaugural State of the Fryer report surveyed 412
+                NCOMA™&rsquo;s inaugural State of the Fryer report surveyed 412
                 commercial-kitchen operators across 38 states to benchmark how
                 America fries. The findings reveal a systemic knowledge and
                 practice gap: the vast majority of operators have never
@@ -435,7 +435,7 @@ export default function StateOfTheFryer2026() {
               Close the gap in your kitchen.
             </h2>
             <p className="mx-auto mt-4 max-w-xl font-sans text-lg text-white/70">
-              NCOMA certification gives operators the tools, training, and
+              NCOMA™ certification gives operators the tools, training, and
               testing protocols to manage oil by data&mdash;not guesswork.
               Join the operators already setting the standard.
             </p>

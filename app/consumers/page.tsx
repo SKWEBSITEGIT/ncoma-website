@@ -95,7 +95,7 @@ export default function Consumers() {
           <FadeIn>
           <h2 className="text-3xl font-bold">What the WIYO! seal tells you</h2>
           <p className="mt-2 text-sm text-charcoal/50">
-            WIYO! stands for <strong className="text-charcoal/70">&ldquo;What Is Your Oil?&rdquo;</strong> — the question NCOMA believes every diner deserves an answer to.
+            WIYO! stands for <strong className="text-charcoal/70">&ldquo;What Is Your Oil?&rdquo;</strong> — the question NCOMA™ believes every diner deserves an answer to.
           </p>
           </FadeIn>
           <div className="mt-8 space-y-4">
@@ -129,8 +129,8 @@ export default function Consumers() {
           <div className="mt-8 space-y-6">
             {[
               { q: 'What oil do you fry in?', why: 'The type of oil matters. Fruit oils like palm and high oleic varieties (sunflower, canola) produce far fewer degradation byproducts than conventional PUFA-rich seed oils (corn, soybean, grapeseed) at the same temperature.' },
-              { q: 'How often do you test it?', why: 'If the answer is "we don\'t" or "we change it every X days," there\'s no data behind the decision. NCOMA-certified kitchens test TPM at minimum daily.' },
-              { q: 'Are you NCOMA certified?', why: 'The WIYO! seal means the kitchen has been independently inspected and meets a published standard. No seal, no standard.' },
+              { q: 'How often do you test it?', why: 'If the answer is "we don\'t" or "we change it every X days," there\'s no data behind the decision. NCOMA™-certified kitchens test TPM at minimum daily.' },
+              { q: 'Are you NCOMA™ certified?', why: 'The WIYO! seal means the kitchen has been independently inspected and meets a published standard. No seal, no standard.' },
             ].map((item, i) => (
               <div key={i}>
                 <p className="text-xl font-bold">&ldquo;{item.q}&rdquo;</p>
@@ -145,7 +145,7 @@ export default function Consumers() {
       <CTABanner
         variant="dark"
         heading="Find certified restaurants near you"
-        subheading="Search the NCOMA directory to find restaurants that manage their oil to a real, science-based standard."
+        subheading="Search the NCOMA™ directory to find restaurants that manage their oil to a real, science-based standard."
         primaryLabel="Search the Directory"
         primaryHref="/find"
         secondaryLabel="Learn About the Seal"
@@ -167,7 +167,7 @@ export default function Consumers() {
         <Container size="md">
           <Footnotes
             notes={[
-              'Germany 27% TPM (mandatory), Belgium/Netherlands/Spain/France 25% TPM (mandatory). Source: NCOMA Certified Cooking Oil Management Guide, Table 7.1.',
+              'Germany 27% TPM (mandatory), Belgium/Netherlands/Spain/France 25% TPM (mandatory). Source: NCOMA™ Certified Cooking Oil Management Guide, Table 7.1.',
               'Saguy, I. S., & Dana, D. (2003). Minimizing oil uptake during deep-fat frying. Journal of Food Engineering, 56(2–3), 143–152.',
             ]}
           />

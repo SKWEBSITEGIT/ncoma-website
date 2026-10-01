@@ -50,7 +50,7 @@ export default function CostCalculator() {
           </h1>
           <p className="mt-6 text-lg text-charcoal/70">
             Enter your actual numbers — what you pay, how much you use, how
-            often you change. See what NCOMA-standard oil management (daily
+            often you change. See what NCOMA™-standard oil management (daily
             filtration + TPM testing + condition-based discard) saves you.
           </p>
         </Container>
@@ -143,7 +143,7 @@ export default function CostCalculator() {
                 </div>
 
                 <div className="border-l-4 border-l-amber pl-4">
-                  <p className="font-sans text-xs font-semibold uppercase tracking-wider text-charcoal/40">With NCOMA-managed protocols</p>
+                  <p className="font-sans text-xs font-semibold uppercase tracking-wider text-charcoal/40">With NCOMA™-managed protocols</p>
                   <p className="mt-1 text-3xl font-bold text-amber">${Math.round(results.annualManagedCost).toLocaleString()}</p>
                   <p className="font-sans text-sm text-charcoal/50">
                     ${results.managedCostPerCover.toFixed(2)} per cover · extending to {results.managedDays}-day cycles
@@ -167,7 +167,7 @@ export default function CostCalculator() {
                 ? 'You already filter daily — good. Adding TPM testing and condition-based discard (instead of a fixed schedule) typically extends oil life an additional 35%, because you stop changing oil that still has usable cycles left.'
                 : 'Daily filtration extends oil life by 40–80% (Moreira et al., Choe & Min 2007). Adding TPM testing means you discard based on actual oil condition, not a calendar — stopping both premature changes (wasted oil) and late changes (degraded food).'
               } These estimates are conservative. Actual results depend on menu mix, frying temperature,
-              food-to-oil ratio, and filtration equipment. The NCOMA Certified Cooking Oil Management
+              food-to-oil ratio, and filtration equipment. The NCOMA™ Certified Cooking Oil Management
               Guide covers the full methodology in Part 5 and Part 8.
             </p>
           </Callout>

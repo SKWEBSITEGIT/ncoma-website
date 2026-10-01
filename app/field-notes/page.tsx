@@ -8,7 +8,7 @@ import { getFieldNotes } from '@/lib/content'
 
 export const metadata = {
   title: 'Field Notes',
-  description: 'Oil chemistry, degradation science, filtration, and best practices — written for operators, not academics. The NCOMA knowledge base.',
+  description: 'Oil chemistry, degradation science, filtration, and best practices — written for operators, not academics. The NCOMA™ knowledge base.',
 }
 
 export default function FieldNotesIndex() {
@@ -61,7 +61,7 @@ export default function FieldNotesIndex() {
       <CTABanner
         variant="light"
         heading="Ready to put the science into practice?"
-        subheading="NCOMA certification is built on the same research you just read. Get your kitchen certified."
+        subheading="NCOMA™ certification is built on the same research you just read. Get your kitchen certified."
         primaryLabel="Get Certified →"
         primaryHref="/operators#get-certified"
         secondaryLabel="Contact Us"

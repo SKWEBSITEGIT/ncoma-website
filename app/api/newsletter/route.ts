@@ -50,9 +50,9 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Always send a notification to NCOMA + a welcome email to the subscriber
+    // Always send a notification to NCOMA™ + a welcome email to the subscriber
     await Promise.all([
-      // Notify NCOMA
+      // Notify NCOMA™
       resend.emails.send({
         from: 'NCOMA Newsletter <info@whatisinyouroil.com>',
         to: ['info@whatisinyouroil.com'],
@@ -73,14 +73,14 @@ export async function POST(req: NextRequest) {
       resend.emails.send({
         from: 'NCOMA <info@whatisinyouroil.com>',
         to: [email],
-        subject: 'Welcome to NCOMA — The US has no federal standard for frying oil quality.',
+        subject: 'Welcome to NCOMA™ — The US has no federal standard for frying oil quality.',
         html: welcomeHtml || `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: #1F1F1F; padding: 32px; text-align: center;">
-              <h1 style="color: #C8841A; margin: 0; font-size: 24px; letter-spacing: 2px;">NCOMA</h1>
+              <h1 style="color: #C8841A; margin: 0; font-size: 24px; letter-spacing: 2px;">NCOMA™</h1>
             </div>
             <div style="padding: 32px; background: #FAF6F0;">
-              <h2 style="color: #1F1F1F; margin: 0 0 16px;">Welcome to NCOMA.</h2>
+              <h2 style="color: #1F1F1F; margin: 0 0 16px;">Welcome to NCOMA™.</h2>
               <p style="color: #555; line-height: 1.7;">Thank you for subscribing. Visit <a href="https://www.whatisinyouroil.com" style="color: #C8841A;">whatisinyouroil.com</a> to learn more.</p>
             </div>
           </div>

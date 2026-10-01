@@ -135,8 +135,8 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-charcoal/5 backdrop-blur-md bg-offwhite/90">
       <div className="mx-auto flex h-16 max-w-[80rem] items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-charcoal">
-          <Image src="/images/ncoma-logo.png" alt="NCOMA" width={40} height={40} className="h-10 w-10" />
-          NCOMA
+          <Image src="/images/ncoma-logo.png" alt="NCOMA™" width={40} height={40} className="h-10 w-10" />
+          NCOMA™
         </Link>
 
         <nav className="hidden items-center gap-7 font-sans text-sm lg:flex">

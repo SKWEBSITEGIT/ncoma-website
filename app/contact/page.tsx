@@ -169,18 +169,18 @@ export default function Contact() {
 
           <div className="mt-8">
             <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-charcoal/40">
-              About NCOMA — Boilerplate
+              About NCOMA™ — Boilerplate
             </h3>
             <p className="mt-3 text-charcoal/70">
-              The National Cooking Oil Management Association (NCOMA) is the
+              The National Cooking Oil Management Association (NCOMA™) is the
               first industry-built certification body for cooking oil management
               in American commercial kitchens. Founded by foodservice industry
-              professionals, NCOMA establishes what no federal regulation
+              professionals, NCOMA™ establishes what no federal regulation
               currently requires: a science-based standard for how cooking oil is
               selected, managed, tested, and replaced. The association&apos;s
               WIYO! (&ldquo;What Is Your Oil?&rdquo;) consumer seal certifies
               that a restaurant manages its frying oil to a published standard
-              aligned with international best practice. NCOMA is headquartered
+              aligned with international best practice. NCOMA™ is headquartered
               in Glendale, Arizona.
             </p>
           </div>
@@ -202,8 +202,8 @@ export default function Contact() {
                     <p className="font-sans text-sm text-charcoal/50">{member.role || member.title}</p>
                     <p className="mt-2 text-sm text-charcoal/60">
                       {member.name === 'Matt McMahon'
-                        ? 'Former owner and operator of casual dining restaurants since 1975 — from New York to Los Angeles, Detroit to Tampa, and everything in between. Co-founded NCOMA to educate the American consumer and the hospitality industry on the importance of handling edible oils properly.'
-                        : 'Founder of The Oil Insurgency (formerly del Llano Farms), a cooking oil company dedicated to bringing high-oleic palm oil (HOPO) to the American market — a fruit oil with superior frying performance and stability. Strategic partner to NCOMA.'}
+                        ? 'Former owner and operator of casual dining restaurants since 1975 — from New York to Los Angeles, Detroit to Tampa, and everything in between. Co-founded NCOMA™ to educate the American consumer and the hospitality industry on the importance of handling edible oils properly.'
+                        : 'Founder of The Oil Insurgency (formerly del Llano Farms), a cooking oil company dedicated to bringing high-oleic palm oil (HOPO) to the American market — a fruit oil with superior frying performance and stability. Strategic partner to NCOMA™.'}
                     </p>
                   </Card>
                 ))}

@@ -13,7 +13,7 @@ import {
 } from './charts'
 
 export const metadata: Metadata = {
-  title: 'Frying Oil Performance Rankings — NCOMA',
+  title: 'Frying Oil Performance Rankings — NCOMA™',
   description:
     'Comprehensive ranking of 21 frying oils by durability, oxidative stability, and cost-per-cycle. Data-driven analysis of why PUFA content — not smoke point — determines fry life.',
 }
@@ -30,7 +30,7 @@ export default function CostPerCycleAnalysis() {
           <Container size="lg">
             <div className="max-w-2xl">
               <p className="animate-hero-1 font-sans text-sm font-medium uppercase tracking-widest text-amber-light">
-                NCOMA Research Report
+                NCOMA™ Research Report
               </p>
               <h1 className="animate-hero-2 mt-4 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
                 Frying Oil Performance Rankings
@@ -41,7 +41,7 @@ export default function CostPerCycleAnalysis() {
               </p>
             </div>
             <div className="animate-hero-3 mt-10 flex items-center gap-3 font-sans text-sm text-white/70">
-              <span>NCOMA Research Division</span>
+              <span>NCOMA™ Research Division</span>
               <span>·</span>
               <time>May 2026</time>
               <span>·</span>
@@ -110,7 +110,7 @@ export default function CostPerCycleAnalysis() {
                   price per gallon alone.
                 </p>
                 <p className="mt-1 font-sans text-xs text-charcoal/50">
-                  NCOMA / State of the Fryer Report, 2026
+                  NCOMA™ / State of the Fryer Report, 2026
                 </p>
               </Callout>
             </FadeIn>

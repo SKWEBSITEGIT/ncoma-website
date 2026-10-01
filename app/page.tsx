@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { Container, Section, Eyebrow, Button, Card, Badge } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'NCOMA — What Is In Your Oil?',
+  title: 'NCOMA™ — What Is In Your Oil?',
   description:
-    'Over 1 million US restaurants. Zero federal requirements to test frying oil. NCOMA is building the standard. The WIYO! seal certifies kitchens that manage their oil to science-based thresholds.',
+    'Over 1 million US restaurants. Zero federal requirements to test frying oil. NCOMA™ is building the standard. The WIYO! seal certifies kitchens that manage their oil to science-based thresholds.',
 }
 import { CTABanner } from '@/components/CTABanner'
 import { FadeIn, FadeInStagger, FadeInItem, SlideIn } from '@/components/AnimatedSection'
@@ -96,7 +96,7 @@ export default function Home() {
                   Not once. They don&apos;t know what&apos;s in it. Neither do their customers.
                 </p>
                 <p className="mt-3 font-sans text-xs text-white/30">
-                  NCOMA 2026 State of the Fryer Survey
+                  NCOMA™ 2026 State of the Fryer Survey
                 </p>
               </div>
             </FadeInItem>
@@ -314,7 +314,7 @@ export default function Home() {
                 No bill has been introduced. Nobody is coming to regulate this.
               </p>
               <p className="mt-6 text-lg font-semibold text-amber">
-                NCOMA changes that.
+                NCOMA™ changes that.
               </p>
             </div>
           </FadeIn>
@@ -328,7 +328,7 @@ export default function Home() {
                 tested, and replaced in American commercial kitchens.&rdquo;
               </blockquote>
               <p className="mt-3 text-center font-sans text-xs font-medium uppercase tracking-wider text-white/30">
-                NCOMA Mission Statement
+                NCOMA™ Mission Statement
               </p>
             </div>
           </FadeIn>
@@ -347,7 +347,7 @@ export default function Home() {
               <strong className="text-charcoal">WIYO! stands for &ldquo;What Is Your Oil?&rdquo;</strong> — the
               question every diner should ask and every kitchen should be able to answer.
               When you see the WIYO! seal on a restaurant window, it means that kitchen has been
-              independently inspected and certified by NCOMA. They test their oil daily, filter it,
+              independently inspected and certified by NCOMA™. They test their oil daily, filter it,
               log every reading, and discard it at the science-backed threshold. No guessing.
             </p>
           </FadeIn>
@@ -405,11 +405,11 @@ export default function Home() {
             <AnimatedCounter
               value="78%"
               label="Of operators who have never tested TPM"
-              source="NCOMA 2026 State of the Fryer"
+              source="NCOMA™ 2026 State of the Fryer"
             />
             <AnimatedCounter
               value="25%"
-              label="TPM — the NCOMA discard threshold"
+              label="TPM — the NCOMA™ discard threshold"
               source="Aligned with Codex Alimentarius and EU law"
             />
             <AnimatedCounter
@@ -476,7 +476,7 @@ export default function Home() {
                   Managed operators extend oil life 20–40% and know exactly when to change.
                 </p>
                 <p className="mt-2 font-sans text-xs text-charcoal/40">
-                  NCOMA 2026 State of the Fryer; Moreira et al., Deep-Fat Frying: Fundamentals
+                  NCOMA™ 2026 State of the Fryer; Moreira et al., Deep-Fat Frying: Fundamentals
                 </p>
               </SlideIn>
             </div>
@@ -512,7 +512,7 @@ export default function Home() {
       <CTABanner
         variant="amber"
         heading="Your kitchen deserves a standard."
-        subheading="NCOMA certification proves your oil is tested, filtered, and managed to a science-based threshold. Show your customers you care about what's in the fryer."
+        subheading="NCOMA™ certification proves your oil is tested, filtered, and managed to a science-based threshold. Show your customers you care about what's in the fryer."
         primaryLabel="Get Certified →"
         primaryHref="/operators#get-certified"
         secondaryLabel="Talk to Us"
@@ -595,7 +595,7 @@ export default function Home() {
                 <p className="mt-2 text-sm text-charcoal/60">
                   Former owner and operator of casual dining restaurants since 1975 — from
                   New York to Los Angeles, Detroit to Tampa, and everything in between.
-                  Co-founded NCOMA to bring awareness to degraded oils and their effects on
+                  Co-founded NCOMA™ to bring awareness to degraded oils and their effects on
                   human health.
                 </p>
               </Card>
@@ -624,7 +624,7 @@ export default function Home() {
                 <p className="mt-2 text-sm text-charcoal/60">
                   Founder of The Oil Insurgency, a cooking oil company dedicated to bringing
                   high-oleic palm oil (HOPO) to the American market — a fruit oil with
-                  superior frying performance and stability. Strategic partner to NCOMA.
+                  superior frying performance and stability. Strategic partner to NCOMA™.
                 </p>
               </Card>
             </FadeInItem>
@@ -632,7 +632,7 @@ export default function Home() {
 
           <FadeIn delay={0.3} className="mt-8 text-center">
             <Button href="/about" variant="outline">
-              About NCOMA
+              About NCOMA™
             </Button>
           </FadeIn>
         </Container>

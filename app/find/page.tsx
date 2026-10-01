@@ -37,7 +37,7 @@ export default function Find() {
             Certified restaurant directory
           </h1>
           <p className="mt-6 text-lg text-charcoal/70">
-            Every restaurant listed here has been inspected by NCOMA and meets
+            Every restaurant listed here has been inspected by NCOMA™ and meets
             the published standard for cooking oil management. Search by name,
             location, or oil type.
           </p>

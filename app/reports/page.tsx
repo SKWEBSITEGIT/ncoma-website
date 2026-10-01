@@ -7,7 +7,7 @@ import { getReports } from '@/lib/content'
 
 export const metadata = {
   title: 'Reports',
-  description: 'NCOMA research reports — the 2026 State of the Fryer survey, cost-per-cycle analysis, and original data on how American restaurants manage their frying oil.',
+  description: 'NCOMA™ research reports — the 2026 State of the Fryer survey, cost-per-cycle analysis, and original data on how American restaurants manage their frying oil.',
 }
 
 const reportImages: Record<string, string> = {

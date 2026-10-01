@@ -8,8 +8,8 @@ import { CTABanner } from '@/components/CTABanner'
 import board from '@/data/board.json'
 
 export const metadata = {
-  title: 'About NCOMA',
-  description: 'NCOMA was built by the people who know the fryer — operators, engineers, and strategists who decided the standard needed to exist. Meet the team behind the WIYO! seal.',
+  title: 'About NCOMA™',
+  description: 'NCOMA™ was built by the people who know the fryer — operators, engineers, and strategists who decided the standard needed to exist. Meet the team behind the WIYO! seal.',
 }
 
 export default function About() {
@@ -54,7 +54,7 @@ export default function About() {
                 operate on instinct, arbitrary schedules, and visual guesswork.
               </p>
               <p>
-                NCOMA was built by the people who have been inside America&apos;s
+                NCOMA™ was built by the people who have been inside America&apos;s
                 fryers for decades — not by regulators, not by academics, but by
                 the industry itself. Operators who opened 240+ restaurants,
                 engineers who invented patented filtration systems, and
@@ -72,7 +72,7 @@ export default function About() {
                 performance data from Fedepalma/Universidad de Caldas.
               </p>
               <p>
-                From that foundation, NCOMA built three things: a knowledge-based
+                From that foundation, NCOMA™ built three things: a knowledge-based
                 exam for individual certification (the Certified Oil Manager
                 designation), an operational inspection standard for kitchens, and
                 the WIYO! consumer seal — so diners can see, at a glance, whether
@@ -100,7 +100,7 @@ export default function About() {
             </blockquote>
             <p className="mt-6 text-charcoal/70">
               We believe that better-managed oil means better food and safer
-              kitchens. The NCOMA Certified Oil Manager designation is how we
+              kitchens. The NCOMA™ Certified Oil Manager designation is how we
               get there — one kitchen at a time.
             </p>
           </FadeIn>
@@ -114,7 +114,7 @@ export default function About() {
             <div className="flex flex-col items-start gap-8 md:flex-row md:items-center">
               <Image
                 src="/images/ncoma-logo.png"
-                alt="NCOMA"
+                alt="NCOMA™"
                 width={112}
                 height={112}
                 className="h-24 w-24 shrink-0 md:h-28 md:w-28"
@@ -127,11 +127,11 @@ export default function About() {
                 <p className="mt-3 max-w-2xl text-white/70">
                   Why the hospitality industry must get ahead of the degraded
                   cooking oil crisis — the science, the numbers, and the lesson
-                  of the industries that waited. NCOMA&apos;s case for leading,
+                  of the industries that waited. NCOMA™&apos;s case for leading,
                   in ten slides.
                 </p>
                 <a
-                  href="/docs/NCOMA-Time-to-Lead.pdf"
+                  href="/docs/NCOMA™-Time-to-Lead.pdf"
                   download
                   className="mt-6 inline-flex items-center justify-center bg-amber px-6 py-3 font-sans text-sm font-medium tracking-wide text-white transition-colors hover:bg-amber-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2"
                 >
@@ -217,7 +217,7 @@ export default function About() {
       <CTABanner
         variant="amber"
         heading="Want to join the mission?"
-        subheading="Whether you want to certify your kitchen, partner with NCOMA, or just learn more — reach out."
+        subheading="Whether you want to certify your kitchen, partner with NCOMA™, or just learn more — reach out."
         primaryLabel="Contact Us →"
         primaryHref="/contact"
         secondaryLabel="Get Certified"

@@ -25,7 +25,7 @@ const columns = [
   {
     title: 'Organization',
     links: [
-      { label: 'About NCOMA', href: '/about' },
+      { label: 'About NCOMA™', href: '/about' },
       { label: 'Contact Us', href: '/contact' },
       { label: 'Get Certified', href: '/operators#get-certified' },
     ],
@@ -39,7 +39,7 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-4">
           {/* Brand column */}
           <div>
-            <p className="text-xl font-bold text-white">NCOMA</p>
+            <p className="text-xl font-bold text-white">NCOMA™</p>
             <p className="mt-3 text-sm leading-relaxed">
               The National Cooking Oil Management Association. The standard
               American kitchens have been missing.
@@ -76,7 +76,7 @@ export function Footer() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="font-sans text-sm font-semibold text-white">
-                Join the NCOMA Newsletter
+                Join the NCOMA™ Newsletter
               </p>
               <p className="mt-1 text-sm">
                 Oil science, certification updates, and industry research. No spam.
