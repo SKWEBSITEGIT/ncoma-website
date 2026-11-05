@@ -93,10 +93,12 @@ export default function About() {
           <FadeIn>
             <h2 className="text-2xl font-bold">Mission</h2>
             <blockquote className="mt-6 border-l-4 border-l-amber pl-6 text-xl italic text-charcoal/80">
-              The National Cooking Oil Management Association exists to establish
-              what no federal regulation currently requires: a rigorous,
-              knowledge-based standard for how cooking oil is selected, managed,
-              tested, and replaced in American commercial kitchens.
+              The National Cooking Oil Management Association (NCOMA™) is a nonprofit
+              educational organization dedicated to improving public health by educating
+              the hospitality industry and consumers about the health impacts of degraded
+              cooking oils, promoting best practices in oil management, and advancing
+              research and awareness related to food quality, nutrition, and consumer
+              well-being.
             </blockquote>
             <p className="mt-6 text-charcoal/70">
               We believe that better-managed oil means better food and safer

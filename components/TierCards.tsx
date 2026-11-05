@@ -7,70 +7,90 @@ const tiers = [
   {
     id: 'bronze',
     name: 'Bronze',
-    tagline: 'Seedless Palm Oil',
+    tagline: 'Seedless Cooking Oil',
     subtitle: 'Better oil in the fryer',
     color: '#CD7F32',
     bgGradient: 'from-[#CD7F32]/10 to-[#CD7F32]/5',
     borderColor: 'border-[#CD7F32]',
     textColor: 'text-[#CD7F32]',
     sealLabel: 'NCOMA™ Bronze',
-    description: 'Food service operation utilizing Seedless Palm Oil from Colombia — a fruit oil, pressed from the flesh of the palm fruit, not extracted from a seed.',
+    description: 'Food service operation using seedless cooking oil, such as Colombian Seedless Palm Oil (a fruit oil pressed from the flesh of the palm fruit, not extracted from a seed), for its fried menu items. The seedless oil must be certified HOPO, Non-GMO, Sustainable and Kosher.',
     features: [
       { text: 'NCOMA™ Bronze seal displayed', included: true },
-      { text: 'Colombian Seedless Palm Oil in the fryer', included: true },
+      { text: 'Seedless cooking oil in the fryer', included: true },
+      { text: 'Oil certified HOPO, Non-GMO, Sustainable and Kosher', included: true },
     ],
     notIncluded: [
-      'Zeco filtration',
-      'TPM protocol',
+      'Fryer oil filtered at least twice a day',
+      'TPM tracking and measurement',
     ],
   },
   {
     id: 'silver',
     name: 'Silver',
-    tagline: 'Zeco Filtration',
-    subtitle: 'Proper filtration procedures',
+    tagline: 'Oil Filtration',
+    subtitle: 'Fryer oil filtered twice a day',
     color: '#A8A9AD',
     bgGradient: 'from-[#71767C]/10 to-[#71767C]/5',
     borderColor: 'border-[#A8A9AD]',
     textColor: 'text-[#71767C]',
     sealLabel: 'NCOMA™ Silver',
-    description: 'Food service operation practicing proper filtration procedures utilizing Zeco filtration — the patented Positive Seal system that eliminates filter bypass.',
+    description: 'Food service operation that filters its fryer cooking oil at least twice a day using proper filtration procedures, such as Zeco filtration (the patented Positive Seal system that eliminates filter bypass).',
     features: [
       { text: 'NCOMA™ Silver seal displayed', included: true },
-      { text: 'Proper filtration procedures practiced', included: true },
-      { text: 'Zeco filtration system in use', included: true },
+      { text: 'Fryer oil filtered at least twice a day', included: true },
     ],
     notIncluded: [
-      'Colombian Seedless Palm Oil',
-      'TPM protocol',
+      'Seedless cooking oil',
+      'TPM tracking and measurement',
     ],
   },
   {
     id: 'gold',
     name: 'Gold',
-    tagline: 'The Full Standard',
-    subtitle: 'Oil + filtration + testing',
+    tagline: 'Oil + Filtration',
+    subtitle: 'Bronze and Silver together',
     color: '#D4AF37',
     bgGradient: 'from-[#D4AF37]/10 to-[#D4AF37]/5',
     borderColor: 'border-[#D4AF37]',
     textColor: 'text-[#D4AF37]',
     sealLabel: 'NCOMA™ Gold',
-    description: 'Food service operation that checks all three boxes: Colombian Seedless Palm Oil in the fryer, proper filtration using Zeco, and a kitchen that observes and practices TPM protocol.',
+    description: 'Food service operation that shows complete practice of both the Bronze and Silver standards: seedless cooking oil in the fryer, and fryer oil filtered at least twice a day.',
     features: [
       { text: 'NCOMA™ Gold seal displayed', included: true },
-      { text: '1. Colombian Seedless Palm Oil', included: true },
-      { text: '2. Proper filtration using Zeco', included: true },
-      { text: '3. Observes & practices TPM protocol', included: true },
+      { text: '1. Seedless cooking oil', included: true },
+      { text: '2. Fryer oil filtered at least twice a day', included: true },
+    ],
+    notIncluded: [
+      'TPM tracking and measurement',
+    ],
+  },
+  {
+    id: 'platinum',
+    name: 'Platinum',
+    tagline: 'Total Oil Management',
+    subtitle: 'Oil + filtration + TPM',
+    color: '#7F8C99',
+    bgGradient: 'from-[#7F8C99]/10 to-[#7F8C99]/5',
+    borderColor: 'border-[#7F8C99]',
+    textColor: 'text-[#7F8C99]',
+    sealLabel: 'NCOMA™ Platinum',
+    description: 'Food service operation that practices the Bronze, Silver and Gold standards and also manages its oil by tracking and measuring TPM (Total Polar Materials). A Platinum operator can show complete oil management practices, so every fried item is served to the highest health and safety standards.',
+    features: [
+      { text: 'NCOMA™ Platinum seal displayed', included: true },
+      { text: '1. Seedless cooking oil', included: true },
+      { text: '2. Fryer oil filtered at least twice a day', included: true },
+      { text: '3. TPM tracked and measured', included: true },
     ],
     notIncluded: [],
   },
 ]
 
 const comparisonFeatures = [
-  { label: 'NCOMA™ seal displayed', bronze: true, silver: true, gold: true },
-  { label: 'Colombian Seedless Palm Oil', bronze: true, silver: false, gold: true },
-  { label: 'Proper filtration procedures (Zeco)', bronze: false, silver: true, gold: true },
-  { label: 'TPM protocol observed & practiced', bronze: false, silver: false, gold: true },
+  { label: 'NCOMA™ seal displayed', bronze: true, silver: true, gold: true, platinum: true },
+  { label: 'Seedless cooking oil', bronze: true, silver: false, gold: true, platinum: true },
+  { label: 'Fryer oil filtered at least twice a day', bronze: false, silver: true, gold: true, platinum: true },
+  { label: 'TPM tracked and measured', bronze: false, silver: false, gold: false, platinum: true },
 ]
 
 export function TierCards() {
@@ -79,7 +99,7 @@ export function TierCards() {
   return (
     <div>
       {/* Cards */}
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {tiers.map((tier) => {
           const isExpanded = expanded === tier.id
           return (
@@ -110,7 +130,7 @@ export function TierCards() {
               {/* Quick feature count */}
               <div className="mt-4 flex items-baseline gap-1">
                 <span className="text-3xl font-bold" style={{ color: tier.color }}>
-                  {tier.features.length}
+                  {tier.features.length - 1}
                 </span>
                 <span className="font-sans text-sm text-charcoal/40">standards met</span>
               </div>
@@ -160,7 +180,7 @@ export function TierCards() {
       <div className="mt-16">
         <h3 className="text-center text-2xl font-bold text-charcoal">Compare tiers</h3>
         <p className="mt-2 text-center text-sm text-charcoal/50">
-          Every tier earns the NCOMA™ seal. Gold checks every box.
+          Every tier earns the NCOMA™ seal. Platinum checks every box.
         </p>
 
         <div className="mt-8 overflow-x-auto">
@@ -190,7 +210,7 @@ export function TierCards() {
                   <td className="border-b border-charcoal/5 py-3 pr-4 text-sm text-charcoal/70">
                     {feature.label}
                   </td>
-                  {(['bronze', 'silver', 'gold'] as const).map((tier) => (
+                  {(['bronze', 'silver', 'gold', 'platinum'] as const).map((tier) => (
                     <td
                       key={tier}
                       className="border-b border-charcoal/5 py-3 text-center"

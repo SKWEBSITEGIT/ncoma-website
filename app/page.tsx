@@ -360,6 +360,7 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/60">
                   Food service operation utilizing Seedless Palm Oil from Colombia —
                   a fruit oil, pressed from the flesh of the palm fruit, not a seed.
+                  The oil must be certified HOPO, Non-GMO, Sustainable and Kosher.
                 </p>
               </Card>
             </FadeInItem>
@@ -584,7 +585,7 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <FadeInStagger className="mt-12 grid gap-8 md:grid-cols-3">
+          <FadeInStagger className="mt-12 grid gap-8 md:grid-cols-2">
             <FadeInItem>
               <Card variant="profile">
                 <div className="mb-4">
@@ -611,20 +612,6 @@ export default function Home() {
                   Inventor of the Zeco Oil Filtration Machine — a patented closed-loop
                   system that microfilters cooking oil down to 0.5 microns, serving hundreds
                   of restaurants across the Southwest.
-                </p>
-              </Card>
-            </FadeInItem>
-            <FadeInItem>
-              <Card variant="profile">
-                <div className="mb-4">
-                  <Avatar name="Pablo Herrera" src="/images/board/pablo-herrera.jpg" />
-                </div>
-                <p className="font-sans text-base font-semibold">Pablo Herrera</p>
-                <p className="font-sans text-sm text-olive">Co-Founder, The Oil Insurgency</p>
-                <p className="mt-2 text-sm text-charcoal/60">
-                  Founder of The Oil Insurgency, a cooking oil company dedicated to bringing
-                  high-oleic palm oil (HOPO) to the American market — a fruit oil with
-                  superior frying performance and stability. Strategic partner to NCOMA™.
                 </p>
               </Card>
             </FadeInItem>

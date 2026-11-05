@@ -28,8 +28,8 @@ const faqs = [
     a: 'Six sections: staff knowledge (can they explain degradation pathways, TPM, and meter operation?), equipment inspection (thermostat accuracy, filtration gear, covers), oil quality at time of inspection (TPM reading, color, foam, smoke, viscosity), operational protocols (salt station placement, oil storage, fish isolation), record-keeping (Oil Log current with 30+ days of history), and filtration compliance.',
   },
   {
-    q: 'What\'s the difference between Bronze, Silver, and Gold?',
-    a: 'All three tiers earn the NCOMA™ seal. Bronze certifies a food service operation utilizing Seedless Palm Oil from Colombia. Silver certifies an operation practicing proper filtration procedures utilizing Zeco filtration. Gold certifies an operation that does all three: Colombian Seedless Palm Oil, proper filtration using Zeco, and observing and practicing TPM protocol.',
+    q: 'What\'s the difference between Bronze, Silver, Gold, and Platinum?',
+    a: 'All four tiers earn the NCOMA™ seal. Bronze: the operation uses seedless cooking oil for its fried menu items, and the oil is certified HOPO, Non-GMO, Sustainable and Kosher. Silver: the operation filters its fryer oil at least twice a day. Gold: the operation fully practices both the Bronze and Silver standards. Platinum: the operation practices Bronze, Silver and Gold, and also tracks and measures TPM for complete oil management.',
   },
   {
     q: 'Do I need special equipment?',
@@ -89,7 +89,7 @@ export default function Seal() {
       <Section className="border-t border-charcoal/10">
         <Container>
           <FadeIn>
-            <h2 className="text-center text-3xl font-bold">Three certification tiers</h2>
+            <h2 className="text-center text-3xl font-bold">Four certification tiers</h2>
             <p className="mx-auto mt-3 max-w-2xl text-center text-charcoal/60">
               Every tier earns the WIYO! seal. The tier tells diners how deep the commitment goes.
               Click a card to see the full details.
@@ -97,6 +97,17 @@ export default function Seal() {
           </FadeIn>
           <div className="mt-12">
             <TierCards />
+          </div>
+          <div className="mx-auto mt-12 max-w-2xl space-y-4 text-center text-charcoal/70">
+            <p>
+              Zeco certification and NCOMA™ certification are recognized by each other: a
+              Zeco-certified operation meets the matching NCOMA™ standard, and an
+              NCOMA™-certified operation meets Zeco&rsquo;s.
+            </p>
+            <p>
+              S&amp;K Oil Sales customers can see their oil management records in the{' '}
+              <a href="https://portal.skz365.com" className="text-amber hover:underline">SKZ365 customer portal</a>.
+            </p>
           </div>
         </Container>
       </Section>
@@ -143,6 +154,10 @@ export default function Seal() {
             Certification pricing varies by operation size, number of fryers, and
             tier level. Individual COT exams, single-kitchen COMK inspections, and
             multi-unit COMP programs are each priced separately.
+          </p>
+          <p className="mt-4 text-charcoal/70">
+            NCOMA™ membership: $25 in Arizona (regional pricing). Get in touch with us and
+            we can get back with you. Pricing subject to change.
           </p>
           <div className="mt-6">
             <Button href="/contact">Request a Quote</Button>

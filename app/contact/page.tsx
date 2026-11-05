@@ -150,6 +150,16 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-charcoal/40">
+                  Certification
+                </h3>
+                <p className="mt-2 text-charcoal/70">
+                  Sean McMahon<br />
+                  <a href="tel:+16235521874" className="text-amber hover:underline">623-552-1874</a><br />
+                  <a href="mailto:mcmahon770@gmail.com" className="text-amber hover:underline">mcmahon770@gmail.com</a>
+                </p>
+              </div>
+              <div>
+                <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-charcoal/40">
                   Mailing Address
                 </h3>
                 <p className="mt-2 text-charcoal/70">
@@ -192,7 +202,7 @@ export default function Contact() {
             </h3>
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
               {board.directors
-                .filter((m) => m.name === 'Matt McMahon' || m.name === 'Pablo Herrera')
+                .filter((m) => m.name === 'Matt McMahon')
                 .map((member) => (
                   <Card key={member.name}>
                     <div className="mb-4">

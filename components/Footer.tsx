@@ -86,6 +86,23 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Certification notice */}
+        <div className="mt-8 border-t border-white/10 pt-8 font-sans text-xs leading-relaxed text-white/50">
+          <p>
+            NCOMA™ Vendor Certification recognizes a company&rsquo;s commitment to professional
+            conduct, industry education and support of best practices in commercial cooking oil
+            management. Certification does not constitute endorsement, recommendation or
+            validation of any specific product, service, equipment, filtration or cooking oil
+            program.
+          </p>
+          <p className="mt-3">
+            Companies wishing to become NCOMA™ Vendor certified: contact Sean McMahon for the
+            certification requirements, cell{' '}
+            <a href="tel:+16235521874" className="hover:text-white">623-552-1874</a>, email{' '}
+            <a href="mailto:mcmahon770@gmail.com" className="hover:text-white">mcmahon770@gmail.com</a>.
+          </p>
+        </div>
+
         {/* Legal */}
         <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-8 font-sans text-xs text-white/30 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} National Cooking Oil Management Association. All rights reserved.</p>

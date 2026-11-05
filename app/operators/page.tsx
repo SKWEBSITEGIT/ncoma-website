@@ -231,17 +231,30 @@ export default function Operators() {
           <div className="mt-8 space-y-4">
             <div className="flex items-start gap-4">
               <Badge variant="bronze">Bronze</Badge>
-              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Bronze seal, annual renewal. For operations utilizing Colombian Seedless Palm Oil.</p>
+              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Bronze seal, annual renewal. For operations using seedless cooking oil for fried menu items. The oil must be certified HOPO, Non-GMO, Sustainable and Kosher.</p>
             </div>
             <div className="flex items-start gap-4">
               <Badge variant="silver">Silver</Badge>
-              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Silver seal, annual renewal. For operations practicing proper filtration with Zeco.</p>
+              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Silver seal, annual renewal. For operations that filter fryer oil at least twice a day.</p>
             </div>
             <div className="flex items-start gap-4">
               <Badge variant="gold">Gold</Badge>
-              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Gold seal, priority directory listing. For operations with Colombian Seedless Palm Oil, Zeco filtration, and TPM protocol.</p>
+              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Gold seal, priority directory listing. For operations that fully practice the Bronze and Silver standards.</p>
+            </div>
+            <div className="flex items-start gap-4">
+              <Badge variant="default">Platinum</Badge>
+              <p className="text-sm text-charcoal/60">On-site inspection, NCOMA™ Platinum seal, priority directory listing. For operations that practice Bronze, Silver and Gold and also track and measure TPM.</p>
             </div>
           </div>
+          <p className="mt-8 text-charcoal/70">
+            NCOMA™ membership: $25 in Arizona (regional pricing). Get in touch with us and
+            we can get back with you. Pricing subject to change.
+          </p>
+          <p className="mt-4 text-charcoal/70">
+            Restaurants wishing to become NCOMA™ certified: contact Sean McMahon, cell{' '}
+            <a href="tel:+16235521874" className="text-amber hover:underline">623-552-1874</a>, email{' '}
+            <a href="mailto:mcmahon770@gmail.com" className="text-amber hover:underline">mcmahon770@gmail.com</a>.
+          </p>
           <div className="mt-8">
             <Button href="/contact">Request a Quote</Button>
           </div>
